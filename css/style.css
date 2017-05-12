@@ -493,7 +493,7 @@ Logo
     padding: 0;
 }
 .text-logo {
-    margin-top: 5px
+    margin-top: 10px
 }
 .text-logo i {
     margin-right: 10px;
@@ -1095,9 +1095,117 @@ Social Links
 }
 
 /* ==========================================================================
+Minor AEON edit April 22, 2017
+ ========================================================================== */
+
+.headline, .banner-content h1 {
+    border-bottom: none;
+}
+.lead {
+    font-weight: 500;
+}
+
+/* ==========================================================================
 Media Queries
  ========================================================================== */
 
+/* ------ Larger than 992 ------*/
+
+@media (min-width: 992px) {
+	.col-md-6 {
+		width: 100%;
+	}
+
+	.banner-content h1 {
+	    padding-bottom: 30px;
+	}
+
+	.banner-list {
+	    margin-top: 30px;
+	}
+
+	.banner-list li {
+	    margin-bottom: 7px;
+	}
+
+	#banner .col-lg-4 {
+	    margin-top: 45px;
+	}
+
+	#features {
+	    padding: 90px 0 30px;
+	}
+
+	#features p {
+	    line-height: 27px;
+	}
+
+	.features h3 {
+	    font-size: 20px;
+	}
+
+	#difference {
+	    text-align: center;
+	    padding: 90px 0 80px;
+	}
+
+	#difference p {
+	    font-size: 17px;
+	    line-height: 27px;
+	}
+
+	#difference h4 {
+	    font-size: 20px;
+	}
+
+	#difference ul {
+	    margin: 0 10% 50px;
+	    text-align: initial;
+	}
+
+	.difference-summary {
+	    margin: 0 12%;
+	}
+
+	#downloads {
+	    padding: 90px 0 50px;
+	}
+
+	.footer li, .footer p {
+	    font-size: 15px;
+	}
+}
+
+/* ------ Larger than Mobile Landscape ------*/
+
+@media (min-width: 768px) {
+	body {
+	    font-size: 16px;
+	}
+	.lead {
+	    font-size: 20px;
+	}
+	.headline p {
+	    font-size: 17px;
+	}
+	
+	/* next line fixes white-on-white navbar :focus error */
+
+	.navbar-inverse .navbar-nav>.active>a:focus {
+	    color: #00a8d6;
+	}
+}
+
+/* ------ Tablet Portrait size to 991 (devices and browsers) ------*/
+
+@media (max-width: 991px) and (min-width: 768px) {
+	.navbar .hidden-sm {
+		display: initial !important;
+	}
+	.navbar .hidden-sm img {
+		margin:0;
+	}
+}
 
 /* ------ Tablet Portrait size to standard 960 (devices and browsers) ------*/
 
@@ -1108,9 +1216,31 @@ Media Queries
     .img-thumbnail {
         margin: 0;
     }
+	.col-sm-8 {
+	    width: 100%;
+	}
+	#features p {
+	    text-align: center;
+	}
+	#features .features h3 {
+	    text-align: center;
+	}
+	#features img {
+		display:block;
+	}
 }
 
 /* ------ Mobile Landscape Size to Tablet Portrait (devices and browsers) ------*/
+
+@media (max-width: 767px) {
+	.navbar .hidden-xs {
+		display: initial !important;
+	}
+	.navbar .hidden-xs img {
+		margin: 0;
+		display: initial;
+	}
+}
 
 @media only screen and (max-width: 767px) {
     .navbar-inverse {
@@ -1120,7 +1250,7 @@ Media Queries
     .navbar> .container .navbar-brand {
         margin-left: 15px;
         color: #1a1a1a;
-        margin-top: 15px;
+        margin-top: 17px;
     }
     .menu-right {
         float: none;
@@ -1147,11 +1277,23 @@ Media Queries
     .img-thumbnail {
         margin: 0;
     }
+	#features p {
+	    text-align: center;
+	}
+	#features .features h3 {
+	    text-align: center;
+	}
+	#features img {
+		display:block;
+	}
 }
 
 /* ------ Mobile Portrait Size to Mobile Landscape Size (devices and browsers) ------*/
 
 @media only screen and (max-width: 479px) {
+	body {
+		font-size: 15px;
+	}
     h2 {
         font-size: 28px;
     }
@@ -1166,9 +1308,18 @@ Media Queries
     iframe {
         max-height: 200px;
     }
+	#banner {
+		padding-bottom: 20px;
+	}
+	.banner-content {
+		padding-top: 15px;
+	}
     .banner-content h1 {
         font-size: 34px;
     }
+	.headline {
+		margin-bottom: 25px;
+	}
     .headline h1 {
         font-size: 30px;
     }
@@ -1178,6 +1329,18 @@ Media Queries
     .section {
         padding: 50px 0;
     }
+	#features {
+		padding-bottom: 5px;
+	}
+	#difference {
+		padding-bottom: 20px;
+	}
+	#difference ul {
+	    margin: 0 10px;
+	}
+	#downloads {
+		padding: 45px 0 25px;
+	}
     .separator60 {
         margin: 30px 0;
     }
@@ -1204,4 +1367,10 @@ Media Queries
     .copyright {
         float: none;
     }
+	.footer-top {
+		padding: 50px 0 35px;
+	}
+	.footer-sub {
+		padding: 25px 0 15px;
+	}
 }
