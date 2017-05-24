@@ -1112,10 +1112,6 @@ Media Queries
 /* ------ Larger than 992 ------*/
 
 @media (min-width: 992px) {
-	.col-md-6 {
-		width: 100%;
-	}
-
 	.banner-content h1 {
 	    padding-bottom: 30px;
 	}
