@@ -59,7 +59,7 @@ a {
 }
 a:hover, a:focus {
     text-decoration: none;
-    color: #007DA0;
+    color: #555;
     outline: none;
 }
 ul {
@@ -518,7 +518,7 @@ Banner
 }
 .banner-content {
     clear: both;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .banner-content h1 {
     font-size: 50px;
@@ -1095,7 +1095,7 @@ Social Links
 }
 
 /* ==========================================================================
-Minor AEON edit April 22, 2017
+Minor AEON.cash-specific edits
  ========================================================================== */
 
 .headline, .banner-content h1 {
@@ -1103,6 +1103,9 @@ Minor AEON edit April 22, 2017
 }
 .lead {
     font-weight: 500;
+}
+#downloads .headline {	
+    margin-bottom: 10px;
 }
 
 /* ==========================================================================
@@ -1287,9 +1290,9 @@ Media Queries
 /* ------ Mobile Portrait Size to Mobile Landscape Size (devices and browsers) ------*/
 
 @media only screen and (max-width: 479px) {
-	body {
-		font-size: 15px;
-	}
+    body {
+	font-size: 15px;
+    }
     h2 {
         font-size: 28px;
     }
@@ -1304,39 +1307,41 @@ Media Queries
     iframe {
         max-height: 200px;
     }
-	#banner {
-		padding-bottom: 20px;
-	}
-	.banner-content {
-		padding-top: 15px;
-	}
+    #banner {
+	padding-bottom: 20px;
+    }
+    .banner-content {
+	padding-top: 0px;
+    }
     .banner-content h1 {
         font-size: 34px;
+	text-align: center;
     }
-	.headline {
-		margin-bottom: 25px;
-	}
+    .headline {
+	margin-bottom: 25px;
+    }
     .headline h1 {
         font-size: 30px;
     }
     .headline h2 {
         font-size: 28px;
+	line-height: 32px;
     }
     .section {
         padding: 50px 0;
     }
-	#features {
-		padding-bottom: 5px;
-	}
-	#difference {
-		padding-bottom: 20px;
-	}
-	#difference ul {
-	    margin: 0 10px;
-	}
-	#downloads {
-		padding: 45px 0 25px;
-	}
+    #features {
+	padding-bottom: 5px;
+    }
+    #difference {
+	padding-bottom: 20px;
+    }
+    #difference ul {
+	margin: 0 10px;
+    }
+    #downloads {
+	padding: 45px 0 25px;
+    }
     .separator60 {
         margin: 30px 0;
     }
@@ -1358,15 +1363,24 @@ Media Queries
         margin-bottom: 20px;
     }
     .contact-list, .quick-links {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .copyright {
         float: none;
     }
-	.footer-top {
-		padding: 50px 0 35px;
-	}
-	.footer-sub {
-		padding: 25px 0 15px;
-	}
+    .footer-top {
+	padding: 50px 0 35px;
+    }
+    .footer-sub {
+	padding: 25px 0 15px;
+    }
+    .navbar > .container .navbar-brand {
+	font-size: 24px;
+    }
+    img {
+	margin: 0px auto;
+    }
+    .features {
+	margin-top: 20px;
+    }
 }
