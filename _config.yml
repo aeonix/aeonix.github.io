@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "AEON - a mobile-friendly private digital currency"
+title: "AEON - Mobile-friendly private digital currency"
 description: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
