@@ -17,7 +17,7 @@ body {
     font-family: "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 23px;
-    color: #7a7a7a;
+    color: #5a5a5a;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -1088,6 +1088,9 @@ Social Links
 }
 .social li.stack-exchange {
     background: #19bb9b;
+}
+.social li.wiki {
+    background: #121212;
 }
 .social li:hover {
     background: #31373a;
