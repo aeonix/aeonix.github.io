@@ -1,0 +1,10 @@
+Aeon Branding Pack
+
+COLOR 1: #5fbcd3ff
+COLOR 2: #2c89a0ff
+COLOR 3: #164450ff
+COLOR 4: #444444ff
+COLOR 5: #ffffffff
+
+TYPESET: Ebrima (Bold)
+
