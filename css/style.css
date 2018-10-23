@@ -987,6 +987,9 @@ Footer
     color: #ADADAD;
     margin-bottom: 10px;
 }
+.footer a:hover {
+    text-decoration: underline;
+}
 .footer li {
     padding: 3px 0;
     font-size: 14px;
