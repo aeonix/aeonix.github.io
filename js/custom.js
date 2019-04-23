@@ -20,3 +20,16 @@ $(".navbar-nav li a[href^='#']").on('click', function(e) {
         scrollTop: $(this.hash).offset().top
     }, 1000);
 });
+
+// --------------------------------------------------------
+//	Language Dropdown
+// -------------------------------------------------------- 
+$(function() {
+	$('.langbtn').click(function(e){
+    	$('.lang-dropdown-child').addClass('show-child');
+    	e.stopPropagation();
+	})
+	$('body').click(function(){
+    	$('.lang-dropdown-child').removeClass('show-child');
+  	});
+});
