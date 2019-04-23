@@ -1,0 +1,41 @@
+<div id="banner" class="bg-blur">
+    <div id="header">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-logo" href="#">
+              <span class="hidden-sm hidden-xs"><img src="/img/aeon-small.png"/></span>
+              {{ site.coinName }}
+            </a>
+          </div>
+          <div class="navigation navbar-collapse collapse">
+            <ul class="nav navbar-nav menu-right">
+              <li class="active"><a href="#banner">{{ site.menu.home[page.lang] }}</a></li>
+              <li><a href="#features">{{ site.menu.features[page.lang] }}</a></li>
+              <li><a href="#difference">{{ site.menu.difference[page.lang] }}</a></li>
+              <li><a href="#downloads">{{ site.menu.download[page.lang] }}</a></li>
+              <li><a href="#presskit">{{ site.menu.pressKit[page.lang] }}</a></li>
+              <li><a href="https://www.aeonfunding.com">{{ site.menu.funding[page.lang] }}</a></li>
+              <li>
+                <div class="lang-dropdown">
+                  <button class="langbtn">{{ site.menu.lang[page.lang] }} <i class="fa fa-caret-down lightblue" aria-hidden="true"></i></button>
+                  <div class="lang-dropdown-child">
+                    <a href="/">English</a>
+                    <a href="/index.es">Espanol</a>
+                    <a href="/index.de">Deutsch</a>
+                    <a href="/index.pl">Polski</a>
+                    <a href="/index.eo">Esperanto</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
