@@ -19,7 +19,7 @@ title:
   eo: "AEON - Mobile-friendly private digital currency"
   de: "AEON - Mobile-friendly private digital currency"
   pl: "AEON - Prywatna cyfrowa waluta przyjazna urządzeniom mobilnym"
-description: 
+description:
   en: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
   es: "Basado en CryptoNote, AEON es una moneda privada digital con características livianas como la poda de blockchain. Ven a ver al hermano pequeño de Monero!"
   eo: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
@@ -47,19 +47,19 @@ markdown: kramdown
 theme: minima
 
 #No matter what language, this remains the same.
-coinName: "AEON" 
-algorithm: "CryptoNight-Lite" 
+coinName: "AEON"
+algorithm: "CryptoNight-Lite"
 
 # content of site
 content:
   banner: #begin with banner section
-    paragraph1: 
+    paragraph1:
       en: "Decentralized digital currency is slowly becoming a normal part of everyday life. Yet everybody's main internet device continues to be their cellphone, a device with a low-powered CPU and limited available storage."
       es: "La moneda digital descentralizada se está convirtiendo lentamente en una parte normal de la vida. Sin embargo, el principal dispositivo de Internet de todo el mundo sigue siendo su teléfono celular, un dispositivo con un CPU de baja potencia y un almacenamiento disponible limitado."
       eo: "Malcentra cifereca valuto iom post iom estas fariĝanta normala parto de la ĉiutaga vivo. Tamen, ĉies ĉefa interreta aparato plu restas la poŝtelefono, ia aparato kun malforta ĉefprocezilo kaj limigita konserv-kapablo."
       de: "Dezentralisierte, digitale Währungen werden langsam ein normaler Bestandteil unseres täglichen Lebens. Das Smartphone das Gerät der Wahl der meisten Menschen um ins Internet zu gehen, ein Gerät mit schwachen CPUs und limitiertem Speicherplatz."
       pl: "Zdecentralizowana waluta cyfrowa powoli staje się normalną częścią codziennego życia. Jednak głównym urządzeniem internetowym wszystkich użytkowników jest nadal ich telefon komórkowy, urządzenie z procesorem o małej mocy i ograniczoną dostępną pamięcią."
-    paragraph2: 
+    paragraph2:
       en: "AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own."
       es: "AEON se trata de habilitar esta era, habilitar una era en la que todas las personas de todo el mundo tengan la libertad de enviar y recibir dinero de manera privada con cualquier dispositivo que ya posean."
       eo: "AEON temas pri ebligi tiun epokon, en kiu ĉiuj homoj ĉie havas la liberecon private sendi kaj ricevi monon per iu ajn aparato, kiun ili jam posedas"
@@ -73,7 +73,7 @@ content:
           eo: "Laborpruvo:"
           de: "PoW Algorithmus:"
           pl: "PoW algorytm:"
-      SUP: 
+      SUP:
         name:
           en: "Max supply:"
           es: "Suministro Máximo:"
@@ -85,8 +85,8 @@ content:
           es: "~18.4 millón"
           eo: "~18.4 milionoj"
           de: "~18.4 Millionen"
-          pl: "~18.4 milionó"
-      RWD: 
+          pl: "~18.4 milionów"
+      RWD:
         name:
           en: "Block reward:"
           es: "Recompensa de Bloque:"
@@ -99,7 +99,7 @@ content:
           eo: "glate malkreskanta"
           de: "langsam abnehmen"
           pl: "płynnie malejąca"
-      TIM: 
+      TIM:
         name:
           en: "Block time:"
           es: "Tiempo de Bloqueo:"
@@ -112,7 +112,7 @@ content:
           eo: "240 sekundoj"
           de: "240 Sekunden"
           pl: "240 sekund"
-      DIF: 
+      DIF:
         name:
           en: "Difficulty:"
           es: "Dificultad:"
@@ -223,7 +223,7 @@ content:
           es: "La poda permite que la cadena de bloques permanezca pequeña y no supere los dispositivos con almacenamiento limitado. Esta característica también mejora el anonimato al reducir los ataques basados ​​en la edad."
           eo: "Pritondado lasas la blokĉenon resti malgranda kaj ne elkreski el aparatoj kun limigita konserv-kapablo. Tiu funkcio ankaŭ plibonigas anonimecon per redukti aĝ-bazitajn atakojn."
           de: "Durch das Beschneiden (pruning) der Blockchain bleibt diese sehr klein und wächst nicht zu schnell für Geräte mit limitiertem Speicherplatz. Dies verbessert ausserdem die Anonymität indem es altersbasierte Attacken reduziert."
-          pl: "Przycinanie(Pruning) pozwala blockchain'owi pozostać małym i przyjazdnym urządzeniom z ograniczoną pamięcią. Ta funkcja poprawia również anonimowość, zmniejszając ataki oparte na wieku."
+          pl: "Przycinanie (pruning) pozwala blockchain'owi pozostać małym i przyjazdnym urządzeniom z ograniczoną pamięcią. Ta funkcja poprawia również anonimowość, zmniejszając ataki oparte na wieku."
       item4:
         name:
           en: "Fast syncing"
@@ -259,10 +259,10 @@ content:
   download:
     heading:
       en: "Download AEON"
-      es: "Descargar AEON" 
+      es: "Descargar AEON"
       eo: "Elŝuti AEON"
       de: "AEON herunterladen"
-      pl: "Pobirz AEON"
+      pl: "Pobierz AEON"
     latestRelease:
       en: "Latest release:"
       es: "Último lanzamiento:"
@@ -326,7 +326,7 @@ content:
         eo: "Alklaku ĉi tie por iri al nia retmesaĝa abonpaĝo."
         de: "Klicke hier um dich in unseren eMail-Verteiler einzutragen."
         pl: "Kliknij tutaj, aby przejść do naszej strony subskrypcji e-mail."
-    column2: 
+    column2:
       heading1:
         en: "Exchanges"
         es: "Intercambios"
@@ -353,7 +353,7 @@ content:
         de: "AEON Links"
         pl: "AEON Linki"
   footerBottom:
-    madeWith: 
+    madeWith:
       en: "Made with <i class='icon-heart'></i> in crypto space"
       es: "Echo con <i class='icon-heart'></i> en el espacio crypto"
       eo: "Farita per <i class='icon-heart'></i> en ĉifriko-spac"
