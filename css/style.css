@@ -1390,3 +1390,31 @@ Media Queries
 	margin-top: 20px;
     }
 }
+/* ==========================================================================
+Custom additions to site
+ ========================================================================== */
+
+.langbtn {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.lang-dropdown-child {
+    display: none;
+}
+.lang-dropdown-child a {
+    text-decoration: none;
+    display: block;
+}
+.show-child {
+    position: absolute;
+    display: block;
+    background: white;
+}
+.nav>li>div { 
+  padding: 10px 15px
+}
