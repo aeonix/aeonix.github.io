@@ -68,15 +68,15 @@ After completing the above, you should be ready to submit a Pull Request to be r
 
 #### Translation credits:
 * English: Multiple sources.
-* Espanol: @420Coupe
-* Esperanto: @marmulak
-* Deutch: @AmorbiaCacoa
-* Polish: @ArqTras
+* Espanol: [@420Coupe](https://github.com/420Coupe)
+* Esperanto: [@marmulak](https://github.com/marmulak)
+* Deutch: [@AmorbiaCacoa](https://github.com/AmorbiaCacoa)
+* Polish: [@ArqTras](https://github.com/ArqTras)
 
 
 ### Multi-language credits:
-@camthegeek - new site structure + introduction of multi-language into existing theme
-@aeon1234 - simplifying multi-language structure.
+* [@camthegeek](https://github.com/camthegeek) - new site structure + introduction of multi-language into existing theme
+* [@aeon1234](https://github.com/aeon1234) - simplifying multi-language structure.
 
 ## Reaching out
 
