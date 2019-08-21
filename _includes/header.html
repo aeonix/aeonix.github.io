@@ -22,17 +22,17 @@
               <li><a href="#downloads">{{ site.menu.download[page.lang] }}</a></li>
               <li><a href="#presskit">{{ site.menu.pressKit[page.lang] }}</a></li>
               <li><a href="https://www.aeonfunding.com">{{ site.menu.funding[page.lang] }}</a></li>
-              <li>
-                <div class="lang-dropdown">
-                  <button class="langbtn">{{ site.menu.lang[page.lang] }} <i class="fa fa-caret-down lightblue" aria-hidden="true"></i></button>
-                  <div class="lang-dropdown-child">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ site.menu.lang[page.lang] }} <span class="caret"></span></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-menu-language">
                     <a href="/">English</a>
                     <a href="/index.es">Espanol</a>
                     <a href="/index.de">Deutsch</a>
                     <a href="/index.pl">Polski</a>
                     <a href="/index.eo">Esperanto</a>
                   </div>
-                </div>
+                </ul>
               </li>
             </ul>
           </div>
