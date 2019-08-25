@@ -456,6 +456,9 @@ Headline
 .scroll-fixed-navbar .navbar-nav> li> a {
     color: #333;
 }
+.scroll-fixed-navbar .navbar-nav > li > a:focus {
+    color: #333;
+}
 .scroll-fixed-navbar .navbar-nav> li> a:hover, .scroll-fixed-navbar .navbar-nav> li.active> a, .scroll-fixed-navbar .navbar-nav> li.active> a:hover {
     color: #00a8d6;
 }
@@ -1389,4 +1392,25 @@ Media Queries
     .features {
 	margin-top: 20px;
     }
+}
+/* ==========================================================================
+Custom additions to site
+ ========================================================================== */
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+  background: none;
+}
+
+.scroll-fixed-navbar .navbar-nav > .open > a, .scroll-fixed-navbar .navbar-nav > .open > a:focus, .scroll-fixed-navbar .navbar-nav > .open > a:hover {
+  color: #000;
+}
+
+.nav>li>div { 
+  padding: 15px 0px 15px 15px;
+}
+
+.dropdown-menu>.dropdown-menu-language>a {
+  display: block;
+  padding: 3px 20px;
+  white-space: nowrap;	
 }
