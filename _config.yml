@@ -21,7 +21,7 @@ title:
   pl: "AEON - Prywatna cyfrowa waluta przyjazna urządzeniom mobilnym"
   rs: "AEON - Мобильная дружественная частная цифровая валюта"
   cn: "AEON - 可用于移动设备的隐私性电子货币"
-  pig: "AEONAY - OBILEMAY-riendlyfay rivatepay igitalday urrencycay"
+  pig: "AEON - OBILEMAY-riendlyfay rivatepay igitalday urrencycay"
 description:
   en: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
   es: "Basado en CryptoNote, AEON es una moneda privada digital con características livianas como la poda de blockchain. Ven a ver al hermano pequeño de Monero!"
@@ -51,7 +51,7 @@ index:
   pl: index.pl
   rs: index.rs
   cn: index.cn
-
+  pig: index.pig
 # Build settings
 markdown: kramdown
 theme: minima
