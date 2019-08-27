@@ -216,7 +216,7 @@ content:
         pl: "Domyślnie AEON wykorzystuje system kryptograficzny do transferu funduszy bez informacji identyfikujących każdego użytkownika, które stają się widoczne w blockchainie."
         rs: "По умолчанию AEON использует криптографическую систему для перевода средств, при этом идентификационная информация каждого пользователя не отображается в цепочке блоков."
         cn: "在默认状态下，AEON使用的加密系统确保资金交易中涉及的每一位用户资料在区块链上都是保密的。"
-        pig: "ybay efaultday , aeon utilizesyay ayay ographiccryptay emsystay otay ansfertray undsfay ithoutway ethay identifyingyay informationyay ofyay eachyay useryay ecomingbay isiblevay onyay ethay ockchainblay."
+        pig: "ybay efaultday, aeon utilizesyay ayay ographiccryptay emsystay otay ansfertray undsfay ithoutway ethay identifyingyay informationyay ofyay eachyay useryay ecomingbay isiblevay onyay ethay ockchainblay."
     feature3:
       heading:
         en: "Untraceable"
@@ -226,6 +226,7 @@ content:
         pl: "Nie do wyśledzenia"
         rs: "Не отслеживается"
         cn: "不可追踪"
+        pig: "Untraceableyay"
       desc:
         en: "AEON uses ring signatures to make transactions untraceable, meaning it is very difficult for blockchain analysis to determine if funds have been spent."
         es: "AEON usa firmas de anillo para hacer que las transacciones sean imposibles de rastrear, lo que significa que es muy difícil para el análisis de blockchain determinar si se han gastado los fondos."
@@ -234,6 +235,7 @@ content:
         pl: "AEON używa sygnatur pierścieniowych, aby transakcje były niemożliwe do wykrycia, co oznacza, że analiza bloków jest bardzo trudna do określenia, czy środki zostały wydane."
         rs: "AEON использует кольцевые подписи чтобы сделать транзакции не отслеживаемыми, а это означает, что при анализе блокчейна очень сложно определить, были ли потрачены средства."
         cn: "AEON采用的环签名令每一笔交易难以被追踪，即使尝试进行区块链分析也无法知道交易资金的走向。"
+        pig: "AEONyay usesyay ingray ignaturessay otay akemay ansactionstray untraceableyay, eaningmay ityay isyay eryvay ifficultday orfay ockchainblay analysisyay otay etermineday ifyay undsfay avehay eenbay entspay."
   difference:
     heading:
       en: "How is AEON different from Monero?"
@@ -243,6 +245,7 @@ content:
       pl: "Czym AEON różni się od Monero?"
       rs: "Чем AEON отличается от Monero?"
       cn: "AEON和门罗币有何不同？"
+      pig: "Owhay isyay AEON ifferentday romfay Oneromay?"
     text:
       en: "Compared to our CryptoNote big brother, here are AEON's main advantages:"
       es: "En comparación con nuestro hermano mayor de CryptoNote, aquí están las principales ventajas de AEON:"
@@ -251,6 +254,8 @@ content:
       pl: "W porównaniu do naszego starszego brata, oto główne zalety AEON:"
       rs: "По сравнению с нашим старшим братом CryptoNote, вот основные преимущества AEON:"
       cn: "在与我们的CryptoNote前辈们相比较之下，AEON的主要优势包括："
+      pig: "Omparedcay otay ouryay CryptoNote igbay rotherbay, erehay areyay AEON's ainmay advantagesyay:"
+      
     listItems:
       item1:
         name:
@@ -261,6 +266,7 @@ content:
           pl: "Przyjazny dla urządzeń mobilnych"
           rs: "Дружелюбность к мобильным устройствам"
           cn: "可用于移动设备"
+          pig: "Obilemay-riendlyfay"
         value:
           en: "1 MB scratchpad allows AEON to run efficiently on mobile devices alongside regular laptops and desktops."
           es: "1 MB scratchpad permite que AEON se ejecute de manera eficiente en dispositivos móviles junto con computadoras portátiles y de escritorio normales."
@@ -269,6 +275,7 @@ content:
           pl: "1 MB scratchpad pozwala AEON na wydajne działanie na urządzeniach mobilnych wraz ze zwykłymi laptopami i komputerami stacjonarnymi."
           rs: "Благодаря 1 Мб scratchpad-памяти, AEON может эффективно работать на мобильных устройствах наряду с обычными ноутбуками и настольными компьютерами."
           cn: "1 MB的暂存器令AEON可以在移动设备上高效运转，包含手机、普通的笔记本电脑以及台式电脑。"
+          pig: "1 MB ratchpadscay allowsyay AEON otay unray efficientlyyay onyay obilemay evicesday alongsideyay egularray aptopslay andyay esktopsday."
       item2:
         name:
           en: "Different proof-of-work"
@@ -278,6 +285,7 @@ content:
           pl: "Inny proof-of-work"
           rs: "Другой proof-of-work алгоритм"
           cn: "工作量证明的不同"
+          pig: "Ifferentday roofpay-ofyay-orkway"
         value:
           en: "AEON's lightweight PoW (CryptoNote-Lite) allows for faster verification of the blockchain."
           es: "AEON's PoW liviana (CryptoNote-Lite) permite una verificación más rápida de la cadena de bloques."
@@ -286,6 +294,7 @@ content:
           pl: "Lekki PoW (CryptoNote-Lite) AEONa pozwala na szybszą weryfikację blockchain."
           rs: "Легковесный PoW (CryptoNote-Lite) позволяет AEON быстрее проверять блокчейн."
           cn: "AEON采用轻量工作量证明（CryptoNote-Lite）演算法，加速了在区块链上的认证。"
+          pig: "AEON's ightweightlay oWPay (CryptoNote-Lite) allowsyay orfay asterfay erificationvay ofyay ethay ockchainblay. "
       item3:
         name:
           en: "Blockchain pruning for scalability"
@@ -295,6 +304,7 @@ content:
           pl: "Przycinanie Blockchaina dla skalowalności"
           rs: "Обрезка блокчейна для масштабируемости"
           cn: "区块链修剪的可扩展性"
+          pig: "Lockchainbay uningpray orfay alabilityscay"
         value:
           en: "Pruning allows the blockchain to stay small and not outgrow devices with limited storage. This feature also improves anonymity by reducing age-based attacks."
           es: "La poda permite que la cadena de bloques permanezca pequeña y no supere los dispositivos con almacenamiento limitado. Esta característica también mejora el anonimato al reducir los ataques basados ​​en la edad."
@@ -303,6 +313,7 @@ content:
           pl: "Przycinanie (pruning) pozwala blockchain'owi pozostać małym i przyjazdnym urządzeniom z ograniczoną pamięcią. Ta funkcja poprawia również anonimowość, zmniejszając ataki oparte na wieku."
           rs: "Обрезка, позволяет блокчейну оставаться небольшим и не разрастаться на устройствах с ограниченным объемом памяти. Эта функция также улучшает анонимность, уменьшая количество возрастных атак."
           cn: "修剪模式将区块数据维持在较小的状态，不会超出用户设备的内存上限。修剪模式还可以帮助防止任何针对过去交易记录的攻击，从而更加确保匿名性。"
+          pig: "uningPray allowsyay ethay ockchainblay otay aystay allsmay andyay otnay outgrowyay evicesday ithway imitedlay oragestay. isThay eaturefay alsoyay improvesyay anonymityyay ybay educingray ageyay-asedbay attacksyay. 
       item4:
         name:
           en: "Fast syncing"
@@ -312,6 +323,7 @@ content:
           pl: "Szybka synchronizacja"
           rs: "Быстрая синхронизация"
           cn: "快速同步"
+          pig: "Astfay yncingsay"
         value:
           en: "Compared to Bitcoin variants, CryptoNote coins typically have higher verification, leading to more orphaned blocks. AEON helps this issue by using a 4-minute blocktime. Coupled with our lighter PoW, sync times on lower end devices can be improved by 10x or more."
           es: "En comparación con las variantes de Bitcoin, las monedas de CryptoNote suelen tener una verificación más alta, lo que lleva a más bloques huérfanos. AEON ayuda con este problema utilizando un tiempo de bloqueo de 4 minutos. Junto con nuestro PoW más ligero, los tiempos de sincronización en los dispositivos de extremo inferior se pueden mejorar por 10 veces o más."
@@ -320,6 +332,7 @@ content:
           pl: "W porównaniu z wariantami Bitcoin waluty CryptoNote mają zazwyczaj wyższą weryfikację, co prowadzi do bardziej osieroconych bloków. AEON pomaga w tym problemie, korzystając z 4-minutowego czasu bloku. W połączeniu z naszym lżejszym PoW, czasy synchronizacji na urządzeniach niższej klasy mogą zostać poprawione o 10x lub więcej."
           rs: "По сравнению с Биткоин вариациями, монеты CryptoNote, как правило, имеют более высокую степень верификации, что приводит к появлению большего количества заброшенных блоков. AEON помогает решить эту проблему, используя 4-минутный блок-тайм. В сочетании с более легким PoW, время синхронизации на устройствах может быть уменьшено в 10 и более раз."
           cn: "对比比特币的分支币种，使用CryptoNote的货币通常运用更高级别的认证，导致了更多孤块的出现。AEON对于这个问题的解决方法是4分钟的区块产生间隔时间，再加上我们的轻量工作量证明，这些帮助低端设备的同步时间加快10倍或以上。"
+          pig: "omparedCay otay Bitcoin ariantsvay, CryptoNote oinscay ypicallytay avehay igherhay erificationvay, eadinglay otay oremay orphanedyay ocksblay. AEON elpshay isthay issueyay ybay usingyay ayay 4-inutemay ocktimeblay. oupledCay ithway ouryay ighterlay oWPay, yncsay imestay onyay owerlay endyay evicesday ancay ebay improvedyay ybay 10xay oryay oremay. "
       item5:
         name:
           en: "Optional lightweight transfers"
@@ -329,6 +342,7 @@ content:
           pl: "Opcjonalne lekkie transfery"
           rs: "Опциональные легковесные переводы"
           cn: "可自选轻型转账交易"
+          pig: "Optionalyay ightweightlay ransferstay"
         value:
           en: "As a CryptoNote coin, payments are still anonymous by default. But unlike Monero, AEON also allows for <em>traceable</em> transfers. These are a faster lower-fee option for non-sensitive payments, like transferring to/from exchanges."
           es: "Como moneda de CryptoNote, los pagos siguen siendo anónimos de forma predeterminada. Pero a diferencia de Monero, AEON también permite transferencias <em>rastreables</em>. Estas son una opción más rápida de tarifa más baja para pagos no sensibles, como la transferencia a/desde intercambios."
@@ -337,6 +351,7 @@ content:
           pl: "Jako waluta CryptoNote płatności są domyślnie anonimowe. Ale w przeciwieństwie do Monero, AEON pozwala również na <em> śledzenie </em> transferów. Są to szybsze opcje niższych opłat w przypadku płatności niewrażliwych, takich jak transfer do / z giełdy."
           rs: "Как в CryptoNote монете, по умолчанию платежи остаются анонимными. Но в отличие от Monero, AEON также допускает <em>отслеживаемые</em> переводы. Это более быстрый и дешевый вариант для несекретных платежей, таких как перевод на биржу или с биржи."
           cn: "作为基于CryptoNote的币种，在默认状态下的交易都是匿名的，和门罗币不同的是，AEON用户可以自行选择进行 <em>可追踪</em> 的交易。这是一项速度更快和费用更低的选择，用户在进行不敏感的交易的时候可以使用此选项，比如转账到交易平台/或者从平台收款的时候。"
+          pig: ""
     paragraph:
       en: "Overall, AEON seeks to be a lightweight-Monero, similar to how Litecoin seeks to be a lightweight-Bitcoin. While still drawing from the technical advantages of Monero and CryptoNote, AEON has distinct development goals and an independent community that enable it to thrive as its own currency."
       es: "En general, AEON busca ser un Monero liviano, similar a cómo Litecoin busca ser un Bitcoin liviano. Mientras sigue aprovechando las ventajas técnicas de Monero y CryptoNote, AEON tiene objetivos de desarrollo distintos y una comunidad independiente que le permite prosperar como su propia moneda."
