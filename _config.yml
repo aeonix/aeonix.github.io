@@ -19,18 +19,24 @@ title:
   eo: "AEON - Mobile-friendly private digital currency"
   de: "AEON - Mobile-friendly private digital currency"
   pl: "AEON - Prywatna cyfrowa waluta przyjazna urządzeniom mobilnym"
+  rs: "AEON - Мобильная дружественная частная цифровая валюта"
+  cn: "AEON - 可用于移动设备的隐私性电子货币"
 description:
   en: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
   es: "Basado en CryptoNote, AEON es una moneda privada digital con características livianas como la poda de blockchain. Ven a ver al hermano pequeño de Monero!"
   eo: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
   de: "Based on CryptoNote, AEON is a private digital currency with lightweight features like blockchain pruning. Come check out Monero's little brother!"
   pl: "Bazująca na CryptoNote, AEON jest prywatną walutą cyfrową z lekkimi funkcjami, takimi jak przycinanie blockchain. Chodź i sprawdź młodszego brata Monero!"
+  rs: "Основанный на CryptoNote, AEON - это частная цифровая валюта с такими легкими функциями, как сокращение блокчейна. Приходите проверить маленький брат Монеро!"
+  cn: "建立在CryptoNote的基础上，AEON是一种轻量的隐私电子货币，比如区块链修剪技术的使用。来了解一下这位门罗币的小弟的特点吧"
 tagline:
   en: "<strong>AEON</strong> isn't just a currency.<br/><strong>It's a lifestyle.</strong>"
   es: "<strong>AEON</strong> no es solo una moneda.<br/><strong>Es un estilo de vida.</strong>"
   eo: "<strong>AEON</strong> ne simple estas valuto.<br/><strong>Ĝi estas vivmaniero.</strong>"
   de: "<strong>AEON</strong> ist nicht einfach nur eine Währung.<br/><strong>Es ist eine Lebenseinstellung.</strong>"
   pl: "<strong>AEON</strong> nie jest tylko walutą.<br/><strong>To styl życia.</strong>"
+  rs: "<strong>AEON</strong> это не просто валюта.<br/><strong>Это стиль жизни.</strong>"
+  cn: "<strong>AEON</strong> 不仅仅是一种货币，<br/><strong>而是一种生活方式。</strong>"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 
@@ -41,6 +47,8 @@ index:
   eo: index.eo
   de: index.de
   pl: index.pl
+  rs: index.rs
+  cn: index.cn
 
 # Build settings
 markdown: kramdown
@@ -59,12 +67,16 @@ content:
       eo: "Malcentra cifereca valuto iom post iom estas fariĝanta normala parto de la ĉiutaga vivo. Tamen, ĉies ĉefa interreta aparato plu restas la poŝtelefono, ia aparato kun malforta ĉefprocezilo kaj limigita konserv-kapablo."
       de: "Dezentralisierte, digitale Währungen werden langsam ein normaler Bestandteil unseres täglichen Lebens. Das Smartphone das Gerät der Wahl der meisten Menschen um ins Internet zu gehen, ein Gerät mit schwachen CPUs und limitiertem Speicherplatz."
       pl: "Zdecentralizowana waluta cyfrowa powoli staje się normalną częścią codziennego życia. Jednak głównym urządzeniem internetowym wszystkich użytkowników jest nadal ich telefon komórkowy, urządzenie z procesorem o małej mocy i ograniczoną dostępną pamięcią."
+      rs: "Децентрализованная цифровая валюта постепенно становится повседневной частью нашей жизни. Тем не менее, основным интернет-устройством для всех по-прежнему остается мобильный телефон, устройство с маломощным процессором и ограниченной доступной памятью."
+      cn: "去中心化的电子货币正在慢慢成为日常生活的一部分。我们每个人使用的主要网络设备仍然是我们的手机，手机的中央处理器性能以及存储空间都有限。"
     paragraph2:
       en: "AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own."
       es: "AEON se trata de habilitar esta era, habilitar una era en la que todas las personas de todo el mundo tengan la libertad de enviar y recibir dinero de manera privada con cualquier dispositivo que ya posean."
       eo: "AEON temas pri ebligi tiun epokon, en kiu ĉiuj homoj ĉie havas la liberecon private sendi kaj ricevi monon per iu ajn aparato, kiun ili jam posedas"
       de: "AEON wird eine neue Ära starten, eine Zeit in der alle Menschen, überall, jederzeit die Freiheit genießen privat Geld zu versenden und zu empfangen, egal was fuer ein Gerät sie gerade verwenden."
       pl: "AEON ma na celu włączenie ery, w której wszyscy ludzie na całym świecie mogą swobodnie wysyłać i otrzymywać pieniądze za pomocą dowolnego gadżetu, który już posiadają."
+      rs: "AEON это создание условий, когда все люди во всем мире могут свободно отправлять и получать деньги с помощью любого гаджета, которым они уже владеют."
+      cn: "AEON的意义在于贴合这个时代的需求，使在世界各地的每个人都可以自由使用任何装置去进行私密的汇款以及收款。"
     listItems:
       POW: #pow algorithm
         name:
@@ -73,6 +85,8 @@ content:
           eo: "Laborpruvo:"
           de: "PoW Algorithmus:"
           pl: "PoW algorytm:"
+          rs: "PoW алгоритм"
+          cn: "PoW 工作量证明演算法"
       SUP:
         name:
           en: "Max supply:"
@@ -80,12 +94,16 @@ content:
           eo: "Maks. provizo:"
           de: "Maximale Verfügbarkeit:"
           pl: "Maksymalna podaż:"
+          rs: "Максимальное количество"
+          cn: "最高限额供应"
         value:
           en: "~18.4 million"
           es: "~18.4 millón"
           eo: "~18.4 milionoj"
           de: "~18.4 Millionen"
           pl: "~18.4 milionów"
+          rs: "~18.4 миллиона"
+          cn: "1千8百40万"
       RWD:
         name:
           en: "Block reward:"
@@ -93,12 +111,16 @@ content:
           eo: "Blok-rekompenco:"
           de: "Blockbelohnung:"
           pl: "Nagoda za blok:"
+          rs: "Награда за блок"
+          cn: "区块奖励"
         value:
           en: "smoothly decreasing"
           es: "disminuyendo suavemente"
           eo: "glate malkreskanta"
           de: "langsam abnehmen"
           pl: "płynnie malejąca"
+          rs: "плавно понижающаяся"
+          cn: "逐渐减少"
       TIM:
         name:
           en: "Block time:"
@@ -106,12 +128,16 @@ content:
           eo: "Blok-tempo:"
           de: "Zeit pro Block:"
           pl: "Czas bloku:"
+          rs: "Время нахождения блока"
+          cn: "区块时间"
         value:
           en: "240 seconds"
           es: "240 segundos"
           eo: "240 sekundoj"
           de: "240 Sekunden"
           pl: "240 sekund"
+          rs: "240 секунд"
+          cn: "240秒"
       DIF:
         name:
           en: "Difficulty:"
@@ -119,12 +145,16 @@ content:
           eo: "Malfacileco:"
           de: "Schwierigkeit:"
           pl: "Trudność:"
+          rs: "Сложность"
+          cn: "难度"
         value:
           en: "retargets at every block"
           es: "readjusta en cada bloque"
           eo: "recelas je ĉiu bloko"
           de: "ändert sich mit jedem neuen Block"
           pl: "zmienna co każdy blok"
+          rs: "перенастраивается для каждого блока"
+          cn: "每个区块重新定义"
   features:
     heading:
       en: " A lightweight <span class='blue'>CryptoNote</span> digital currency"
@@ -132,6 +162,8 @@ content:
       eo: "Malpeza ĉifromono kun la povo de <span class='blue'>CryptoNote</span>"
       de: "Eine leichte, digitale <span class='blue'>CryptoNote</span> Währung"
       pl: "Lekka <span class='blue'>CryptoNote</span> cyfrowa waluta"
+      rs: "Легковесная <span class='blue'>CryptoNote</span> цифровая валюта"
+      cn: "一种轻量级的 <span class='blue'>CryptoNote</span>电子货币"
     feature1:
       heading:
         en: "Secure"
@@ -139,12 +171,16 @@ content:
         eo: "Sekureca"
         de: "Sicher"
         pl: "Bezpieczna"
+        rs: "Безопасный"
+        cn: "安全"
       desc:
         en: "Each transaction is secured with robust cryptography and distributed through a global peer-to-peer consensus network."
         es: "Cada transacción se asegura con criptografía robusta y se distribuye a través de una red de consenso global de persona a persona."
         eo: "Ĉiu transakcio estas sekurigita per forta ĉifrado kaj disdonita tra tutmonda samtavola reto de konsento."
         de: "Jede Transaktion ist durch starke Kryptografie gesichert und wird durch ein globales Peer-to-Peer Netzwerk verteilt."
         pl: "Każda transakcja jest zabezpieczona solidną kryptografią i dystrybuowana za pośrednictwem globalnej sieci konsensusowej typu peer-to-peer."
+        rs: "Каждая сделка защищена надежной криптографией и распространяется через глобальную пиринговую сеть для достижения консенсуса."
+        cn: "每一笔交易都在强大的加密功能下进行，并且分散在全球范围内的点对点共识网络中。"
     feature2:
       heading:
         en: "Private"
@@ -152,12 +188,16 @@ content:
         eo: "Privateca"
         de: "Privat"
         pl: "Prywatna"
+        rs: "Приватность"
+        cn: "隐私"
       desc:
         en: "By default, AEON utilizes a cryptographic system to transfer funds without the identifying information of each user becoming visible on the blockchain."
         es: "De forma predeterminada, AEON utiliza un sistema criptográfico para transferir fondos sin que la información de identificación de cada usuario se haga visible en la cadena de bloques."
         eo: "AEON implicite utiligas ĉifran sistemon por transferi monon sen la identiga informo pri ĉiu uzanto fariĝi videbla en la blokĉeno."
         de: "AEON verwendet ein voreingestelltes kryptografisches System um das anonyme Versenden und Empfangen von Überweisungen sicherzustellen, ohne dass Informationen, die die beteiligten Benutzer identifizieren könnten, in der Blockchain sichtbar werden."
         pl: "Domyślnie AEON wykorzystuje system kryptograficzny do transferu funduszy bez informacji identyfikujących każdego użytkownika, które stają się widoczne w blockchainie."
+        rs: "По умолчанию AEON использует криптографическую систему для перевода средств, при этом идентификационная информация каждого пользователя не отображается в цепочке блоков."
+        cn: "在默认状态下，AEON使用的加密系统确保资金交易中涉及的每一位用户资料在区块链上都是保密的。"
     feature3:
       heading:
         en: "Untraceable"
@@ -165,12 +205,16 @@ content:
         eo: "Nesekvebla"
         de: "Nicht nachzuverfolgen"
         pl: "Nie do wyśledzenia"
+        rs: "Не отслеживается"
+        cn: "不可追踪"
       desc:
         en: "AEON uses ring signatures to make transactions untraceable, meaning it is very difficult for blockchain analysis to determine if funds have been spent."
         es: "AEON usa firmas de anillo para hacer que las transacciones sean imposibles de rastrear, lo que significa que es muy difícil para el análisis de blockchain determinar si se han gastado los fondos."
         eo: "AEON uzas ring-signojn por fari transakciojn nesekveblaj. Tio signifas, ke estas tre malfacile por blokĉen-analizantoj determini ĉu mono estas elspezita aŭ ne."
         de: "AEON verwendet Ringsignaturen um Überweisungen nicht nachverfolgbar zu machen. Das bedeutet, es ist sehr schwierig durch eine Analyse der Blockchain herauszufinden, welche oder ob Überweisungen getätigt wurden."
         pl: "AEON używa sygnatur pierścieniowych, aby transakcje były niemożliwe do wykrycia, co oznacza, że analiza bloków jest bardzo trudna do określenia, czy środki zostały wydane."
+        rs: "AEON использует кольцевые подписи чтобы сделать транзакции не отслеживаемыми, а это означает, что при анализе блокчейна очень сложно определить, были ли потрачены средства."
+        cn: "AEON采用的环签名令每一笔交易难以被追踪，即使尝试进行区块链分析也无法知道交易资金的走向。"
   difference:
     heading:
       en: "How is AEON different from Monero?"
@@ -178,12 +222,16 @@ content:
       eo: "Kiel AEON malsamas kun Monero?"
       de: "Was unterscheidet AEON von Monero?"
       pl: "Czym AEON różni się od Monero?"
+      rs: "Чем AEON отличается от Monero?"
+      cn: "AEON和门罗币有何不同？"
     text:
       en: "Compared to our CryptoNote big brother, here are AEON's main advantages:"
       es: "En comparación con nuestro hermano mayor de CryptoNote, aquí están las principales ventajas de AEON:"
       eo: "Komparate al nia CryptoNote-fratego, AEON posedas la sekvajn avantaĝojn:"
       de: "Verglichen mit unserem großen CryptoNote Bruder Monero, sind die Vorteile von AEON:"
       pl: "W porównaniu do naszego starszego brata, oto główne zalety AEON:"
+      rs: "По сравнению с нашим старшим братом CryptoNote, вот основные преимущества AEON:"
+      cn: "在与我们的CryptoNote前辈们相比较之下，AEON的主要优势包括："
     listItems:
       item1:
         name:
@@ -192,12 +240,16 @@ content:
           eo: "Bona por porteblaj aparatoj"
           de: "Mobilfreundlich"
           pl: "Przyjazny dla urządzeń mobilnych"
+          rs: "Дружелюбность к мобильным устройствам"
+          cn: "可用于移动设备"
         value:
           en: "1 MB scratchpad allows AEON to run efficiently on mobile devices alongside regular laptops and desktops."
           es: "1 MB scratchpad permite que AEON se ejecute de manera eficiente en dispositivos móviles junto con computadoras portátiles y de escritorio normales."
           eo: "1-Mbajta datenujo ebligas AEON labori efike sur porteblaj aparatoj same kiel pli grandaj komputiloj."
           de: "Ein scratchpad von 1 MB erlaubt es AEON sehr effizient auf mobilen Geräten zu laufen und nebenbei natürlich auch auf Laptops und Desktop PCs zu brillieren."
           pl: "1 MB scratchpad pozwala AEON na wydajne działanie na urządzeniach mobilnych wraz ze zwykłymi laptopami i komputerami stacjonarnymi."
+          rs: "Благодаря 1 Мб scratchpad-памяти, AEON может эффективно работать на мобильных устройствах наряду с обычными ноутбуками и настольными компьютерами."
+          cn: "1 MB的暂存器令AEON可以在移动设备上高效运转，包含手机、普通的笔记本电脑以及台式电脑。"
       item2:
         name:
           en: "Different proof-of-work"
@@ -205,12 +257,16 @@ content:
           eo: "Malsama pruvo de laboro"
           de: "Unterschiedlicher proof-of-work (PoW) Algorithmus"
           pl: "Inny proof-of-work"
+          rs: "Другой proof-of-work алгоритм"
+          cn: "工作量证明的不同"
         value:
           en: "AEON's lightweight PoW (CryptoNote-Lite) allows for faster verification of the blockchain."
           es: "AEON's PoW liviana (CryptoNote-Lite) permite una verificación más rápida de la cadena de bloques."
           eo: "La malpeza laborpruvo de AEON (CrytpoNight-Lite) ebligas pli rapidan konfirmadon de la blokĉeno."
           de: "AEON's leichtgewichtiger PoW (CryptoNote-Lite) erlaubt es die Blockchain schneller zu verifizieren."
           pl: "Lekki PoW (CryptoNote-Lite) AEONa pozwala na szybszą weryfikację blockchain."
+          rs: "Легковесный PoW (CryptoNote-Lite) позволяет AEON быстрее проверять блокчейн."
+          cn: "AEON采用轻量工作量证明（CryptoNote-Lite）演算法，加速了在区块链上的认证。"
       item3:
         name:
           en: "Blockchain pruning for scalability"
@@ -218,12 +274,16 @@ content:
           eo: "Pritondado de la blokĉeno por skalebleco"
           de: "Reduzierung der Blockchain für bessere Skalierbarkei"
           pl: "Przycinanie Blockchaina dla skalowalności"
+          rs: "Обрезка блокчейна для масштабируемости"
+          cn: "区块链修剪的可扩展性"
         value:
           en: "Pruning allows the blockchain to stay small and not outgrow devices with limited storage. This feature also improves anonymity by reducing age-based attacks."
           es: "La poda permite que la cadena de bloques permanezca pequeña y no supere los dispositivos con almacenamiento limitado. Esta característica también mejora el anonimato al reducir los ataques basados ​​en la edad."
           eo: "Pritondado lasas la blokĉenon resti malgranda kaj ne elkreski el aparatoj kun limigita konserv-kapablo. Tiu funkcio ankaŭ plibonigas anonimecon per redukti aĝ-bazitajn atakojn."
           de: "Durch das Beschneiden (pruning) der Blockchain bleibt diese sehr klein und wächst nicht zu schnell für Geräte mit limitiertem Speicherplatz. Dies verbessert ausserdem die Anonymität indem es altersbasierte Attacken reduziert."
           pl: "Przycinanie (pruning) pozwala blockchain'owi pozostać małym i przyjazdnym urządzeniom z ograniczoną pamięcią. Ta funkcja poprawia również anonimowość, zmniejszając ataki oparte na wieku."
+          rs: "Обрезка, позволяет блокчейну оставаться небольшим и не разрастаться на устройствах с ограниченным объемом памяти. Эта функция также улучшает анонимность, уменьшая количество возрастных атак."
+          cn: "修剪模式将区块数据维持在较小的状态，不会超出用户设备的内存上限。修剪模式还可以帮助防止任何针对过去交易记录的攻击，从而更加确保匿名性。"
       item4:
         name:
           en: "Fast syncing"
@@ -231,12 +291,16 @@ content:
           eo: "Rapida sinkronigado"
           de: "Schnelle Synchronisation"
           pl: "Szybka synchronizacja"
+          rs: "Быстрая синхронизация"
+          cn: "快速同步"
         value:
           en: "Compared to Bitcoin variants, CryptoNote coins typically have higher verification, leading to more orphaned blocks. AEON helps this issue by using a 4-minute blocktime. Coupled with our lighter PoW, sync times on lower end devices can be improved by 10x or more."
           es: "En comparación con las variantes de Bitcoin, las monedas de CryptoNote suelen tener una verificación más alta, lo que lleva a más bloques huérfanos. AEON ayuda con este problema utilizando un tiempo de bloqueo de 4 minutos. Junto con nuestro PoW más ligero, los tiempos de sincronización en los dispositivos de extremo inferior se pueden mejorar por 10 veces o más."
           eo: "Komparate al variantoj de Bitcoin, CryptoNote-monoj ofte havas pli altan konfirmadon, kaŭzante pli da orf-blokoj. AEON helpas tiun problemon per uzi 4-minutan blok-tempon. Kune kun nia pli malpeza laborpruvo, la sinkronig-tempo de pli malfortaj aparatoj povas pliboniĝi dekoble aŭ eĉ pli."
           de: "Verglichen mit Varianten von Bitcoin haben CryptoNote Währungen oft eine längere Verifikation von Überweisungen, was zu mehr verwaisten Blocks führt. AEON vermeidet dieses Problem indem es eine Blockzeit von 4 Minuten verwendet. Gekoppelt mit unserem leichtgewichtigen PoW führt dies zu kürzeren Synchronisationszeiten auf Geräten mit niedrigerer Leistung. Die Verbesserung beträgt 10-fach oder sogar mehr."
           pl: "W porównaniu z wariantami Bitcoin waluty CryptoNote mają zazwyczaj wyższą weryfikację, co prowadzi do bardziej osieroconych bloków. AEON pomaga w tym problemie, korzystając z 4-minutowego czasu bloku. W połączeniu z naszym lżejszym PoW, czasy synchronizacji na urządzeniach niższej klasy mogą zostać poprawione o 10x lub więcej."
+          rs: "По сравнению с Биткоин вариациями, монеты CryptoNote, как правило, имеют более высокую степень верификации, что приводит к появлению большего количества заброшенных блоков. AEON помогает решить эту проблему, используя 4-минутный блок-тайм. В сочетании с более легким PoW, время синхронизации на устройствах может быть уменьшено в 10 и более раз."
+          cn: "对比比特币的分支币种，使用CryptoNote的货币通常运用更高级别的认证，导致了更多孤块的出现。AEON对于这个问题的解决方法是4分钟的区块产生间隔时间，再加上我们的轻量工作量证明，这些帮助低端设备的同步时间加快10倍或以上。"
       item5:
         name:
           en: "Optional lightweight transfers"
@@ -244,18 +308,24 @@ content:
           eo: "Laŭvolaj malpezaj transferoj"
           de: "Optionale, leichtgewichtige Überweisungen"
           pl: "Opcjonalne lekkie transfery"
+          rs: "Опциональные легковесные переводы"
+          cn: "可自选轻型转账交易"
         value:
           en: "As a CryptoNote coin, payments are still anonymous by default. But unlike Monero, AEON also allows for <em>traceable</em> transfers. These are a faster lower-fee option for non-sensitive payments, like transferring to/from exchanges."
           es: "Como moneda de CryptoNote, los pagos siguen siendo anónimos de forma predeterminada. Pero a diferencia de Monero, AEON también permite transferencias <em>rastreables</em>. Estas son una opción más rápida de tarifa más baja para pagos no sensibles, como la transferencia a/desde intercambios."
           eo: "Kiel CryptoNote-mono, pagoj ankoraŭ estas implicite anonimaj. Sed malsame de Monero, AEON ankaŭ permesas <em>sekveblajn</em> transferojn. Tio estas pli rapida, pli malmultekosta elekto por ne-sekretaj pagoj, ekzemple transferoj el/al borso."
           de: "Wie bei allen CryptoNote Währungen sind Überweisungen in AEON grundsätlich anonym. Im Gegensatz zu Monero erlaubt AEON allerdings auch eine begrenzte Anzahl an <em>nachverfolgbaren</em> Transaktionen. Diese sind eine noch schnellere und kostengünstigere Option für nicht sensitive Zahlungen, wie zum Beispiel die Überweisung zu oder von Tauschbörsen."
           pl: "Jako waluta CryptoNote płatności są domyślnie anonimowe. Ale w przeciwieństwie do Monero, AEON pozwala również na <em> śledzenie </em> transferów. Są to szybsze opcje niższych opłat w przypadku płatności niewrażliwych, takich jak transfer do / z giełdy."
+          rs: "Как в CryptoNote монете, по умолчанию платежи остаются анонимными. Но в отличие от Monero, AEON также допускает <em>отслеживаемые</em> переводы. Это более быстрый и дешевый вариант для несекретных платежей, таких как перевод на биржу или с биржи."
+          cn: "作为基于CryptoNote的币种，在默认状态下的交易都是匿名的，和门罗币不同的是，AEON用户可以自行选择进行 <em>可追踪</em> 的交易。这是一项速度更快和费用更低的选择，用户在进行不敏感的交易的时候可以使用此选项，比如转账到交易平台/或者从平台收款的时候。"
     paragraph:
       en: "Overall, AEON seeks to be a lightweight-Monero, similar to how Litecoin seeks to be a lightweight-Bitcoin. While still drawing from the technical advantages of Monero and CryptoNote, AEON has distinct development goals and an independent community that enable it to thrive as its own currency."
       es: "En general, AEON busca ser un Monero liviano, similar a cómo Litecoin busca ser un Bitcoin liviano. Mientras sigue aprovechando las ventajas técnicas de Monero y CryptoNote, AEON tiene objetivos de desarrollo distintos y una comunidad independiente que le permite prosperar como su propia moneda."
       eo: "Entute, AEON strebas esti malpeza ekvivalento de Monero, simile kiel Litecoin strebas esti malpeza ekvivalento de Bitcoin. Kvankam ĝi elĉirpas teknikajn avantaĝojn de Monero kaj CryptoNote, AEON posedas siajn unikajn celojn kaj sendependan komunumon, kiuj ebligas ĝin prosperi kiel propra valuto."
       de: "Zusammengefasst ist AEON ein leichtgewichtigeres Monero, ähnlich wie Litecoin eine leichtere Alternative zu Bitcoin darstellt. Es werden die technischen Vorteile von Monero und CryptoNote verwendet, allerdings verfolgt AEON unterschiedliche Ziele in seiner Entwicklung. Die unabhängige Community erlaubt es AEON als eigenständige Währung Erfolg zu haben."
       pl: "Ogólnie rzecz biorąc, AEON stara się być lekkim Monero, podobnym do tego, jak Litecoin chce być lekkim Bitcoinem. Wciąż czerpiąc z zalet technicznych Monero i CryptoNote, AEON ma odrębne cele rozwojowe i niezależną społeczność, która umożliwia mu rozwój jako własnej waluty."
+      rs: "В целом, AEON стремится быть легковесным Monero, подобно тому, как Litecoin стремится быть легковесным Bitcoin. Опираясь на технические преимущества Monero и CryptoNote, AEON имеет четкие цели развития и независимое сообщество, что позволяет ей успешно развиваться как самостоятельной валюте."
+      cn: "总体来说，AEON的定位是一个轻量级的门罗币，就像莱特币作为轻量级的比特币一样。在维持门罗币和CryptoNote的技术优势的同时，AEON加入了其特有的发展目标和自主的社区支持，从而使AEON成为一个成功的独立加密货币。"
   download:
     heading:
       en: "Download AEON"
@@ -263,18 +333,24 @@ content:
       eo: "Elŝuti AEON"
       de: "AEON herunterladen"
       pl: "Pobierz AEON"
+      rs: "Загрузки AEON"
+      cn: "下载 AEON"
     latestRelease:
       en: "Latest release:"
       es: "Último lanzamiento:"
       eo: "Lasta eldonita versio:"
       de: "Letzte Version:"
       pl: "Aktualne wydanie:"
+      rs: "Последний релиз:"
+      cn: "最新消息"
     sourceCode:
       en: "Source code"
       es: "Código"
       eo: "Fontkodo"
       de: "Quelltext"
       pl: "Kod źródłowy"
+      rs: "Исходный код"
+      cn: "源代码"
   press:
     heading:
       en: "AEON Press Kit"
@@ -282,12 +358,16 @@ content:
       eo: "AEON Ĵurnalisma Ekipaĵo"
       de: "AEON Pressematerial"
       pl: "AEON Materiały prasowe"
+      rs: "AEON пресс-контент"
+      cn: "AEON 宣传资料"
     text:
       en: "Full <em>Press Kit</em> can be downloaded in one zip file <a href='/branding/aeon-press-kit.zip'>here</a><br><em>Colors</em> and <em>Typeset</em> can be found <a href='/branding/extras.txt'>here</a>"
       es: "El <em>Kit de Prensa</em> se puede descargar en un archivo zip <a href='/branding/aeon-press-kit.zip'>aqui</a><br><em>Colores</em> y <em>Tipografía</em> puede ser encontrado <a href='/branding/extras.txt'>aqui</a>"
       eo: "La plena <em>Ĵurnalisma Ekipaĵo</em> elŝuteblas kiel unu zip-dosiero <a href='/branding/aeon-press-kit.zip'>ĉi tie</a><br><em>Koloroj</em> kaj <em>Komposto</em> troveblas <a href='/branding/extras.txt'>ĉi tie</a>"
       de: "Das vollständige AEON <em>Pressematerial</em> gibt es als ZIP-Datei <a href='/branding/aeon-press-kit.zip'>hier</a><br><em>Farben</em> und <em>Schriftarten</em> können <a href='/branding/extras.txt'>hier</a> gefunden werden"
       pl: "Pełne <em>Materiały prasowe</em> mogą byc pobrane jako jeden plik zip <a href='/branding/aeon-press-kit.zip'>tutaj</a><br><em>Kolory</em> i <em>przykłady</em> znajdziesz <a href='/branding/extras.txt'>tutaj</a>"
+      rs: "Полный <em>комплект материалов</em> для прессы можно скачать одним zip-файлом <a href='/branding/aeon-press-kit.zip'>отсюда</a><br><em>Цвета</em> и <em>Шрифты</em> можно найти <a href='/branding/extras.txt'>здесь</a>"
+      cn: "完整的<em>宣传资料</em>可以在<a href='/branding/aeon-press-kit.zip'>这里</a><br>下载<em>颜色</em> 和 <em>字体</em> 在 <a href='/branding/extras.txt'>这里</a>"
   footer:
     column1:
       heading1:
@@ -296,36 +376,48 @@ content:
         eo: "Pri tiu ĉi projekto"
         de: "Über dieses Projekt"
         pl: "O projekcie"
+        rs: "Об этом проекте"
+        cn: "关于项目"
       paragraph1:
         en: "AEON is open source and completely free to use without restriction."
         es: "AEON es de código abierto y completamente gratuito de usar sin restricciones."
         eo: "AEON estas malfermitkoda kaj tute libera por uzo sen limigo"
         de: "AEON ist quelloffen und komplett kostenlos zu verwenden."
         pl: "AEON jest open source i całkowicie darmowy do użycia bez ograniczeń."
+        rs: "AEON является проектом с открытым исходным кодом и полностью свободным для использования, без ограничений."
+        cn: "AEON是一个开源项目，大家可以不受限的自由使用。"
       paragraph2:
         en: "Likewise, everybody is welcome to contribute."
-        es: "Asimismo, todos son bienvenidos a contribuir.."
+        es: "Asimismo, todos son bienvenidos a contribuir."
         eo: "Same, ĉiu estas bonvena kontribui"
         de: "Gleichzeitig ist jeder eingeladen sich an der Entwicklung zu beteiligen."
         pl: "Każdy może wnieść swój wkład."
+        rs: "Кроме того, мы приглашаем всех внести свой вклад в развитие проекта."
+        cn: "同样的，我们也欢迎大家可以提供的贡献。"
       heading2:
         en: "Subscribe to announcements"
         es: "Suscribirse a los anuncios."
         eo: "Aboni anoncojn"
         de: "Eintragen, um neue Ankündigungen zu erhalten"
         pl: "Subskrybuj ogłoszenia"
+        rs: "Подписаться на анонсы"
+        cn: "订阅消息"
       paragraph3:
         en: "We will send you notifications about new Aeon releases and other important announcements like security patches."
         es: "Le enviaremos notificaciones sobre nuevas versiones de Aeon y otros anuncios importantes, como parches de seguridad."
         eo: "Ni sendos al vi sciigojn pri novaj eldonoj de AEON kaj aliaj gravaj anoncoj kiel sekurigaj flikaĵoj."
         de: "Wir werden dir nur Nachrichten über neue AEON Versionen und andere wichtige Ankündigungen, wie Sicherheitspatches, zusenden."
         pl: "Wyślemy Ci powiadomienia o nowych wydaniach Aeon i innych ważnych ogłoszeniach, takich jak poprawki zabezpieczeń."
+        rs: "Мы будем отправлять вам уведомления о новых релизах Aeon и других важных объявлениях, таких как обновления безопасности."
+        cn: "当AEON有任何新消息或者重要的公告，我们会通知您，例如全新的安全补丁的发布。"
       paragraph4:
         en: "Click here to go to our email subscription page."
         es: "Clic Aquí para ir a nuestra página de suscripción de correo electrónico."
         eo: "Alklaku ĉi tie por iri al nia retmesaĝa abonpaĝo."
         de: "Klicke hier um dich in unseren eMail-Verteiler einzutragen."
         pl: "Kliknij tutaj, aby przejść do naszej strony subskrypcji e-mail."
+        rs: "Нажмите здесь, чтобы перейти на нашу страницу подписки на электронную почту."
+        cn: "点击这里到我们的订阅邮件消息页面。"
     column2:
       heading1:
         en: "Exchanges"
@@ -333,12 +425,16 @@ content:
         eo: "Borsoj"
         de: "Tauschbörsen"
         pl: "Kantory wymiany"
+        rs: "Обмены"
+        cn: "交易所"
       heading2:
         en: "Block explorers"
         es: "Exploradores de Bloque"
         eo: "Blok-esploriloj"
         de: "Block Explorer"
         pl: "Eksploratory bloków"
+        rs: "Обозреватели блокчейна"
+        cn: "区块链浏览器"
     column3:
       heading1:
         en: "Related projects"
@@ -346,12 +442,16 @@ content:
         eo: "Rilataj projektoj"
         de: "Verwandte Projekt"
         pl: "Powiązane projekty"
+        rs: "Похожие проекты"
+        cn: "相关项目"
       heading2:
         en: "AEON links"
         es: "Enlaces de AEON"
         eo: "AEON ligiloj"
         de: "AEON Links"
         pl: "AEON Linki"
+        rs: "AEON ссылки"
+        cn: "AEON链接"
   footerBottom:
     madeWith:
       en: "Made with <i class='icon-heart'></i> in crypto space"
@@ -359,6 +459,8 @@ content:
       eo: "Farita per <i class='icon-heart'></i> en ĉifriko-spac"
       de: "Gemacht mit <i class='icon-heart'></i> im Cryptouniversum"
       pl: "Wykonane z <i class='icon-heart'></i> przestrzeni krypto"
+      rs: "Сделано с <i class='icon-heart'></i> в крипто-пространстве"
+      cn: "在加密货币世界里，用<i class='icon-heart'></i>创造"
 
 menu:
   home:
@@ -367,39 +469,53 @@ menu:
     eo: "Ĉefpaĝo"
     de: "Startseite"
     pl: "Start"
+    rs: "Главная"
+    cn: "首页"
   features:
     en: "Features"
     es: "Características"
     eo: "Eblecoj"
     de: "Eigenschaften"
     pl: "Cechy"
+    rs: "Особенности"
+    cn: "特点"
   difference:
     en: "Difference"
     es: "Diferencia"
     eo: "Malsamo"
     de: "Unterschiede"
     pl: "Różnice"
+    rs: "Отличие"
+    cn: "不同之处"
   download:
     en: "Download"
     es: "Descargar"
     eo: "Elŝuti"
     de: "Herunterladen"
     pl: "Pobierz"
+    rs: "Загрузки"
+    cn: "下载"
   pressKit:
     en: "Press Kit"
     es: "Kit de Prensa"
     eo: "Ĵurnalisma Ekipaĵo"
     de: "Pressematerial"
     pl: "Materiały prasowe"
+    rs: "Контент для прессы"
+    cn: "宣传资料"
   funding:
     en: "Funding System"
     es: "Sistema de Financiamiento"
     eo: "Sistemo de Financado"
     de: "Spenden"
     pl: "System Finansowania"
+    rs: "Система финансирования"
+    cn: "资金"
   lang:
     en: "Language"
     es: "Idioma"
     eo: "Language"
     de: "Language"
     pl: "Język"
+    rs: "язык"
+    cn: "语言"

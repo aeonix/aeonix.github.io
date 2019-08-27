@@ -72,11 +72,13 @@ After completing the above, you should be ready to submit a Pull Request to be r
 * Esperanto: [@marmulak](https://github.com/marmulak)
 * Deutch: [@AmorbiaCacoa](https://github.com/AmorbiaCacoa)
 * Polish: [@ArqTras](https://github.com/ArqTras)
-
+* Russian: [@TheFuzzStone](https://github.com/TheFuzzStone)
+* Chinese: [@Xiaomogwai](https://github.com/Xiaomogwai)
 
 ### Multi-language credits:
 * [@camthegeek](https://github.com/camthegeek) - new site structure + introduction of multi-language into existing theme
 * [@aeon1234](https://github.com/aeon1234) - simplifying multi-language structure.
+* [@BigslimVdub](https://github.com/bigslimvdub) - Community translations project organizer
 
 ## Reaching out
 
