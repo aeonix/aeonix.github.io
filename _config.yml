@@ -39,6 +39,7 @@ tagline:
   pl: "<strong>AEON</strong> nie jest tylko walutą.<br/><strong>To styl życia.</strong>"
   rs: "<strong>AEON</strong> это не просто валюта.<br/><strong>Это стиль жизни.</strong>"
   cn: "<strong>AEON</strong> 不仅仅是一种货币，<br/><strong>而是一种生活方式。</strong>"
+  pig: "<strong>AEON</stron> isn'tay ustjay aay urrencycay <br/><strong>It's aay ifestylelay.</strong>"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 
@@ -71,6 +72,7 @@ content:
       pl: "Zdecentralizowana waluta cyfrowa powoli staje się normalną częścią codziennego życia. Jednak głównym urządzeniem internetowym wszystkich użytkowników jest nadal ich telefon komórkowy, urządzenie z procesorem o małej mocy i ograniczoną dostępną pamięcią."
       rs: "Децентрализованная цифровая валюта постепенно становится повседневной частью нашей жизни. Тем не менее, основным интернет-устройством для всех по-прежнему остается мобильный телефон, устройство с маломощным процессором и ограниченной доступной памятью."
       cn: "去中心化的电子货币正在慢慢成为日常生活的一部分。我们每个人使用的主要网络设备仍然是我们的手机，手机的中央处理器性能以及存储空间都有限。"
+      pig: "ecentralizedday igitalday urrencycay isyay owlyslay ecomingbay ayay ormalnay artpay ofyay everydayyay ifelay. etyay everybody'syay ainmay internetyay eviceday ontinuescay otay ebay eirthay ellphonecay, ayay eviceday ithway ayay ow-poweredlay ucpay andyay imitedlay availableyay oragestay."
     paragraph2:
       en: "AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own."
       es: "AEON se trata de habilitar esta era, habilitar una era en la que todas las personas de todo el mundo tengan la libertad de enviar y recibir dinero de manera privada con cualquier dispositivo que ya posean."
@@ -79,6 +81,7 @@ content:
       pl: "AEON ma na celu włączenie ery, w której wszyscy ludzie na całym świecie mogą swobodnie wysyłać i otrzymywać pieniądze za pomocą dowolnego gadżetu, który już posiadają."
       rs: "AEON это создание условий, когда все люди во всем мире могут свободно отправлять и получать деньги с помощью любого гаджета, которым они уже владеют."
       cn: "AEON的意义在于贴合这个时代的需求，使在世界各地的每个人都可以自由使用任何装置去进行私密的汇款以及收款。"
+      pig: "aeonyay isyay aboutyay enablingyay isthay erayay, enablingyay anyay ageyay erewhay allyay eoplepay everywhereyay avehay ethay eedomfray otay ivatelypray endsay andyay eceiveray oneymay ithway ateverwhay adgetgay eythay alreadyyay ownyay."
     listItems:
       POW: #pow algorithm
         name:
@@ -89,6 +92,7 @@ content:
           pl: "PoW algorytm:"
           rs: "PoW алгоритм"
           cn: "PoW 工作量证明演算法"
+          pig: "OwPay lgorithmaay:"
       SUP:
         name:
           en: "Max supply:"
@@ -98,6 +102,7 @@ content:
           pl: "Maksymalna podaż:"
           rs: "Максимальное количество"
           cn: "最高限额供应"
+          pig: "Axmay upplyssay:"
         value:
           en: "~18.4 million"
           es: "~18.4 millón"
@@ -106,6 +111,7 @@ content:
           pl: "~18.4 milionów"
           rs: "~18.4 миллиона"
           cn: "1千8百40万"
+          pig: "~18.4 illionmay"
       RWD:
         name:
           en: "Block reward:"
@@ -115,6 +121,7 @@ content:
           pl: "Nagoda za blok:"
           rs: "Награда за блок"
           cn: "区块奖励"
+          pig: "Ockblay ewardray"
         value:
           en: "smoothly decreasing"
           es: "disminuyendo suavemente"
@@ -123,6 +130,7 @@ content:
           pl: "płynnie malejąca"
           rs: "плавно понижающаяся"
           cn: "逐渐减少"
+          pig: "oothlysmay ecreasingday"
       TIM:
         name:
           en: "Block time:"
@@ -132,6 +140,7 @@ content:
           pl: "Czas bloku:"
           rs: "Время нахождения блока"
           cn: "区块时间"
+          pig: "Ockblay imetay"
         value:
           en: "240 seconds"
           es: "240 segundos"
@@ -140,6 +149,7 @@ content:
           pl: "240 sekund"
           rs: "240 секунд"
           cn: "240秒"
+          pig: "240 econdsay"
       DIF:
         name:
           en: "Difficulty:"
@@ -149,6 +159,7 @@ content:
           pl: "Trudność:"
           rs: "Сложность"
           cn: "难度"
+          pig: "Ifficulty:"
         value:
           en: "retargets at every block"
           es: "readjusta en cada bloque"
@@ -157,6 +168,7 @@ content:
           pl: "zmienna co każdy blok"
           rs: "перенастраивается для каждого блока"
           cn: "每个区块重新定义"
+          pig: "retargets at every block"
   features:
     heading:
       en: " A lightweight <span class='blue'>CryptoNote</span> digital currency"
@@ -166,6 +178,7 @@ content:
       pl: "Lekka <span class='blue'>CryptoNote</span> cyfrowa waluta"
       rs: "Легковесная <span class='blue'>CryptoNote</span> цифровая валюта"
       cn: "一种轻量级的 <span class='blue'>CryptoNote</span>电子货币"
+      pig: " Aay ightweightay <span class='blue'>RyptoNotecay>/span> igitalday urrencycay"
     feature1:
       heading:
         en: "Secure"
