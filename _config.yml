@@ -188,6 +188,7 @@ content:
         pl: "Bezpieczna"
         rs: "Безопасный"
         cn: "安全"
+        pig: "Ecuresay"
       desc:
         en: "Each transaction is secured with robust cryptography and distributed through a global peer-to-peer consensus network."
         es: "Cada transacción se asegura con criptografía robusta y se distribuye a través de una red de consenso global de persona a persona."
@@ -196,6 +197,7 @@ content:
         pl: "Każda transakcja jest zabezpieczona solidną kryptografią i dystrybuowana za pośrednictwem globalnej sieci konsensusowej typu peer-to-peer."
         rs: "Каждая сделка защищена надежной криптографией и распространяется через глобальную пиринговую сеть для достижения консенсуса."
         cn: "每一笔交易都在强大的加密功能下进行，并且分散在全球范围内的点对点共识网络中。"
+        pig: "eachyay ansactiontray isyay ecuredsay ithway obustray ographycryptay andyay istributedday oughthray ayay obalglay eer-to-peerpay onsensuscay etworknay."
     feature2:
       heading:
         en: "Private"
@@ -205,6 +207,7 @@ content:
         pl: "Prywatna"
         rs: "Приватность"
         cn: "隐私"
+        pig: "Rivatepay"
       desc:
         en: "By default, AEON utilizes a cryptographic system to transfer funds without the identifying information of each user becoming visible on the blockchain."
         es: "De forma predeterminada, AEON utiliza un sistema criptográfico para transferir fondos sin que la información de identificación de cada usuario se haga visible en la cadena de bloques."
@@ -213,6 +216,7 @@ content:
         pl: "Domyślnie AEON wykorzystuje system kryptograficzny do transferu funduszy bez informacji identyfikujących każdego użytkownika, które stają się widoczne w blockchainie."
         rs: "По умолчанию AEON использует криптографическую систему для перевода средств, при этом идентификационная информация каждого пользователя не отображается в цепочке блоков."
         cn: "在默认状态下，AEON使用的加密系统确保资金交易中涉及的每一位用户资料在区块链上都是保密的。"
+        pig: "ybay efaultday , aeon utilizesyay ayay ographiccryptay emsystay otay ansfertray undsfay ithoutway ethay identifyingyay informationyay ofyay eachyay useryay ecomingbay isiblevay onyay ethay ockchainblay."
     feature3:
       heading:
         en: "Untraceable"
