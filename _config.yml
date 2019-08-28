@@ -168,7 +168,7 @@ content:
           pl: "zmienna co każdy blok"
           rs: "перенастраивается для каждого блока"
           cn: "每个区块重新定义"
-          pig: "retargets at every block"
+          pig: "Etargetsray atyay everyyay ockblay"
   features:
     heading:
       en: " A lightweight <span class='blue'>CryptoNote</span> digital currency"
@@ -178,7 +178,7 @@ content:
       pl: "Lekka <span class='blue'>CryptoNote</span> cyfrowa waluta"
       rs: "Легковесная <span class='blue'>CryptoNote</span> цифровая валюта"
       cn: "一种轻量级的 <span class='blue'>CryptoNote</span>电子货币"
-      pig: " Aay ightweightay <span class='blue'>RyptoNotecay>/span> igitalday urrencycay"
+      pig: " Aay ightweightay <span class='blue'>CryptoNote</span> igitalday urrencycay"
     feature1:
       heading:
         en: "Secure"
@@ -313,7 +313,7 @@ content:
           pl: "Przycinanie (pruning) pozwala blockchain'owi pozostać małym i przyjazdnym urządzeniom z ograniczoną pamięcią. Ta funkcja poprawia również anonimowość, zmniejszając ataki oparte na wieku."
           rs: "Обрезка, позволяет блокчейну оставаться небольшим и не разрастаться на устройствах с ограниченным объемом памяти. Эта функция также улучшает анонимность, уменьшая количество возрастных атак."
           cn: "修剪模式将区块数据维持在较小的状态，不会超出用户设备的内存上限。修剪模式还可以帮助防止任何针对过去交易记录的攻击，从而更加确保匿名性。"
-          pig: "uningPray allowsyay ethay ockchainblay otay aystay allsmay andyay otnay outgrowyay evicesday ithway imitedlay oragestay. isThay eaturefay alsoyay improvesyay anonymityyay ybay educingray ageyay-asedbay attacksyay. 
+          pig: "uningPray allowsyay ethay ockchainblay otay aystay allsmay andyay otnay outgrowyay evicesday ithway imitedlay oragestay. isThay eaturefay alsoyay improvesyay anonymityyay ybay educingray ageyay-asedbay attacksyay." 
       item4:
         name:
           en: "Fast syncing"
