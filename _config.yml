@@ -351,7 +351,7 @@ content:
           pl: "Jako waluta CryptoNote płatności są domyślnie anonimowe. Ale w przeciwieństwie do Monero, AEON pozwala również na <em> śledzenie </em> transferów. Są to szybsze opcje niższych opłat w przypadku płatności niewrażliwych, takich jak transfer do / z giełdy."
           rs: "Как в CryptoNote монете, по умолчанию платежи остаются анонимными. Но в отличие от Monero, AEON также допускает <em>отслеживаемые</em> переводы. Это более быстрый и дешевый вариант для несекретных платежей, таких как перевод на биржу или с биржи."
           cn: "作为基于CryptoNote的币种，在默认状态下的交易都是匿名的，和门罗币不同的是，AEON用户可以自行选择进行 <em>可追踪</em> 的交易。这是一项速度更快和费用更低的选择，用户在进行不敏感的交易的时候可以使用此选项，比如转账到交易平台/或者从平台收款的时候。"
-          pig: ""
+          pig: "Asyay ayay yptoNoteCray oincay, aymentspay areyay illstay anonymousyay ybay efaultday. utBay unlikeyay oneroMay, AEONyay alsoyay allowsyay orfay <em>raceabletray</em> ransferstay. Esethay areyay ayay asterfay owerlay-eefyay option for onnay-ensitivesay aymentspay, ikelay ransferrintay otay/romfay exchangesyay."
     paragraph:
       en: "Overall, AEON seeks to be a lightweight-Monero, similar to how Litecoin seeks to be a lightweight-Bitcoin. While still drawing from the technical advantages of Monero and CryptoNote, AEON has distinct development goals and an independent community that enable it to thrive as its own currency."
       es: "En general, AEON busca ser un Monero liviano, similar a cómo Litecoin busca ser un Bitcoin liviano. Mientras sigue aprovechando las ventajas técnicas de Monero y CryptoNote, AEON tiene objetivos de desarrollo distintos y una comunidad independiente que le permite prosperar como su propia moneda."
@@ -360,6 +360,7 @@ content:
       pl: "Ogólnie rzecz biorąc, AEON stara się być lekkim Monero, podobnym do tego, jak Litecoin chce być lekkim Bitcoinem. Wciąż czerpiąc z zalet technicznych Monero i CryptoNote, AEON ma odrębne cele rozwojowe i niezależną społeczność, która umożliwia mu rozwój jako własnej waluty."
       rs: "В целом, AEON стремится быть легковесным Monero, подобно тому, как Litecoin стремится быть легковесным Bitcoin. Опираясь на технические преимущества Monero и CryptoNote, AEON имеет четкие цели развития и независимое сообщество, что позволяет ей успешно развиваться как самостоятельной валюте."
       cn: "总体来说，AEON的定位是一个轻量级的门罗币，就像莱特币作为轻量级的比特币一样。在维持门罗币和CryptoNote的技术优势的同时，AEON加入了其特有的发展目标和自主的社区支持，从而使AEON成为一个成功的独立加密货币。"
+      pig: "Overallyay, AEON eekssay otay ebay ayay ightweightlay-oneroMay, imilarsay otay owhay itecoinLay eekssay otay ebay ayay ightweightlay-itcoinBay. ileWhay illstay awingdray omfray ethay echnicaltay advantagesyay ofyay oneroMay andyay yptoNoteCray, AEONyay ashay istinctday evelopmentday oalsgay andyay anyay independentyay ommunitycay atthay enableyay ityay otay ivethray asyay itsyay ownyay urrencycay."
   download:
     heading:
       en: "Download AEON"
@@ -369,6 +370,7 @@ content:
       pl: "Pobierz AEON"
       rs: "Загрузки AEON"
       cn: "下载 AEON"
+      pig: "Ownloadday AEON"
     latestRelease:
       en: "Latest release:"
       es: "Último lanzamiento:"
@@ -377,6 +379,7 @@ content:
       pl: "Aktualne wydanie:"
       rs: "Последний релиз:"
       cn: "最新消息"
+      pig: "Atestlay eleaseray:"
     sourceCode:
       en: "Source code"
       es: "Código"
@@ -385,6 +388,7 @@ content:
       pl: "Kod źródłowy"
       rs: "Исходный код"
       cn: "源代码"
+      pig: "Ourcesay odecay"
   press:
     heading:
       en: "AEON Press Kit"
@@ -394,6 +398,7 @@ content:
       pl: "AEON Materiały prasowe"
       rs: "AEON пресс-контент"
       cn: "AEON 宣传资料"
+      pig: "AEON Resspay Itkay"
     text:
       en: "Full <em>Press Kit</em> can be downloaded in one zip file <a href='/branding/aeon-press-kit.zip'>here</a><br><em>Colors</em> and <em>Typeset</em> can be found <a href='/branding/extras.txt'>here</a>"
       es: "El <em>Kit de Prensa</em> se puede descargar en un archivo zip <a href='/branding/aeon-press-kit.zip'>aqui</a><br><em>Colores</em> y <em>Tipografía</em> puede ser encontrado <a href='/branding/extras.txt'>aqui</a>"
@@ -402,6 +407,7 @@ content:
       pl: "Pełne <em>Materiały prasowe</em> mogą byc pobrane jako jeden plik zip <a href='/branding/aeon-press-kit.zip'>tutaj</a><br><em>Kolory</em> i <em>przykłady</em> znajdziesz <a href='/branding/extras.txt'>tutaj</a>"
       rs: "Полный <em>комплект материалов</em> для прессы можно скачать одним zip-файлом <a href='/branding/aeon-press-kit.zip'>отсюда</a><br><em>Цвета</em> и <em>Шрифты</em> можно найти <a href='/branding/extras.txt'>здесь</a>"
       cn: "完整的<em>宣传资料</em>可以在<a href='/branding/aeon-press-kit.zip'>这里</a><br>下载<em>颜色</em> 和 <em>字体</em> 在 <a href='/branding/extras.txt'>这里</a>"
+      pig: "Ullfay <em>Resspay Itkay</em> ancay ebay Ownloadedday inyay oneyay ipzay ilefay <a href='/branding/aeon-press-kit.zip'>erehay</a><br><em>Olorscay</em> andyay <em>Ypesettay</em> ancay ebay oundfay <a href='/branding/extras.txt'>erehay</a>"      
   footer:
     column1:
       heading1:
@@ -412,6 +418,7 @@ content:
         pl: "O projekcie"
         rs: "Об этом проекте"
         cn: "关于项目"
+        pig: "Aboutyay isthay rojectpay"
       paragraph1:
         en: "AEON is open source and completely free to use without restriction."
         es: "AEON es de código abierto y completamente gratuito de usar sin restricciones."
