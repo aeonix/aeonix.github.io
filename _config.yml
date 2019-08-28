@@ -427,6 +427,7 @@ content:
         pl: "AEON jest open source i całkowicie darmowy do użycia bez ograniczeń."
         rs: "AEON является проектом с открытым исходным кодом и полностью свободным для использования, без ограничений."
         cn: "AEON是一个开源项目，大家可以不受限的自由使用。"
+        pig: "AEON isyay openyay ourcesay andyay ompletelycay reefay otay useyay ithoutway estrictionray."
       paragraph2:
         en: "Likewise, everybody is welcome to contribute."
         es: "Asimismo, todos son bienvenidos a contribuir."
@@ -435,6 +436,7 @@ content:
         pl: "Każdy może wnieść swój wkład."
         rs: "Кроме того, мы приглашаем всех внести свой вклад в развитие проекта."
         cn: "同样的，我们也欢迎大家可以提供的贡献。"
+        pig: "Ikewiselay, everybodyyay isyay elcomeway otay ontributecay."
       heading2:
         en: "Subscribe to announcements"
         es: "Suscribirse a los anuncios."
@@ -443,6 +445,7 @@ content:
         pl: "Subskrybuj ogłoszenia"
         rs: "Подписаться на анонсы"
         cn: "订阅消息"
+        pig: "Ubscribesay otay announcementsyay"
       paragraph3:
         en: "We will send you notifications about new Aeon releases and other important announcements like security patches."
         es: "Le enviaremos notificaciones sobre nuevas versiones de Aeon y otros anuncios importantes, como parches de seguridad."
@@ -451,6 +454,7 @@ content:
         pl: "Wyślemy Ci powiadomienia o nowych wydaniach Aeon i innych ważnych ogłoszeniach, takich jak poprawki zabezpieczeń."
         rs: "Мы будем отправлять вам уведомления о новых релизах Aeon и других важных объявлениях, таких как обновления безопасности."
         cn: "当AEON有任何新消息或者重要的公告，我们会通知您，例如全新的安全补丁的发布。"
+        pig: "eWay illway endsay youyay otificationsnay aboutyay ewnay Aeonyay eleasesray andyay otheryay importantyay announcementsyay ikelay ecuritysay atchespay."
       paragraph4:
         en: "Click here to go to our email subscription page."
         es: "Clic Aquí para ir a nuestra página de suscripción de correo electrónico."
@@ -459,6 +463,7 @@ content:
         pl: "Kliknij tutaj, aby przejść do naszej strony subskrypcji e-mail."
         rs: "Нажмите здесь, чтобы перейти на нашу страницу подписки на электронную почту."
         cn: "点击这里到我们的订阅邮件消息页面。"
+        pig: "Ickclay erehay otay ogay otay ouryay emailyay ubscriptionsay agepay"
     column2:
       heading1:
         en: "Exchanges"
@@ -468,6 +473,7 @@ content:
         pl: "Kantory wymiany"
         rs: "Обмены"
         cn: "交易所"
+        pig: "Exchangesyay"
       heading2:
         en: "Block explorers"
         es: "Exploradores de Bloque"
@@ -476,6 +482,7 @@ content:
         pl: "Eksploratory bloków"
         rs: "Обозреватели блокчейна"
         cn: "区块链浏览器"
+        pig: "Ockblay explorersyay"
     column3:
       heading1:
         en: "Related projects"
@@ -485,6 +492,7 @@ content:
         pl: "Powiązane projekty"
         rs: "Похожие проекты"
         cn: "相关项目"
+        pig: "Elatedray rojectspay"
       heading2:
         en: "AEON links"
         es: "Enlaces de AEON"
@@ -493,6 +501,7 @@ content:
         pl: "AEON Linki"
         rs: "AEON ссылки"
         cn: "AEON链接"
+        pig: "AEON inkslay"
   footerBottom:
     madeWith:
       en: "Made with <i class='icon-heart'></i> in crypto space"
@@ -502,6 +511,7 @@ content:
       pl: "Wykonane z <i class='icon-heart'></i> przestrzeni krypto"
       rs: "Сделано с <i class='icon-heart'></i> в крипто-пространстве"
       cn: "在加密货币世界里，用<i class='icon-heart'></i>创造"
+      pig: "Ademay ithway <i class='icon-heart'></i> inyay ryptocray acespay"
 
 menu:
   home:
@@ -512,6 +522,7 @@ menu:
     pl: "Start"
     rs: "Главная"
     cn: "首页"
+    pig: "Omehay"
   features:
     en: "Features"
     es: "Características"
@@ -520,6 +531,7 @@ menu:
     pl: "Cechy"
     rs: "Особенности"
     cn: "特点"
+    pigs: "Eaturesfay"
   difference:
     en: "Difference"
     es: "Diferencia"
@@ -528,6 +540,7 @@ menu:
     pl: "Różnice"
     rs: "Отличие"
     cn: "不同之处"
+    pig: "Ifferenceday"
   download:
     en: "Download"
     es: "Descargar"
@@ -536,6 +549,7 @@ menu:
     pl: "Pobierz"
     rs: "Загрузки"
     cn: "下载"
+    pig: "Ownloadday"
   pressKit:
     en: "Press Kit"
     es: "Kit de Prensa"
@@ -544,6 +558,7 @@ menu:
     pl: "Materiały prasowe"
     rs: "Контент для прессы"
     cn: "宣传资料"
+    pig: "Resspay Itkay"
   funding:
     en: "Funding System"
     es: "Sistema de Financiamiento"
@@ -552,6 +567,7 @@ menu:
     pl: "System Finansowania"
     rs: "Система финансирования"
     cn: "资金"
+    pay: "Undingfay Ystemsay"
   lang:
     en: "Language"
     es: "Idioma"
@@ -560,3 +576,4 @@ menu:
     pl: "Język"
     rs: "язык"
     cn: "语言"
+    pig: "Anguagelay"
