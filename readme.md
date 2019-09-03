@@ -74,6 +74,7 @@ After completing the above, you should be ready to submit a Pull Request to be r
 * Polish: [@ArqTras](https://github.com/ArqTras)
 * Russian: [@TheFuzzStone](https://github.com/TheFuzzStone)
 * Chinese: [@Xiaomogwai](https://github.com/Xiaomogwai)
+* French: [@estenity](https://bitcointalk.org/index.php?action=profile;u=662052)
 
 ### Multi-language credits:
 * [@camthegeek](https://github.com/camthegeek) - new site structure + introduction of multi-language into existing theme
