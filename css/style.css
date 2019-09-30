@@ -324,6 +324,12 @@ Color Customizations
     background-color: #08b4da;
     background: url(../img/blue-square.png);
 }
+.bg-blue-pattern a {
+    color: #555;
+}
+.bg-blue-pattern a:hover {
+    text-decoration: underline;
+}
 .bg-testimonial {
     background: url(../img/headshot-bg.jpg);
 }
