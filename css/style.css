@@ -324,6 +324,12 @@ Color Customizations
     background-color: #08b4da;
     background: url(../img/blue-square.png);
 }
+.bg-blue-pattern a {
+    color: #555;
+}
+.bg-blue-pattern a:hover {
+    text-decoration: underline;
+}
 .bg-testimonial {
     background: url(../img/headshot-bg.jpg);
 }
@@ -355,6 +361,27 @@ Line Font
 }
 .line-font-small {
     font-size: 20px;
+}
+
+/* ==========================================================================
+Announce
+========================================================================== */
+
+.announce {
+    background-color: #FF0;
+    color: #000;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #F00;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.announce a {
+    color: #F00;
+}
+.announce a:hover {
+    text-decoration: underline;
 }
 
 /* ==========================================================================
