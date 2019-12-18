@@ -379,6 +379,24 @@ content:
       rs: "Исходный код"
       cn: "源代码"
       fr: "Code source"
+    pgpSignature:
+      en: "PGP signature"
+      es: "Firma PGP"
+      eo: "PGP-subskribo"
+      de: "PGP-Signatur"
+      pl: "Podpis PGP"
+      rs: "Подпись PGP"
+      cn: "PGP签名"
+      fr: "Signature PGP"
+    signingKey:
+      en: "Signing key"
+      es: "Clave de firma"
+      eo: "Subskriba ŝlosilo"
+      de: "Signaturschlüssel"
+      pl: "Klucz do podpisu"
+      rs: "Ключ подписи"
+      cn: "签名密钥"
+      fr: "Clé de signature"
   press:
     heading:
       en: "AEON Press Kit"
