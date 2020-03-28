@@ -32,14 +32,14 @@ description:
   cn: "建立在CryptoNote的基础上，AEON是一种轻量的隐私电子货币，比如区块链修剪技术的使用。来了解一下这位门罗币的小弟的特点吧"
   fr: "Basée sur les Cryptonotes, AEON est une devise digitale privée de caractère léger comme l’élagage de la blockchain. Venez visiter la petite sœur de Monero!"
 tagline:
-  en: "<strong>AEON</strong> isn't just a currency.<br/><strong>It's a lifestyle.</strong>"
-  es: "<strong>AEON</strong> no es solo una moneda.<br/><strong>Es un estilo de vida.</strong>"
-  eo: "<strong>AEON</strong> ne simple estas valuto.<br/><strong>Ĝi estas vivmaniero.</strong>"
-  de: "<strong>AEON</strong> ist nicht einfach nur eine Währung.<br/><strong>Es ist eine Lebenseinstellung.</strong>"
-  pl: "<strong>AEON</strong> nie jest tylko walutą.<br/><strong>To styl życia.</strong>"
-  rs: "<strong>AEON</strong> это не просто валюта.<br/><strong>Это стиль жизни.</strong>"
-  cn: "<strong>AEON</strong> 不仅仅是一种货币，<br/><strong>而是一种生活方式。</strong>"
-  fr: "<strong>AEON</strong> Ce n'est pas qu'une monnaie,<br/><strong>c'est un style de vie.</strong>"
+  en: "<strong>AEON</strong><br/>A lightweight digital currency"
+  es: "<strong>AEON</strong><br/>Una moneda digital liviana"
+  eo: "<strong>AEON</strong><br/>Malpeza cifereca monero"
+  de: "<strong>AEON</strong><br/>Eine leichte digitale Währung"
+  pl: "<strong>AEON</strong><br/>Lekka waluta cyfrowa"
+  rs: "<strong>AEON</strong><br/>Легкая цифровая валюта"
+  cn: "<strong>AEON</strong><br/>輕量級數字貨幣"
+  fr: "<strong>AEON</strong><br/>Une monnaie numérique légère"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 
@@ -181,14 +181,14 @@ content:
           fr: "réajustée à chaque bloc"
   features:
     heading:
-      en: "A lightweight <span class='blue'>CryptoNote</span> digital currency"
-      es: "Una moneda digital <span class='blue'>CryptoNote</span> liviana"
-      eo: "Malpeza ĉifromono kun la povo de <span class='blue'>CryptoNote</span>"
-      de: "Eine leichte, digitale <span class='blue'>CryptoNote</span> Währung"
-      pl: "Lekka <span class='blue'>CryptoNote</span> cyfrowa waluta"
-      rs: "Легковесная <span class='blue'>CryptoNote</span> цифровая валюта"
-      cn: "一种轻量级的 <span class='blue'>CryptoNote</span>电子货币"
-      fr: "Une devise digitale légère de type <span class='blue'>CryptoNote</span>"
+      en: "Features"
+      es: "Caracteristicas"
+      eo: "Trajtoj"
+      de: "Eigenschaften"
+      pl: "Cechy"
+      rs: "Характеристики"
+      cn: "特徵"
+      fr: "Traits"
     feature1:
       heading:
         en: "Secure"
