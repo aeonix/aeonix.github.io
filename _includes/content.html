@@ -140,6 +140,16 @@
     </div>
     <div class="row">
       <div class="col-md-12 headline">
+        <h3><span class="fa">{{ site.content.download.blockchain[page.lang] }}</span></h3>
+        <div>{{ site.content.download.blockchainNotes[page.lang] }}</div>
+<pre>
+aeon-blockchain-import --input-file /path/to/your/file/blockchain.raw
+</pre>
+        <a href="https://www.dropbox.com/s/7gdvzmxey1dd1d9/blockchain.raw">blockchain.raw</a> (3.65 GB)<br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 headline">
         <h3>
           <span class="fa fa-hashes">&nbsp;&nbsp;Hashes</span>
         </h3>
@@ -150,6 +160,7 @@ SHA256(aeon-gui-win-x64-v0.13.1.0.zip)= 1790fd71b09b5ca109f007d476f2d5e410bee335
 SHA256(aeon-linux-x64-v0.13.1.0.tar.bz2)= d05f057bf2c24f3421c77f6e683c47488f8d7e3234d7084731a3c296d2d38061
 SHA256(aeon-mac-x64-v0.13.1.0.tar.bz2)= 1990595ced942ad281dda0279d3715ec8da11d2775143ce82befc884cab13b31
 SHA256(aeon-win-x64-v0.13.1.0.zip)= 40fd2159cab26f49b75698e279f45bdee419dc9880e16a4cfaf43766f058550a
+SHA256(blockchain.raw)= 2fd09abb53009e1f1a58d4bbe021b9a3ac0695be9294577d37710e02362a7947
 </pre>
         <p><a href="hashes.asc">{{ site.content.download.pgpSignature[page.lang] }}</a> (<a href="https://raw.githubusercontent.com/aeonix/aeon/master/utils/gpg_keys/stoffu.asc">{{ site.content.download.signingKey[page.lang] }}</a>)</p>
       </div>
