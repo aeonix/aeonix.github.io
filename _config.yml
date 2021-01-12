@@ -64,15 +64,6 @@ algorithm: "KangarooTwelve"
 
 # content of site
 content:
-  announce:
-    en: "There will be a hard fork on block height 1280000 (November 11, 2020), so please update your software by then."
-    es: "Habrá una bifurcación dura en la altura del bloque 1280000 (11 de noviembre de 2020), así que actualice su software para entonces."
-    eo: "Estos malmola forko sur bloko alteco 1280000 (11 novembro 2020), do bonvolu ĝisdatigi vian programon ĝis tiam."
-    de: "Auf Blockhöhe 1280000 (11. November 2020) befindet sich eine harte Gabel. Bitte aktualisieren Sie Ihre Software bis dahin."
-    pl: "Na wysokości bloku 1280000 pojawi się twardy widelec (11 listopada 2020 r.), Więc do tego czasu zaktualizuj swoje oprogramowanie."
-    rs: "На высоте блока 1280000 (11 ноября 2020 г.) будет жесткая вилка, поэтому, пожалуйста, обновите свое программное обеспечение к тому времени."
-    cn: "区块高度1280000（2020年11月11日）上将有一个硬叉，因此请在那时更新您的软件。"
-    fr: "Il y aura une fourche fixe sur la hauteur du bloc 1280000 (11 novembre 2020), veuillez donc mettre à jour votre logiciel d'ici là."
   banner: #begin with banner section
     paragraph1:
       en: "Decentralized digital currency is slowly becoming a normal part of everyday life. Yet everybody's main internet device continues to be their cellphone, a device with a low-powered CPU and limited available storage."
