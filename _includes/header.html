@@ -1,7 +1,9 @@
 <div id="banner" class="bg-blur">
     <div id="header">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      {% if site.content.announce[page.lang] And site.content.announce[page.lang] != "" And site.content.announce[page.lang] != nil %}
         <div class="announce"><a href="https://github.com/aeonix/aeon-gui/releases/tag/v0.14.1.0-aeon">{{ site.content.announce[page.lang] }}</a></div>
+      {% endif %}
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
