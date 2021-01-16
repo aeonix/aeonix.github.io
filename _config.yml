@@ -32,7 +32,7 @@ description:
   cn: "建立在CryptoNote的基础上，AEON是一种轻量的隐私电子货币，比如区块链修剪技术的使用。来了解一下这位门罗币的小弟的特点吧"
   fr: "Basée sur les Cryptonotes, AEON est une devise digitale privée de caractère léger comme l’élagage de la blockchain. Venez visiter la petite sœur de Monero!"
 tagline:
-  en: "<strong>AEON</strong><br/>A lightweight digital currency"
+  en: "<strong>AEON</strong>is...<br/>a digital currency with a small footprint<br>and a big focus on private transactions."
   es: "<strong>AEON</strong><br/>Una moneda digital liviana"
   eo: "<strong>AEON</strong><br/>Malpeza cifereca monero"
   de: "<strong>AEON</strong><br/>Eine leichte digitale Währung"
@@ -66,7 +66,7 @@ algorithm: "KangarooTwelve"
 content:
   banner: #begin with banner section
     paragraph1:
-      en: "Decentralized digital currency is slowly becoming a normal part of everyday life. Yet everybody's main internet device continues to be their cellphone, a device with a low-powered CPU and limited available storage."
+      en: "Peer-to-peer, open-source digital currencies like Bitcoin are gradually becoming part of everyday life; yet few can run on everyone's primary internet device: their phone. Additionally, the most popular digital currencies are failing to protect their users' privacy, exposing their transactions and balances to the general public."
       es: "La moneda digital descentralizada se está convirtiendo lentamente en una parte normal de la vida. Sin embargo, el principal dispositivo de Internet de todo el mundo sigue siendo su teléfono celular, un dispositivo con un CPU de baja potencia y un almacenamiento disponible limitado."
       eo: "Malcentra cifereca valuto iom post iom estas fariĝanta normala parto de la ĉiutaga vivo. Tamen, ĉies ĉefa interreta aparato plu restas la poŝtelefono, ia aparato kun malforta ĉefprocezilo kaj limigita konserv-kapablo."
       de: "Dezentralisierte, digitale Währungen werden langsam ein normaler Bestandteil unseres täglichen Lebens. Das Smartphone das Gerät der Wahl der meisten Menschen um ins Internet zu gehen, ein Gerät mit schwachen CPUs und limitiertem Speicherplatz."
@@ -75,7 +75,7 @@ content:
       cn: "去中心化的电子货币正在慢慢成为日常生活的一部分。我们每个人使用的主要网络设备仍然是我们的手机，手机的中央处理器性能以及存储空间都有限。"
       fr: "La devise digitale décentralisée devient lentement une partie normale de la vie quotidienne. Cependant le principal accessoire internet de chacun demeure son téléphone portable, qui a un computer de bas rendement et de capacité limitée."
     paragraph2:
-      en: "AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own."
+      en: "AEON unleashes this new decentralized era to billions of mobile devices. It is enabling an age where everyone has the freedom to send, receive, and store money on their go-to device without surrendering their fundamental rights to privacy."
       es: "AEON se trata de habilitar esta era, habilitar una era en la que todas las personas de todo el mundo tengan la libertad de enviar y recibir dinero de manera privada con cualquier dispositivo que ya posean."
       eo: "AEON temas pri ebligi tiun epokon, en kiu ĉiuj homoj ĉie havas la liberecon private sendi kaj ricevi monon per iu ajn aparato, kiun ili jam posedas"
       de: "AEON wird eine neue Ära starten, eine Zeit in der alle Menschen, überall, jederzeit die Freiheit genießen privat Geld zu versenden und zu empfangen, egal was fuer ein Gerät sie gerade verwenden."
