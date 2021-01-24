@@ -116,7 +116,7 @@ Classes
     font-size: 24px;
 }
 .section {
-    padding: 90px 0;
+    padding: 100px 0 40px;
 }
 .section20 {
     padding: 20px 0;
@@ -480,15 +480,16 @@ Headline
     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 }
-.scroll-fixed-navbar .navbar-nav> li> a {
+.scroll-fixed-navbar .navbar-nav> li> a, .scroll-fixed-navbar .navbar-nav > li > a:focus {
     color: #333;
 }
-.scroll-fixed-navbar .navbar-nav > li > a:focus {
+.scroll-fixed-navbar .navbar-nav> li.dropdown> a, .scroll-fixed-navbar .navbar-nav > li.dropdown > a:focus, .scroll-fixed-navbar .navbar-nav > li.dropdown > a:hover {
     color: #333;
 }
-.scroll-fixed-navbar .navbar-nav> li> a:hover, .scroll-fixed-navbar .navbar-nav> li.active> a, .scroll-fixed-navbar .navbar-nav> li.active> a:hover {
+.scroll-fixed-navbar .navbar-nav> li> a:hover, .scroll-fixed-navbar .navbar-nav> li.li-active> a, .scroll-fixed-navbar .navbar-nav> li.li-active> a:hover {
     color: #00a8d6;
 }
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -1168,7 +1169,7 @@ Media Queries
 	}
 
 	#features {
-	    padding: 90px 0 30px;
+	    padding: 100px 0 30px;
 	}
 
 	#features p {
@@ -1181,7 +1182,7 @@ Media Queries
 
 	#difference {
 	    text-align: center;
-	    padding: 90px 0 80px;
+	    padding: 100px 0 80px;
 	}
 
 	#difference p {
@@ -1203,12 +1204,16 @@ Media Queries
 	}
 
 	#downloads {
-	    padding: 90px 0 50px;
+	    padding: 100px 0 50px;
 	}
 
 	.footer li, .footer p {
 	    font-size: 15px;
 	}
+	
+	#press-kit {
+        padding: 100px 0 50px;
+    }
 }
 
 /* ------ Larger than Mobile Landscape ------*/
@@ -1301,7 +1306,7 @@ Media Queries
         margin: 20px auto;
     }
     .section {
-        padding: 70px 0;
+        padding: 90px 0 35px;
     }
     .main-point {
         margin-bottom: 40px;
@@ -1364,7 +1369,7 @@ Media Queries
 	line-height: 32px;
     }
     .section {
-        padding: 50px 0;
+        padding: 80px 0 30px;
     }
     #features {
 	padding-bottom: 5px;
@@ -1374,9 +1379,6 @@ Media Queries
     }
     #difference ul {
 	margin: 0 10px;
-    }
-    #downloads {
-	padding: 45px 0 25px;
     }
     .separator60 {
         margin: 30px 0;
