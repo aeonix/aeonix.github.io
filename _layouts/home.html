@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<!-- Home -->
+<section id="banner" class="bg-blur">
+  <div class="banner-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <!-- show only first -->
+          <h1>{{ site.data.i18n.content.banner.tagline[page.lang] }}</h1>
+          <h2>{{ site.data.i18n.content.banner.tagline2[page.lang] }}</h2>
+          <p class="lead">{{ site.data.i18n.content.banner.paragraph1[page.lang] }}</p>
+          <p class="lead">{{ site.data.i18n.content.banner.paragraph2[page.lang] }}</p>
+          <ul class="banner-list">
+            <li><i class="fa fa-check"></i><em>{{ site.data.i18n.content.banner.listItems.POW[page.lang] }}</em></li>
+            <li><i class="fa fa-check"></i><em>{{ site.data.i18n.content.banner.listItems.SUP[page.lang] }}</em></li>
+            <li><i class="fa fa-check"></i><em>{{ site.data.i18n.content.banner.listItems.RWD[page.lang] }}</em></li>
+            <li><i class="fa fa-check"></i><em>{{ site.data.i18n.content.banner.listItems.TIM[page.lang] }}</em></li>
+            <li><i class="fa fa-check"></i><em>{{ site.data.i18n.content.banner.listItems.DIF[page.lang] }}</em></li>
+          </ul>
+        </div>
+        <div class="col-md-4 hidden-sm hidden-xs">
+          <img src="/img/aeon.png" class="img-responsive"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Home -->
+
+<!-- Features -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 headline">
+        <h2>
+          {{ site.data.i18n.content.features.heading[page.lang] }}
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="features col-sm-4 col-md-4 col-lg-4">
+        <img src="/img/icon_secure.png" height="65px" style="margin-top:3px;">
+        <h3>{{ site.data.i18n.content.features.feature1.heading[page.lang] }}</h3>
+        <p>{{ site.data.i18n.content.features.feature1.desc[page.lang] }}</p>
+      </div>
+      <div class="features col-sm-4 col-md-4 col-lg-4">
+        <img src="/img/icon_private.png" height="68px" style="margin-top:0px;">
+        <h3>{{ site.data.i18n.content.features.feature2.heading[page.lang] }}</h3>
+        <p>{{ site.data.i18n.content.features.feature2.desc[page.lang] }}</p>
+      </div>
+      <div class="features col-sm-4 col-md-4 col-lg-4">
+        <img src="/img/icon_untraceable.png" height="60px" style="margin-top:8px;">
+        <h3>{{ site.data.i18n.content.features.feature3.heading[page.lang] }}</h3>
+        <p>{{ site.data.i18n.content.features.feature3.desc[page.lang] }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features -->
+
+<!-- Difference -->
+<section id="difference" class="section bg-blue-pattern white-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="headline">
+          <h2>{{ site.data.i18n.content.difference.heading[page.lang] }}</h2>
+          <p style="font-weight:600;">{{ site.data.i18n.content.difference.text[page.lang] }}</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="steps-list">
+          <li>
+            <span>1</span>
+            <h4>{{ site.data.i18n.content.difference.listItems.item1.name[page.lang] }}</h4>
+            <p>{{ site.data.i18n.content.difference.listItems.item1.value[page.lang] }}</p>
+          </li>
+          <li>
+            <span>2</span>
+            <h4>{{ site.data.i18n.content.difference.listItems.item2.name[page.lang] }}</h4>
+            <p>{{ site.data.i18n.content.difference.listItems.item2.value[page.lang] }}</p>
+          </li>
+          <li>
+            <span>3</span>
+            <h4>{{ site.data.i18n.content.difference.listItems.item3.name[page.lang] }}</h4>
+            <p>{{ site.data.i18n.content.difference.listItems.item3.value[page.lang] }}</p>
+          </li>
+          <li>
+            <span>4</span>
+            <h4>{{ site.data.i18n.content.difference.listItems.item4.name[page.lang] }}</h4>
+            <p>{{ site.data.i18n.content.difference.listItems.item4.value[page.lang] }}</p>
+          </li>
+        </ul>
+        <p class="difference-summary">
+          {{ site.data.i18n.content.difference.paragraph[page.lang] }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Difference -->

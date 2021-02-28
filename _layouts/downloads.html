@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<!-- Downloads -->
+<section id="downloads" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 headline">
+        <h2>{{ site.data.i18n.content.download.heading[page.lang] }}</h2>
+        <p>
+          <em>{{ site.data.i18n.content.download.latestRelease[page.lang] }}</em>
+          <a href="https://github.com/aeonix/aeon/releases/tag/v0.14.1.0-aeon">Chronos (0.14.1.0)</a>
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 text-center">
+        <h3>
+          <span class="fa fa-windows">&nbsp;&nbsp;Windows, 64-bit</span>
+        </h3>
+        <a href="https://github.com/aeonix/aeon-gui/releases/download/v0.14.1.0-aeon/aeon-gui-win-x64-v0.14.1.0.zip">Windows, 64-bit</a><br>
+        <a href="https://github.com/aeonix/aeon/releases/download/v0.14.1.0-aeon/aeon-win-x64-v0.14.1.0.zip">Windows, 64-bit Command-Line Tools Only</a><br><br>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-5 text-center">
+        <h3>
+          <span class="fa fa-apple">&nbsp;&nbsp;Mac OS X, 64-bit</span>
+        </h3>
+        <a href="https://github.com/aeonix/aeon-gui/releases/download/v0.14.1.0-aeon/aeon-gui-mac-x64-v0.14.1.0.tar.bz2">Mac OS X, 64-bit</a><br>
+        <a href="https://github.com/aeonix/aeon/releases/download/v0.14.1.0-aeon/aeon-mac-x64-v0.14.1.0.tar.bz2">Mac OS X, 64-bit Command-Line Tools Only</a><br><br>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 text-center">
+        <h3>
+          <span class="fa fa-linux">&nbsp;&nbsp;Linux, 64-bit</span>
+        </h3>
+        <a href="https://github.com/aeonix/aeon-gui/releases/download/v0.14.1.0-aeon/aeon-gui-linux-x64-v0.14.1.0.tar.bz2">Linux, 64-bit</a><br>
+        <a href="https://github.com/aeonix/aeon/releases/download/v0.14.1.0-aeon/aeon-linux-x64-v0.14.1.0.tar.bz2">Linux, 64-bit Command-Line Tools Only</a><br><br>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-5 text-center">
+        <h3>
+          <span class="fa fa-github">&nbsp;&nbsp;{{ site.data.i18n.content.download.sourceCode[page.lang] }}</span>
+        </h3>
+        <a href="https://github.com/aeonix/aeon-gui">GitHub, GUI</a><br>
+        <a href="https://github.com/aeonix/aeon">GitHub, CLI</a><br><br>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="row">
+      <div class="col-md-12 headline">
+        <h3><span class="fa">{{ site.data.i18n.content.download.blockchain[page.lang] }}</span></h3>
+        <div>{{ site.data.i18n.content.download.blockchainNotes[page.lang] }}</div>
+        <br>
+<pre>
+aeon-blockchain-import --input-file /path/to/your/file/blockchain.raw
+</pre>
+        <a href="https://drive.google.com/u/0/uc?id=1yiF7xvApQeQ-VBrJ_IDPQpdleqywNtvg">blockchain.raw</a> (3.4 GB)<br><br>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-md-12 headline">
+        <h3>
+          <span class="fa fa-hashes">&nbsp;&nbsp;Hashes</span>
+        </h3>
+<pre>
+SHA256(aeon-gui-linux-x64-v0.14.1.0.tar.bz2)= fe4d98e46211a72a618a4a14669796fd570829a4dddb830c33cb20bec7d414f2
+SHA256(aeon-gui-mac-x64-v0.14.1.0.tar.bz2)= bf77694df5bfe3ccd9262db14355094161d31990bba0a5b26dd99a36d9036c64
+SHA256(aeon-gui-win-x64-v0.14.1.0.zip)= d8b384be827c841dfe40e8037f5b11ec7c024ebe4bd65f45d01ed81fce8baf0d
+SHA256(aeon-linux-x64-v0.14.1.0.tar.bz2)= 15d5b01d0d9434bce70b088315086dd83ff9dea20a5492ffccc6d1e3704cc1f5
+SHA256(aeon-mac-x64-v0.14.1.0.tar.bz2)= d9cc9fc393db5993190a3fe40c88f2047feb4c0a692b1b704deec108ad3d454a
+SHA256(aeon-win-x64-v0.14.1.0.zip)= 7d289940ed7e79e6f929feea122a889066e9fc1be06fd22d0e7801a8b31b1e5f
+SHA256(aeon-blockchain-1265000.raw)= 3be0b4bd6d118b8fdbef056aacde4303a07b8dc204aa6c7787cf5f043953649c
+</pre>
+        <p>
+          <a href="/hashes.asc">{{ site.data.i18n.content.download.pgpSignature[page.lang] }}</a>
+          (<a href="https://raw.githubusercontent.com/aeonix/aeon/master/utils/gpg_keys/stoffu.asc">{{ site.data.i18n.content.download.signingKey[page.lang] }}</a>)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Downloads -->

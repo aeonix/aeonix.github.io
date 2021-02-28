@@ -1,8 +1,7 @@
-<div id="banner" class="bg-blur">
     <div id="header">
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      {% if site.content.announce[page.lang] And site.content.announce[page.lang] != "" And site.content.announce[page.lang] != nil %}
-        <div class="announce"><a href="https://github.com/aeonix/aeon-gui/releases/tag/v0.14.1.0-aeon">{{ site.content.announce[page.lang] }}</a></div>
+      <nav class="navbar navbar-inverse navbar-fixed-top scroll-fixed-navbar" role="navigation">
+      {% if site.data.i18n.content.announce[page.lang] And site.data.i18n.content.announce[page.lang] != "" And site.data.i18n.content.announce[page.lang] != nil %}
+        <div class="announce"><a href="https://github.com/aeonix/aeon-gui/releases/tag/v0.14.1.0-aeon">{{ site.data.i18n.content.announce[page.lang] }}</a></div>
       {% endif %}
         <div class="container">
           <div class="navbar-header">
@@ -12,30 +11,34 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-logo" href="#">
+            <a class="navbar-brand text-logo" href="/{{ page.lang }}/home">
               <span class="hidden-sm hidden-xs"><img src="/img/aeon-small.png"/></span>
-              {{ site.coinName }}
+              {{ site.data.i18n.coinName }}
             </a>
           </div>
           <div class="navigation navbar-collapse collapse">
             <ul class="nav navbar-nav menu-right">
-              <li class="active"><a href="#banner">{{ site.menu.home[page.lang] }}</a></li>
-              <li><a href="#features">{{ site.menu.features[page.lang] }}</a></li>
-              <li><a href="#difference">{{ site.menu.difference[page.lang] }}</a></li>
-              <li><a href="#downloads">{{ site.menu.download[page.lang] }}</a></li>
-              <li><a href="#presskit">{{ site.menu.pressKit[page.lang] }}</a></li>
+              {% if page.layout == "home" %}<li class="li-active">{% else %}<li>{% endif %}
+                <a href="/{{ page.lang }}/home">{{ site.data.i18n.menu.home[page.lang] }}</a>
+              </li>
+              {% if page.layout == "downloads" %}<li class="li-active">{% else %}<li>{% endif %}
+                <a href="/{{ page.lang }}/downloads">{{ site.data.i18n.menu.download[page.lang] }}</a>
+              </li>
+              {% if page.layout == "presskit" %}<li class="li-active">{% else %}<li>{% endif %}
+                <a href="/{{ page.lang }}/presskit">{{ site.data.i18n.menu.pressKit[page.lang] }}</a>
+              </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ site.menu.lang[page.lang] }} <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ site.data.i18n.menu.lang[page.lang] }} <span class="caret"></span></a>
                 <div class="dropdown-menu dropdown-menu-right">
                   <div class="dropdown-menu-language">
-                    <a href="/">English</a>
-                    <a href="/index.es">Espanol</a>
-                    <a href="/index.de">Deutsch</a>
-                    <a href="/index.pl">Polski</a>
-                    <a href="/index.eo">Esperanto</a>
-                    <a href="/index.fr">Française</a>
-                    <a href="/index.rs">русский</a>
-                    <a href="/index.cn">中文</a>
+                    <a href="/en/{{ page.layout }}">English</a>
+                    <a href="/es/{{ page.layout }}">Espanol</a>
+                    <a href="/de/{{ page.layout }}">Deutsch</a>
+                    <a href="/pl/{{ page.layout }}">Polski</a>
+                    <a href="/eo/{{ page.layout }}">Esperanto</a>
+                    <a href="/fr/{{ page.layout }}">Française</a>
+                    <a href="/rs/{{ page.layout }}">русский</a>
+                    <a href="/cn/{{ page.layout }}">中文</a>
                   </div>
                 </div>
               </li>
