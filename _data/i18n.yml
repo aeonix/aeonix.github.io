@@ -170,7 +170,7 @@ content:
       fr: "Traits"
     feature1:
       heading:
-        en: "Secure"
+        en: "Secured by Proof-of-Work"
         es: "Seguro"
         eo: "Sekureca"
         de: "Sicher"
@@ -179,7 +179,7 @@ content:
         cn: "安全"
         fr: "Sûre"
       desc:
-        en: "Each transaction is secured with robust cryptography and distributed through a global peer-to-peer consensus network."
+        en: "The AEON transaction ledger is protected by a global peer-to-peer network in the same manner as Bitcoin. Instead of SHA256, AEON relies on SHA3 and is secured by the KangarooTwelve ARM-friendly hashing algorithm developed by the Keccak team to meet the latest NIST standards."
         es: "Cada transacción se asegura con criptografía robusta y se distribuye a través de una red de consenso global de persona a persona."
         eo: "Ĉiu transakcio estas sekurigita per forta ĉifrado kaj disdonita tra tutmonda samtavola reto de konsento."
         de: "Jede Transaktion ist durch starke Kryptografie gesichert und wird durch ein globales Peer-to-Peer Netzwerk verteilt."
@@ -189,7 +189,7 @@ content:
         fr: "Chaque transaction est sécurisée par une cryptographie robuste et distribuée dans un réseau consensuel pair-à-pair."
     feature2:
       heading:
-        en: "Private"
+        en: "Hard Money"
         es: "Privado"
         eo: "Privateca"
         de: "Privat"
@@ -198,7 +198,7 @@ content:
         cn: "隐私"
         fr: "Privée"
       desc:
-        en: "By default, AEON utilizes a cryptographic system to transfer funds without the identifying information of each user becoming visible on the blockchain."
+        en: "Unlike the traditional banking where clients` funds are lent out to others, your AEON coins are immediately transferrable at any time. So long as your private keys are secure, your coins are truly yours and always in your posession."
         es: "De forma predeterminada, AEON utiliza un sistema criptográfico para transferir fondos sin que la información de identificación de cada usuario se haga visible en la cadena de bloques."
         eo: "AEON implicite utiligas ĉifran sistemon por transferi monon sen la identiga informo pri ĉiu uzanto fariĝi videbla en la blokĉeno."
         de: "AEON verwendet ein voreingestelltes kryptografisches System um das anonyme Versenden und Empfangen von Überweisungen sicherzustellen, ohne dass Informationen, die die beteiligten Benutzer identifizieren könnten, in der Blockchain sichtbar werden."
@@ -208,7 +208,7 @@ content:
         fr: "Par défaut AEON utilise un système de cryptographie pour transférer les fonds sans que les informations de chaque utilisateur devienne visible."
     feature3:
       heading:
-        en: "Untraceable"
+        en: "Privacy Protected"
         es: "Imposible de Rastrear"
         eo: "Nesekvebla"
         de: "Nicht nachzuverfolgen"
@@ -217,7 +217,7 @@ content:
         cn: "不可追踪"
         fr: "Intraçable"
       desc:
-        en: "AEON uses ring signatures to make transactions untraceable, meaning it is very difficult for blockchain analysis to determine if funds have been spent."
+        en: "AEON transactions are signed using multiple signatures known as a ring signature. Additionally a new receiving address is generated for every transaction. These and other encryption methods combined protect your balances and your transactions from blockchain analysis."
         es: "AEON usa firmas de anillo para hacer que las transacciones sean imposibles de rastrear, lo que significa que es muy difícil para el análisis de blockchain determinar si se han gastado los fondos."
         eo: "AEON uzas ring-signojn por fari transakciojn nesekveblaj. Tio signifas, ke estas tre malfacile por blokĉen-analizantoj determini ĉu mono estas elspezita aŭ ne."
         de: "AEON verwendet Ringsignaturen um Überweisungen nicht nachverfolgbar zu machen. Das bedeutet, es ist sehr schwierig durch eine Analyse der Blockchain herauszufinden, welche oder ob Überweisungen getätigt wurden."
