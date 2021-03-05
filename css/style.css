@@ -534,6 +534,24 @@ Logo
 Banner
 ========================================================================== */
 
+a.download-link {
+    display: inline-block;
+    background: #2c89a0ff;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    margin: 0 3px 0 0;
+    text-shadow: none;
+    border: 2px solid #164450ff;
+    font-weight: normal;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 0 #164450ff;
+    -moz-box-shadow: 0 2px 0 #164450ff;
+    box-shadow: 0 2px 0 #164450ff;
+}
+
 #banner {
     padding-top: 90px;
     padding-bottom: 70px;
