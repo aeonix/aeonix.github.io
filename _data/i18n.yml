@@ -158,9 +158,18 @@ content:
         rs: "SHA-3 proof-of-work (KangarooTwelve)"
         cn: "SHA-3 proof-of-work (KangarooTwelve)"
         fr: "SHA-3 proof-of-work (KangarooTwelve)"
+    download:
+      en: "Download Aeon"
+      es: "Descargar Aeon"
+      eo: "Elŝuti Aeon"
+      de: "Herunterladen Aeon"
+      pl: "Ściągnij Aeon"
+      rs: "скачать Aeon"
+      cn: "下载 Aeon"
+      fr: "Télécharger Aeon"
   features:
     heading:
-      en: "Features"
+      en: "More About AEON"
       es: "Caracteristicas"
       eo: "Trajtoj"
       de: "Eigenschaften"
