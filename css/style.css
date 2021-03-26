@@ -14,6 +14,7 @@ Basic Styling
 body {
     width: 100%;
     min-height: 100%;
+    background-color: #f5f5f6;
     font-family: "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 23px;
@@ -614,7 +615,8 @@ ul.steps-list li span {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    background: #1a1a1a;
+    color: #fff;
+    background: #08b4da;
 }
 ul.steps-list li h4, ul.steps-list li p {
     margin-left: 80px;
@@ -1442,4 +1444,26 @@ Custom additions to site
   display: block;
   padding: 3px 20px;
   white-space: nowrap;
+}
+
+#banner {
+  clip-path: ellipse(110% 50% at 50% 50%);	
+}
+
+.btn-custom{
+  color: #fff;
+  background-color: #2C89A0;
+  border-color: #2C89A0;
+  border-radius: 4px;
+}
+
+.btn-custom:hover {
+  background-color: #08b4da;
+  border-color: #08b4da;
+}
+
+pre {
+  border: 1px solid #08b4da;
+  border-left-width: 12px;
+  background-color: #fff;
 }
