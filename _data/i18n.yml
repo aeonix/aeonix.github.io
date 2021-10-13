@@ -44,6 +44,15 @@ menu:
     rs: "Загрузки"
     cn: "下载"
     fr: "Téléchargements"
+  whitepaper:
+    en: "Whitepaper"
+    es: "Whitepaper"
+    eo: "Whitepaper"
+    de: "Whitepaper"
+    pl: "Whitepaper"
+    rs: "Whitepaper"
+    cn: "Whitepaper"
+    fr: "Whitepaper"
   pressKit:
     en: "Press Kit"
     es: "Kit de Prensa"
