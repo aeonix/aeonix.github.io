@@ -1,0 +1,281 @@
+ 
+
+
+
+CRYPTONOTE STANDARD 001                           Nicolas van Saberhagen
+Category: Main Track                                      Johannes Meier
+                                                       Antonio M. Juarez
+                                                              CryptoNote
+                                                           December 2011
+
+
+                         CryptoNote Signatures
+
+
+Abstract
+
+   This document is part of the CryptoNote Standards describing a peer-
+   to-peer anonymous payment system. It defines the exact method of
+   zero-knowledge proof to establish the ownership of an asset. The
+   standard CryptoNote approach is the one-time ring signature scheme:
+   it allows a user to sign a message on behalf of the group while
+   keeping his identity indistinguishable from others. Only one
+   signature is allowed under the same key ("one-time" property), as any
+   other signatures will be unambiguously linked with the first one,
+   which prevents double-spending.
+
+
+Copyright and License Notice
+
+   Copyright (c) 2011 CryptoNote. This document is available under the
+   Creative Commons Attribution 3.0 License (international). To view a
+   copy of the license visit http://creativecommons.org/licenses/by/3.0/
+
+
+Table of Contents
+
+   1. Introduction  . . . . . . . . . . . . . . . . . . . . . . . . .  2
+   2. Definitions . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+   3. One-Time Ring Signatures  . . . . . . . . . . . . . . . . . . .  2
+   4. Data Types and Accessory Functions  . . . . . . . . . . . . . .  3
+   5. Signature Generation  . . . . . . . . . . . . . . . . . . . . .  4
+   6. Signature Verification  . . . . . . . . . . . . . . . . . . . .  4
+   7. Security Considerations . . . . . . . . . . . . . . . . . . . .  5
+   8. References  . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+
+
+
+
+
+
+
+
+ 
+
+
+Van Saberhagen et al.    CryptoNote Signatures                  [Page 1]
+
+CRYPTONOTE STANDARD 001                                    December 2011
+
+
+1. Introduction
+
+   A distinguishing feature of cryptocurrencies is that they establish
+   the money ownership and the authenticity of money transfers by
+   cryptographic means, specifically through the use of digital
+   signatures. A digital signature certifies that a particular
+   transaction is authorized by the owner of a particular key. However,
+   with regular digital signatures, the key which was used to
+   authenticate each transaction can be precisely identified. While the
+   keys are not directly linked to their owners' identities, they can be
+   used to link transactions. This means that it is possible to start
+   from a transaction whose sender or recipient is known, and trace the
+   funds either forward or backward to deduce how they are spent, or
+   where they were obtained.
+
+   CryptoNote uses advanced cryptography to obscure some of this
+   information. An ideal scheme would leave attackers completely
+   oblivious to a transaction's funding sources, but the scheme used in
+   CryptoNote is more limited. Firstly, a transaction input can only
+   obtain its funds from an output of the same amount. Secondly, each
+   input lists specific outputs, and it is known that the output spent
+   by the input is present in the list. However, no information is
+   disclosed beyond this point; the real spender is unidentifiable from
+   other outputs in the list.
+
+
+2. Definitions
+
+   digital signature: a cryptographic method of showing that a
+   particular message was authorized by a particular peer
+
+   public key: a datum used to identify a peer for the purpose of
+   digital signature verification
+
+   ring signature: a class of schemes that allow a user to sign a
+   message on behalf of a group, making his identity indistinguishable
+   from the other members of the group
+
+   secret key: data known to a peer only, which enables him to create
+   digital signatures under his identity
+
+
+3. One-Time Ring Signatures
+
+   Like regular digital signatures, keys for CryptoNote signatures come
+   in pairs. Public keys are included in transaction outputs and are
+   used to check the signatures, while the corresponding secret keys are
+   used to create them. However, CryptoNote utilizes ring signatures
+ 
+
+
+Van Saberhagen et al.    CryptoNote Signatures                  [Page 2]
+
+CRYPTONOTE STANDARD 001                                    December 2011
+
+
+   instead of regular, and these signatures may need multiple keys for
+   verification. A single secret key is needed to create a signature,
+   and this key must correspond to one of the public keys the signature
+   is verified against. Moreover, it is computationally infeasible to
+   recover the secret key used to create the signature. This means that
+   the sender of a transaction can link his inputs to multiple outputs,
+   making the task of tracking the funds more complex.
+
+   However, if CryptoNote used standard ring signatures, it would not be
+   known which outputs are spent and which are not. Therefore, it would
+   be possible to spend the same output multiple times. This would lead
+   to a double-spend problem, nullifying the scarcity of the currency.
+   To solve this issue, CryptoNote signatures were made one-time, which
+   means that it is possible to detect when multiple signatures are made
+   under the same key without revealing the key. This means that the
+   double-spend protection does not break the privacy properties.
+
+   The properties of CryptoNote signatures can be summarized as follows:
+
+      1. Usability: any person with a secret key can create a signature
+      on any message under that key and any other public keys. The list
+      of keys under which the signature is created, including the public
+      key which corresponds to the secret key used, is called a ring.
+
+      2. Security: it is not possible to create a signature without
+      possessing a secret key corresponding to one of the public keys in
+      the ring.
+
+      3. Anonymity: the signature does not convey any information beyond
+      being created by one of the keys in the ring. Signatures created
+      using different keys are indistinguishable, with a small
+      exception:
+
+      4. Linkability: it is possible to tell if two signatures were made
+      with the same secret key. No information is revealed beyond that,
+      therefore it could be any of the keys present in both rings.
+
+   The construction of the One-Time Ring Signatures used in CryptoNote
+   is a simplified version of Traceable Ring Signatures by Fujisaki and
+   Suzuki [TRS]. 
+
+
+4. Data Types and Accessory Functions
+
+   The CryptoNote signature scheme can be instantiated with any elliptic
+   curve of prime order. The curve will be referred to as E, with its
+   order being q. The terms "points" and "scalars" will be used to refer
+   to the elements of E and the integers modulo q respectively. The
+ 
+
+
+Van Saberhagen et al.    CryptoNote Signatures                  [Page 3]
+
+CRYPTONOTE STANDARD 001                                    December 2011
+
+
+   parameters are E, two points of order q - G1 and G2, and a hash
+   function H producing a scalar. Secret keys are scalars, and the
+   public key corresponding to the secret key a is the point A = a*G1.
+
+   A signature in a ring of n keys consists of a point Q and 2*n
+   scalars.
+
+
+5. Signature Generation
+
+   In the following two procedures || denotes concatenation.
+
+   To generate a signature, the following procedure is used:
+
+   Procedure generate_signature(M, A[1], A[2], ..., A[n], i, a[i]):
+      Q <- a[i]*G2
+      c[j], r[j] [j=1..n, j!=i] <- random
+      k <- random
+      For j <- 1..n, j!=i
+         X[j] <- c[j]*A[j]+r[j]*G1
+         Y[j] <- c[j]*Q+r[j]*G2
+      End For
+      X[i] <- k*G1
+      Y[i] <- k*G2
+      c[i] <- H(H(M) || X[1] || Y[1] || X[2] || Y[2] || ... || X[n] ||
+       Y[n])-Sum[j=1..n, j!=i](c[j])
+      r[i] <- k-a[i]*c[i]
+      Return (Q, c[1], r[1], c[2], r[2], ..., c[n], r[n])
+   End Procedure
+
+
+6. Signature Verification
+
+   Signatures are verified using the following procedure:
+
+   Procedure verify_signature(M, A[1], A[2], ..., A[n], Q, c[1], r[1],
+    c[2], r[2], ..., c[n], r[n]):
+      For i <- 1..n
+         X[i] <- c[i]*A[i]+r[i]*G1
+         Y[i] <- c[i]*Q+r[i]*G2
+      End For
+      If H(H(M) || X[1] || Y[1] || X[2] || Y[2] || ... || X[n] || Y[n])
+       = Sum[i=1..n](c[i])
+         If Q has been used before
+            Return "Double spend"
+         Else
+            Return "Correct"
+         End If
+ 
+
+
+Van Saberhagen et al.    CryptoNote Signatures                  [Page 4]
+
+CRYPTONOTE STANDARD 001                                    December 2011
+
+
+      Else
+         Return "Incorrect"
+      End If
+   End Procedure
+
+
+7. Security Considerations
+
+   It is of utmost importance that the random numbers used during the
+   signatures generation are produced by a cryptographically secure
+   random number generator. The distribution of the numbers must be
+   indistinguishable from the uniform distribution. Insecure generation
+   of the numbers c[j] and r[j] (j!=i) can be used to compromise
+   anonymity, while insecure generation of k can compromise the secret
+   key a[i].
+
+
+8. References
+
+   [TRS] Fujisaki, E., and K. Suzuki, "Traceable Ring Signature", 2007.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Van Saberhagen et al.    CryptoNote Signatures                  [Page 5]
+
