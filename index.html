@@ -1,522 +1,373 @@
 <!DOCTYPE html>
 <html>
-<head><style>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-</style> 
-</head>
-<body style="width: 79ch; margin: 0 auto; font-size:11pt; background-color:aliceblue; font-family: 'Ubuntu', sans-serif;">
-<div style="background-color:white; padding:1rem 2rem;">
-<h1 style="background-color: antiquewhite;padding: 2rem;">
-&#x1FA99; Aeon Cryptocurrency
-</h1>
-<h3>
-About
-</h3>
-<p>
-Aeon was annouced on BitcoinTalk forums in June of 2014 as a copy of Monero code and the genesis block was mined shortly thereafter. Since then, the Aeon codebase has intentionally been kept close to Monero's in order to benefit from the higher code reliability (due to the larger resources of peer reviewing available to Monero). Over time, Aeon has evolved a few critical differences such as size 3 ring signatures, asic-friendly mining, and omitting ring-ct proofs. As a direct result of this, Aeon serves as a unique alternative to Monero. All coins have been 100% proof-of-work mined with no coin sale, no ICO, no pre-mine, no tax etc.
-</p>
-<p>
-Latest aeonix release: <b>aeon-v0.14.1.0</b> (Chronos) Oct 25, 2020
-</p>
-<ul>
-<li>
-Full Node:
-<a href="https://github.com/aeonix/aeon">
-https://github.com/aeonix/aeon
-</a>
-</li>
-<li>
-Block Explorer 1:
-<a href="http://104.168.163.221/">
-http://104.168.163.221/
-</a>
-</li>
-<li>
-Block Explorer 2:
-<a href="http://188.166.75.158/">
-http://188.166.75.158/
-</a>
-</li>
-<li>
-Bitcointalk:
-<a href="https://bitcointalk.org/index.php?topic=641696.0">
-https://bitcointalk.org/index.php?topic=641696.0
-</a>
-</li>
-</ul>
-<h3>
-0. Table of Contents
-</h3>
-<ol>
-<li>
-Mission
-</li>
-<li>
-Economics
-</li>
-<li>
-Network Consensus
-</li>
-<li>
-Transactions
-</li>
-<li>
-Wallet
-</li>
-<li>
-Development
-</li>
-<li>
-References
-</li>
-</ol>
-</p>
-<h3>
-1. Mission
-</h3>
-<p>
-Being a fork of Monero, Aeon shares most of its codebase with Monero while making a few critical modifications such that it can offer a unique alternative. The codebase is intentionally kept close to Monero's in order to benefit from the higher code reliability (due to the larger source of peer reviewing available in Monero). By maintaining a stable codebase, Aeon can ensure security and fairness for all network participants. [15]
-</p>
-<h3>
-2. Economics
-</h3>
-<h4>
-Total Supply
-</h4>
-<p>
-There is always a predictable number of Aeon coins in circulation. Aeon follows the smooth supply emission schedule of Monero with a slight delay being that it was launched in June whereas Monero was launched in April of 2014. Thus it slowly approaches 18.44 million (2**64/(10**12)) coins from genesis block to approximately 2022. Once the block reward reaches 1.2 coins, the reward remains fixed at that amount so that the supply grows at a constant rate each year. See also: Tail Emission. [1][2]
-</p>
-<h4>
-Tail Emission
-</h4>
-<p>
-Aeon relies on a constant block reward to ensure a perpetual incentive for miners to secure the network. This is fixed to 1.2 coins per block which amounts to creating about 157,680 coins each year. [1][2]
-</p>
-<h4>
-Fees and Mining Reward
-</h4>
-<p>
-With a constant block reward for miners, the security of the blockchain does not depend on the fees paid by its network users. Thus fees can be very low so long as there is no spam to the blockchain. Thus there is currently a fixed minimum fee set to 0.0001 coins/KB. [3]
-</p>
-<h4>
-Block Size Limit
-</h4>
-<p>
-Because the security of the network is guaranteed by the tail emission reward, there does not need to be any imposed artificial restrictions to the block size limit. Thus the block size limit can grow as necessary to allow for increased transaction throughput. To prevent spam there is a hard limit of twice the median of the size of the previous 100 blocks.[1] In order for a miner to raise the block size limit, they must incur a penalty to their block reward. penalty = base_reward * ((block size / median size of last 100 blocks) - 1)^2. reward = base_reward - penalty. Miners can avoid this fee altogether by refusing to include transactions in blocks that would lead to exceeding the median block size, although this is likely not the optimal practice as including such transactions will often still be profitable. Miners can create their own criteria for including transactions in blocks by balancing transaction fees collected against the quadratic miners penalty that will be applied. For example for all blocks exceeding the median blocksize they could enforce minimum transaction fees with a formula that scales fee requirements to compensate for the quadratic penalty.[20]
-</p>
-<h3>
-3. Network Consensus
-</h3>
-<p>
-The Aeon network relies on the proof-of-work system innovated by the Bitcoin protocol.
-</p>
-<h4>
-Difficulty Adjustment
-</h4>
-<h5>
-Version 1
-</h5>
-<p>
-Height: 1, Version 0.8.9.1 - Jun 6, 2014. The adjustment algorithm examines 720 prior blocks, starting from 15 blocks ago. Of those 720 blocks, the 60 highest and lowest block times are excluded from the analysis, which leaves 600 blocks. Out of those 600 blocks, the average block time is determined. This average is then used to adjust the difficulty proportionally in order to target a 120 second block time. Difficulty is defined as the number of hash attempts required, on average, to find a valid hash for the block every 120 seconds. [4][5]
-</p>
-<h5>
-Version 2
-</h5>
-<p>
-Height: 1280000, Version 0.14.0.0 - Oct 4, 2020. The delay is dropped from 15 blocks to 8 blocks. The sort/cutting highest and lowest block times is removed, thus all 720 blocks are included in the difficulty calculation.
-</p>
-<h4>
-Block Time Interval
-</h4>
-<h5>
-Version 1
-</h5>
-<p>
-Height: 1, Version 0.8.9.1 - Jun 6, 2014. Because Aeon was launched as a clone of Monero, it started with a one minute block time. 
-</p>
-<h5>
-Version 2
-</h5>
-<p>
-Height: 592000, Version 0.9.0.0 - Jul 21, 2015. Seeing that there were many empty blocks adding unwanted bloat, this was modified to a 4 minute block time. 
-</p>
-<p>
-<h4>
-Timestamp
-</h4>
-<p>
-The timestamp of an acceptable block is restricted to being no more than two hours of the node's local time and no less than the median of the previous 60 blocks. [6]
-</p>
-<h4>
-Mining Algorithms
-</h4>
-<h5>
-Cryptonight
-</h5>
-<p>
-Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote protocol hashing algorithm. [7]
-</p>
-<h5>
-Cryptonight-Lite
-</h5>
-<p>
-Height: 592000, Version: 0.9.0.0 - Jul 21, 2015. There are two modifications: the scratchpad is only half the size of regular Cryptonight (1 MB rather than 2 MB) and the number of AES iterations is halved (half a million rather than a million). This makes a light hash about 4 times as fast as a regular one. [8]
-</p>
-<h5>
-KangarooTwelve
-</h5>
-<p>
-Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. Aeon originally set out to be an ASIC resistant mined coin using Cryptonite and this was successful for many years. Eventually, ASIC miners arrived to the network which caused a debate on whether AEON should continue to support ASIC resistance or to switch to a different hash function. Through much deliberation, it was decided to switch to a more efficient algorithm to create a lower barrier of entry for miners and to make it easier to compute the hash. The algorithm chosen was KangarooTwelve. This algorithm was designed by the winners of the SHA-3 competition. 
-[9][21][22]
-</p>
-<h3>
-4. Transactions
-</h3>
-<h4>
-Ring signatures
-</h4>
-<p>
-Ring signature refers to the essential mechanism Aeon relies on to protect identifying information of network users. Transactions are signed using the basic Ring signature scheme used in Monero, such that each signer of the transaction has a plausible deniability. The ring signature size of Aeon is fixed to 3. This is recognized as a balanced comprise between maintaining privacy and keeping transactions lightweight to prevent large blockchain size increases. [17][18][19]
-</p>
-<h4>
-Stealth Addresses
-</h4>
-<p>
-A minimum piece of information compacted to a single 95-character base58 string which the recipient needs to give to the sender in order to receive aeon. The information encoded in the address is the network byte, public spend key, public view key and a checksum. The bare minimum which the sender needs are the 2 public keys, but the network byte and the checksum are added to prevent errors. Any Aeon address is a stealth address. They're called stealth addresses because no aeon are actually sent to the address itself, ie it never appears on the blockchain. Instead, it's used by the sender to create a one-time destination from which only the intended recipient can spend. [10]
-</p>
-<h4>
-RingCT
-</h4>
-<p>
-The Aeon codebase currently omits the use of RingCT. There are no plans to add this feature as developers have opted to favor security of the supply over enhanced privacy protections. 
-</p>
-<h3>
-5. Wallet
-</h3>
-<h4>
-Mnemonic Seed
-</h4>
-<p>
-Minimum piece of information used to restore the cryptographic keys that make up the wallet. Basically, just a very very big number impossible to guess. I'd like to separate the mnemonic and seed terms: seed: a 256bit integer (usually represented as a 64 digit base16 number); mnemonic: in this context, a word representation of the seed, with one extra word used as a checksum. Both represent the same thing, but the mnemonic is a human readable form of it. Convention currently in use consists of encoding the seed using a 1626 words dictionary which results in a 24-word mnemonic. A CRC32 checksum is performed on them to give the 25th word which is used for error checking. The seed itself, if smaller than a certain number, is used directly as the private spend key. Otherwise a seed mod l operation is performed to obtain the private key from the seed, where l is a very big number, specific to the elliptic curve used in Aeon cryptography. The private view key is derived deterministically from the private spend key (it doesn't have to be) and that is why we call such wallets deterministic. [10]
-</p>
-<h4>
-Public-key cryptography
-</h4>
-<p>
-General terms specific to public-key cryptography where a private key and a public key make up a keypair. A public key is derived from the private key. The public key is safe to share, and gives the recipient the ability to encrypt something or verify a signature. The private key gives the owner the ability to sign or decrypts something, so should be kept private. It's important that private keys are generated in a good way as they shouldn't be easy to guess. [10]
-</p>
-<h4>
-View Keypair
-</h4>
-<p>
-The public part of it makes up the 2nd half of aeon address, and is used by the sender to generate a one-time stealth address to where the funds are actually sent. The owner of the wallet uses the private view key to scan the blockchain and find the funds sent to his address. At the protocol level, the sender performs an encryption with the recipient's public view key, and the recipient attempts to decrypt all the outputs on the blockchain to find the one belonging to him (where decryption was successful). For audit purposes, it could be shared with the auditor, along with the signed key images to prove the balance of a wallet. Sharing only the view key would enable the auditor only to see received transactions, but he wouldn't be able to tell if any funds were spent, so he couldn't know the actual balance. [10]
-</p>
-<h4>
-Spend Keypair
-</h4>
-<p>
-The public part of it makes up the 1st half of aeon address, and is used to make new transactions and participate in ring signatures. The private spend key is used to sign a key image when the owner wants to spend funds, and the public spend key is used by the network to verify the signature of the key image and accept the transaction as valid. This is what prevents double-spend as the network enforces the rule that a key image can be spent only once. I'd like to expand this a bit, but I'm a bit lacking here, so can't right now. [10]
-</p>
-<h4>
-Address Types and Prefixes
-</h4>
-<p>
-Public addresses start with "Wm". Integrated addresses use "Wz". Subadresses use "Xn". [11]
-</p>
-<h4>
-Payment ID
-</h4>
-<p>
-A feature developed to make it easier for the sender to prove to the recipient that he sent him the funds. Due to Aeon privacy features, the recipient can't tell from where the funds came. However, if there's a payment ID attached to it, it would give him a clue. Payment IDs should be randomly generated for each transaction to avoid linking transactions. It works like this: 1. Recipient gives the sender his address and an unique payment ID 2. Sender sends the Aeon with payment ID specified 3. Recipient sees an incoming transaction with the payment ID specified, and he can know that it came from that specific user because only that user could have known the payment ID. [10]
-</p>
-<h4>
-Integrated Addresses
-</h4>
-<p>
-Integrated addresses are an amalgamation of a standard Monero address and a short payment id, bundled in one single string. They are intended to be used when a recipient requires a payment id, and they have two main advantages over the historical practice of supplying a standard address and a payment id: (*) it is self contained, including a checksum, so it becomes a lot harder for the payer to forget the payment id, which is a common cause of trouble. (*) integrated addresses use a short payment id (64 bits, as opposed to the original 256 bit standalone payment ids), which will always be encrypted on the blockchain, increasing privacy (and decreasing blockchain size usage slightly). Note that it is trivial to go from an integrated address to the standard address plus payment id. Thus, an integrated address should NOT be viewed as a way to obscure one's address from the sender. Not many exchanges and other merchants currently support integrated addresses, however, but their use is encouraged for the above reasons. [12]
-</p>
-<h4>
-Subaddresses
-</h4>
-<p>
-Aeon supports the subaddress functionality from Monero. [13]
-</p>
-<h4>
-Multisignature
-</h4>
-<p>
-Aeon supports the arbitrary M of N multi-signature wallet scheme from Monero. [14][23]
-</p>
-<h3>
-6. Development
-</h3>
-<h4>
-Release History
-</h4>
-<p>
-<ul>
-<li>
-0.8.9.1 - Jun 6, 2014
-</li>
-<li>
-0.8.8.1 - Jun 7, 2014
-</li>
-<li>
-0.8.8.2 - Aug 20, 2014
-</li>
-<li>
-0.9.0.0 - Jul 21, 2015
-</li>
-<li>
-0.9.1.0 - Aug 6, 2015
-</li>
-<li>
-0.9.1.1 - Aug 7, 2015
-</li>
-<li>
-0.9.2.0 - Aug 16, 2015
-</li>
-<li>
-0.9.3.0 - Sep 2, 2015
-</li>
-<li>
-0.9.4.0 - Sep 3, 2015
-</li>
-<li>
-0.9.5.0 - Oct 9, 2015
-</li>
-<li>
-0.9.6.0 - Nov 5, 2015
-</li>
-<li>
-0.9.7.1 - Feb 23, 2017
-</li>
-<li>
-0.9.8.0 - Mar 4, 2017
-</li>
-<li>
-0.9.9.0 - Mar 28, 2017
-</li>
-<li>
-0.9.10.0 - Apr 3, 2017
-</li>
-<li>
-0.9.11.0 - Apr 5, 2017
-</li>
-<li>
-0.9.12.0 - Apr 21, 2017
-</li>
-<li>
-0.9.13.0 - Sep 29, 2017
-</li>
-<li>
-0.9.14.0 - Oct 7, 2017
-</li>
-<li>
-0.12.0.0 - May 24, 2018
-</li>
-<li>
-0.12.1.0 - Jun 14, 2018
-</li>
-<li>
-0.12.1.1 - Jun 16, 2018
-</li>
-<li>
-0.12.2.0 - Jun 20, 2018
-</li>
-<li>
-0.12.2.1 - Jun 20, 2018
-</li>
-<li>
-0.12.3.0 - Jun 26, 2018
-</li>
-<li>
-0.12.4.0 - Jul 7, 2018
-</li>
-<li>
-0.12.5.0 - Jul 9, 2018
-</li>
-<li>
-0.12.6.0 - Sep 27, 2018
-</li>
-<li>
-0.12.7.0 - Nov 27, 2018
-</li>
-<li>
-0.12.8.0 - Nov 30, 2018
-</li>
-<li>
-0.12.9.0 - Mar 16, 2019
-</li>
-<li>
-0.13.0.0 - Sep 24, 2019
-</li>
-<li>
-0.13.1.0 - Nov 28, 2019
-</li>
-<li>
-0.14.0.0 - Oct 4, 2020
-</li>
-<li>
-0.14.1.0 - Oct 25, 2020
-</li>
-</ul>
-</p>
-<h4>
-Contributing Guidelines
-</h4>
-<p>
-Please see [15].
-</p>
-<h4>
-Donation Fund
-</h4>
-<p style="word-wrap: break-word;">
-Aeon is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. You can send AEON to the Aeon donation address via the donate command (type help in the command-line wallet for details). The Aeon donation address is: WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs (viewkey: 71bf19a7348ede17fa487167710dac401ef1556851bfd36b76040facf051630b). The Bitcoin donation address is: 12Cyjf3qV6qLyXdzpLSLPdRFPUVidvnzFM. There currently remains 445,369 AEON and 0.81 BTC in the donation fund. [16]
-</p>
-<h3>
-7. References
-</h3>
-<ol>
-<li>
-Aeon contributors, 
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_basic/cryptonote_basic_impl.cpp">
-cryptonote_basic_impl.cpp get_block_reward
-</a> 
-</li>
-<li>
-Aeon contributors,
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
-cryptonote_config.h MONEY_SUPPLY EMISSION_SPEED_FACTOR_PER_MINUTE FINAL_SUBSIDY_PER_MINUTE
-</a>   
-</li>
-<li>
-Aeon contributors,
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
-cryptonote_config.h FEE_PER_KB
-</a>
-</li>
-<li>
-CryptoNote authors,  
-<a href="/files/cns/cns-010.txt">
-CryptoNote Difficulty Adjustment
-</a>
-</li>
-<li>
-knacc,
-<a href="https://monero.stackexchange.com/a/7981">
-How does the difficulty adjustment for monero work?
-</a>
-</li>
-<li>
-Aeon contributors,
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
-cryptonote_config.h BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT
-</a>   
-</li>
-<li>
-CryptoNote authors, 
-<a href="/files/cns/cns-008.txt">
-CryptoNight Hash Function
-</a>
-</li>
-<li>
-user36303, 
-<a href="https://monero.stackexchange.com/a/372">
-CryptoNight-Lite PoW modifications in Aeon
-</a>
-</li>
-<li>
-Team Keccak, 
-<a href="/files/KangarooTwelve.pdf">
-KangarooTwelve: fast hashing based on Keccak-p
-</a>
-</li>
-<li>
-JollyMort, 
-<a href="https://monero.stackexchange.com/questions/2053/view-key-spend-key-paper-key-seed-is-there-a-short-presentation-of-vocabul">View key, spend key, paper key, seed... Is there a short presentation of vocabulary around Monero wallet?
-</a>
-</li>
-<li>
-Aeon contributors, 
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
-cryptonote_config.h CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX
-</a>
-</li>
-<li>
-user36303, 
-<a href="https://monero.stackexchange.com/questions/3179/what-is-an-integrated-address">
-What is an integrated address?
-</a>
-</li>
-<li>
-kenshi84, 
-<a href="https://github.com/monero-project/monero/pull/2056">
-Subaddresses #2056
-</a>
-</li>
-<li>
-JollyMort, 
-<a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">
-How to Use Monero Multisignature Wallets (2/2 & 2/3)
-</a>
-</li>
-<li>
-Aeon contributors, 
-<a href="https://raw.githubusercontent.com/aeonix/aeon/master/CONTRIBUTING.md">
-CONTRIBUTING.md
-</a>
-</li>
-<li>
-yorha-0x, 
-<a href="https://docs.google.com/document/d/1X5Ansi0B9ruAaLHoP7v4Xu8vi79AHnLRztDKyvXRzhk/">
-AEON Donation Fund Review
-</a>
-</li>
-<li>
-CryptoNote authors,
-<a href="/files/cns/cns-009.txt">
-CryptoNote Technology
-</a>
-</li>
-<li>
-CryptoNote authors,
-<a href="/files/cns/cns-002.txt">
-CryptoNote Signatures
-</a>
-</li>
-<li>
-Monero Research Lab, 
-<a href="/files/MRL-0001.pdf">
-A Note on Chain Reactions in Traceability in CryptoNote 2.0
-</a>
-</li>
-<li>
-studycrypto, 
-<a href="https://monero.stackexchange.com/a/195">
-How is the quadratic miners penalty calculated
-</a>
-</li>
-<li>
-stoffu,
-<a href="https://github.com/aeonix/aeon/pull/108">
-switch to KangarooTwelve proof of work #108 
-</a>
-</li>
-<li>
-stoffu,
-<a href="https://github.com/aeonix/aeon/issues/103">
-Proposal to switch to SHA-3 proof of work #103 
-</a>
-</li>
-<li>
-stoffu,
-<a href="https://github.com/aeonix/aeon/pull/188">
-Aeon multisig #188 
-</a>
-</li>
-</ol>
-</div>
-</body>
-</html>
 
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  </style>
+</head>
+
+<body
+  style="width: 80ch; margin: 0 auto; font-size:11pt; background-color:aliceblue; font-family: 'Ubuntu', sans-serif;">
+  <div style="background-color:white; padding:1rem 2rem;">
+    <h1 style="background-color: antiquewhite;padding: 2rem;"> &#x1FA99; Aeon
+      Cryptocurrency </h1>
+    <h3> About </h3>
+    <p> Aeon was annouced on BitcoinTalk forums in June of 2014 as a copy of
+      Monero code and the genesis block was mined shortly thereafter. Since
+      then, the Aeon codebase has intentionally been kept close to Monero's in
+      order to benefit from the higher code reliability (due to the larger
+      resources of peer reviewing available to Monero). Over time, Aeon has
+      evolved a few critical differences such as size 3 ring signatures,
+      asic-friendly mining, and omitting ring-ct proofs. As a direct result of
+      this, Aeon serves as a unique alternative to Monero. All coins have been
+      100% proof-of-work mined with no coin sale, no ICO, no pre-mine, no tax
+      etc. </p>
+    <p> Latest aeonix release: <b>aeon-v0.14.1.0</b> (Chronos) Oct 25, 2020 </p>
+    <ul>
+      <li> Full Node: <a href="https://github.com/aeonix/aeon">
+          https://github.com/aeonix/aeon </a> </li>
+      <li> Block Explorer 1: <a href="http://104.168.163.221/">
+          http://104.168.163.221/ </a> </li>
+      <li> Block Explorer 2: <a href="http://188.166.75.158/">
+          http://188.166.75.158/ </a> </li>
+      <li> Bitcointalk: <a
+          href="https://bitcointalk.org/index.php?topic=641696.0">
+          https://bitcointalk.org/index.php?topic=641696.0 </a> </li>
+    </ul>
+    <h3> 0. Table of Contents </h3>
+    <ol>
+      <li> Mission </li>
+      <li> Economics </li>
+      <li> Network Consensus </li>
+      <li> Transactions </li>
+      <li> Wallet </li>
+      <li> Development </li>
+      <li> References </li>
+    </ol>
+    <h3> 1. Mission </h3>
+    <p> Being a fork of Monero, Aeon shares most of its codebase with Monero
+      while making a few critical modifications such that it can offer a unique
+      alternative. The codebase is intentionally kept close to Monero's in order
+      to benefit from the higher code reliability (due to the larger source of
+      peer reviewing available in Monero). By maintaining a stable codebase,
+      Aeon can ensure security and fairness for all network participants. [15]
+    </p>
+    <h3> 2. Economics </h3>
+    <h4> Total Supply </h4>
+    <p> There is always a predictable number of Aeon coins in circulation. Aeon
+      follows the smooth supply emission schedule of Monero with a slight delay
+      being that it was launched in June whereas Monero was launched in April of
+      2014. Thus it slowly approaches 18.44 million (2**64/(10**12)) coins from
+      genesis block to approximately 2022. Once the block reward reaches 1.2
+      coins, the reward remains fixed at that amount so that the supply grows at
+      a constant rate each year. See also: Tail Emission. [1][2] </p>
+    <h4> Tail Emission </h4>
+    <p> Aeon relies on a constant block reward to ensure a perpetual incentive
+      for miners to secure the network. This is fixed to 1.2 coins per block
+      which amounts to creating about 157,680 coins each year. [1][2] </p>
+    <h4> Fees and Mining Reward </h4>
+    <p> With a constant block reward for miners, the security of the blockchain
+      does not depend on the fees paid by its network users. Thus fees can be
+      very low so long as there is no spam to the blockchain. Thus there is
+      currently a fixed minimum fee set to 0.0001 coins/KB. [3] </p>
+    <h4> Block Size Limit </h4>
+    <p> Because the security of the network is guaranteed by the tail emission
+      reward, there does not need to be any imposed artificial restrictions to
+      the block size limit. Thus the block size limit can grow as necessary to
+      allow for increased transaction throughput. To prevent spam there is a
+      hard limit of twice the median of the size of the previous 100 blocks.[1]
+      In order for a miner to raise the block size limit, they must incur a
+      penalty to their block reward. penalty=base_reward * ((block size / median
+      size of last 100 blocks) - 1)^2. reward=base_reward - penalty. Miners can
+      avoid this fee altogether by refusing to include transactions in blocks
+      that would lead to exceeding the median block size, although this is
+      likely not the optimal practice as including such transactions will often
+      still be profitable. Miners can create their own criteria for including
+      transactions in blocks by balancing transaction fees collected against the
+      quadratic miners penalty that will be applied. For example for all blocks
+      exceeding the median blocksize they could enforce minimum transaction fees
+      with a formula that scales fee requirements to compensate for the
+      quadratic penalty.[20] </p>
+    <h3> 3. Network Consensus </h3>
+    <p> The Aeon network relies on the proof-of-work system innovated by the
+      Bitcoin protocol. </p>
+    <h4> Difficulty Adjustment </h4>
+    <h5> Version 1 </h5>
+    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The adjustment algorithm
+      examines 720 prior blocks, starting from 15 blocks ago. Of those 720
+      blocks, the 60 highest and lowest block times are excluded from the
+      analysis, which leaves 600 blocks. Out of those 600 blocks, the average
+      block time is determined. This average is then used to adjust the
+      difficulty proportionally in order to target a 120 second block time.
+      Difficulty is defined as the number of hash attempts required, on average,
+      to find a valid hash for the block every 120 seconds. [4][5] </p>
+    <h5> Version 2 </h5>
+    <p> Height: 1280000, Version 0.14.0.0 - Oct 4, 2020. The delay is dropped
+      from 15 blocks to 8 blocks. The sort/cutting highest and lowest block
+      times is removed, thus all 720 blocks are included in the difficulty
+      calculation. </p>
+    <h4> Block Time Interval </h4>
+    <h5> Version 1 </h5>
+    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. Because Aeon was launched as a
+      clone of Monero, it started with a one minute block time. </p>
+    <h5> Version 2 </h5>
+    <p> Height: 592000, Version 0.9.0.0 - Jul 21, 2015. Seeing that there were
+      many empty blocks adding unwanted bloat, this was modified to a 4 minute
+      block time. </p>
+    <p>
+    <h4> Timestamp </h4>
+    <p> The timestamp of an acceptable block is restricted to being no more than
+      two hours of the node's local time and no less than the median of the
+      previous 60 blocks. [6] </p>
+    <h4> Mining Algorithms </h4>
+    <h5> Cryptonight </h5>
+    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
+      protocol hashing algorithm. [7] </p>
+    <h5> Cryptonight-Lite </h5>
+    <p> Height: 592000, Version: 0.9.0.0 - Jul 21, 2015. There are two
+      modifications: the scratchpad is only half the size of regular Cryptonight
+      (1 MB rather than 2 MB) and the number of AES iterations is halved (half a
+      million rather than a million). This makes a light hash about 4 times as
+      fast as a regular one. [8] </p>
+    <h5> KangarooTwelve </h5>
+    <p> Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. Aeon originally set
+      out to be an ASIC resistant mined coin using Cryptonite and this was
+      successful for many years. Eventually, ASIC miners arrived to the network
+      which caused a debate on whether AEON should continue to support ASIC
+      resistance or to switch to a different hash function. Through much
+      deliberation, it was decided to switch to a more efficient algorithm to
+      create a lower barrier of entry for miners and to make it easier to
+      compute the hash. The algorithm chosen was KangarooTwelve. This algorithm
+      was designed by the winners of the SHA-3 competition. [9][21][22] </p>
+    <h3> 4. Transactions </h3>
+    <h4> Ring signatures </h4>
+    <p> Ring signature refers to the essential mechanism Aeon relies on to
+      protect identifying information of network users. Transactions are signed
+      using the basic Ring signature scheme used in Monero, such that each
+      signer of the transaction has a plausible deniability. The ring signature
+      size of Aeon is fixed to 3. This is recognized as a balanced comprise
+      between maintaining privacy and keeping transactions lightweight to
+      prevent large blockchain size increases. [17][18][19] </p>
+    <h4> Stealth Addresses </h4>
+    <p> A minimum piece of information compacted to a single 95-character base58
+      string which the recipient needs to give to the sender in order to receive
+      aeon. The information encoded in the address is the network byte, public
+      spend key, public view key and a checksum. The bare minimum which the
+      sender needs are the 2 public keys, but the network byte and the checksum
+      are added to prevent errors. Any Aeon address is a stealth address.
+      They're called stealth addresses because no aeon are actually sent to the
+      address itself, ie it never appears on the blockchain. Instead, it's used
+      by the sender to create a one-time destination from which only the
+      intended recipient can spend. [10] </p>
+    <h4> RingCT </h4>
+    <p> The Aeon codebase currently omits the use of RingCT. There are no plans
+      to add this feature as developers have opted to favor security of the
+      supply over enhanced privacy protections. </p>
+    <h3> 5. Wallet </h3>
+    <h4> Mnemonic Seed </h4>
+    <p> Minimum piece of information used to restore the cryptographic keys that
+      make up the wallet. Basically, just a very very big number impossible to
+      guess. I'd like to separate the mnemonic and seed terms: seed: a 256bit
+      integer (usually represented as a 64 digit base16 number); mnemonic: in
+      this context, a word representation of the seed, with one extra word used
+      as a checksum. Both represent the same thing, but the mnemonic is a human
+      readable form of it. Convention currently in use consists of encoding the
+      seed using a 1626 words dictionary which results in a 24-word mnemonic. A
+      CRC32 checksum is performed on them to give the 25th word which is used
+      for error checking. The seed itself, if smaller than a certain number, is
+      used directly as the private spend key. Otherwise a seed mod l operation
+      is performed to obtain the private key from the seed, where l is a very
+      big number, specific to the elliptic curve used in Aeon cryptography. The
+      private view key is derived deterministically from the private spend key
+      (it doesn't have to be) and that is why we call such wallets
+      deterministic. [10] </p>
+    <h4> Public-key cryptography </h4>
+    <p> General terms specific to public-key cryptography where a private key
+      and a public key make up a keypair. A public key is derived from the
+      private key. The public key is safe to share, and gives the recipient the
+      ability to encrypt something or verify a signature. The private key gives
+      the owner the ability to sign or decrypts something, so should be kept
+      private. It's important that private keys are generated in a good way as
+      they shouldn't be easy to guess. [10] </p>
+    <h4> View Keypair </h4>
+    <p> The public part of it makes up the 2nd half of aeon address, and is used
+      by the sender to generate a one-time stealth address to where the funds
+      are actually sent. The owner of the wallet uses the private view key to
+      scan the blockchain and find the funds sent to his address. At the
+      protocol level, the sender performs an encryption with the recipient's
+      public view key, and the recipient attempts to decrypt all the outputs on
+      the blockchain to find the one belonging to him (where decryption was
+      successful). For audit purposes, it could be shared with the auditor,
+      along with the signed key images to prove the balance of a wallet. Sharing
+      only the view key would enable the auditor only to see received
+      transactions, but he wouldn't be able to tell if any funds were spent, so
+      he couldn't know the actual balance. [10] </p>
+    <h4> Spend Keypair </h4>
+    <p> The public part of it makes up the 1st half of aeon address, and is used
+      to make new transactions and participate in ring signatures. The private
+      spend key is used to sign a key image when the owner wants to spend funds,
+      and the public spend key is used by the network to verify the signature of
+      the key image and accept the transaction as valid. This is what prevents
+      double-spend as the network enforces the rule that a key image can be
+      spent only once. I'd like to expand this a bit, but I'm a bit lacking
+      here, so can't right now. [10] </p>
+    <h4> Address Types and Prefixes </h4>
+    <p> Public addresses start with "Wm". Integrated addresses use "Wz".
+      Subadresses use "Xn". [11] </p>
+    <h4> Payment ID </h4>
+    <p> A feature developed to make it easier for the sender to prove to the
+      recipient that he sent him the funds. Due to Aeon privacy features, the
+      recipient can't tell from where the funds came. However, if there's a
+      payment ID attached to it, it would give him a clue. Payment IDs should be
+      randomly generated for each transaction to avoid linking transactions. It
+      works like this: 1. Recipient gives the sender his address and an unique
+      payment ID 2. Sender sends the Aeon with payment ID specified 3. Recipient
+      sees an incoming transaction with the payment ID specified, and he can
+      know that it came from that specific user because only that user could
+      have known the payment ID. [10] </p>
+    <h4> Integrated Addresses </h4>
+    <p> Integrated addresses are an amalgamation of a standard Monero address
+      and a short payment id, bundled in one single string. They are intended to
+      be used when a recipient requires a payment id, and they have two main
+      advantages over the historical practice of supplying a standard address
+      and a payment id: (*) it is self contained, including a checksum, so it
+      becomes a lot harder for the payer to forget the payment id, which is a
+      common cause of trouble. (*) integrated addresses use a short payment id
+      (64 bits, as opposed to the original 256 bit standalone payment ids),
+      which will always be encrypted on the blockchain, increasing privacy (and
+      decreasing blockchain size usage slightly). Note that it is trivial to go
+      from an integrated address to the standard address plus payment id. Thus,
+      an integrated address should NOT be viewed as a way to obscure one's
+      address from the sender. Not many exchanges and other merchants currently
+      support integrated addresses, however, but their use is encouraged for the
+      above reasons. [12] </p>
+    <h4> Subaddresses </h4>
+    <p> Aeon supports the subaddress functionality from Monero. [13] </p>
+    <h4> Multisignature </h4>
+    <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
+      Monero. [14][23] </p>
+    <h3> 6. Development </h3>
+    <h4> Release History </h4>
+    <ul>
+      <li> 0.8.9.1 - Jun 6, 2014 </li>
+      <li> 0.8.8.1 - Jun 7, 2014 </li>
+      <li> 0.8.8.2 - Aug 20, 2014 </li>
+      <li> 0.9.0.0 - Jul 21, 2015 </li>
+      <li> 0.9.1.0 - Aug 6, 2015 </li>
+      <li> 0.9.1.1 - Aug 7, 2015 </li>
+      <li> 0.9.2.0 - Aug 16, 2015 </li>
+      <li> 0.9.3.0 - Sep 2, 2015 </li>
+      <li> 0.9.4.0 - Sep 3, 2015 </li>
+      <li> 0.9.5.0 - Oct 9, 2015 </li>
+      <li> 0.9.6.0 - Nov 5, 2015 </li>
+      <li> 0.9.7.1 - Feb 23, 2017 </li>
+      <li> 0.9.8.0 - Mar 4, 2017 </li>
+      <li> 0.9.9.0 - Mar 28, 2017 </li>
+      <li> 0.9.10.0 - Apr 3, 2017 </li>
+      <li> 0.9.11.0 - Apr 5, 2017 </li>
+      <li> 0.9.12.0 - Apr 21, 2017 </li>
+      <li> 0.9.13.0 - Sep 29, 2017 </li>
+      <li> 0.9.14.0 - Oct 7, 2017 </li>
+      <li> 0.12.0.0 - May 24, 2018 </li>
+      <li> 0.12.1.0 - Jun 14, 2018 </li>
+      <li> 0.12.1.1 - Jun 16, 2018 </li>
+      <li> 0.12.2.0 - Jun 20, 2018 </li>
+      <li> 0.12.2.1 - Jun 20, 2018 </li>
+      <li> 0.12.3.0 - Jun 26, 2018 </li>
+      <li> 0.12.4.0 - Jul 7, 2018 </li>
+      <li> 0.12.5.0 - Jul 9, 2018 </li>
+      <li> 0.12.6.0 - Sep 27, 2018 </li>
+      <li> 0.12.7.0 - Nov 27, 2018 </li>
+      <li> 0.12.8.0 - Nov 30, 2018 </li>
+      <li> 0.12.9.0 - Mar 16, 2019 </li>
+      <li> 0.13.0.0 - Sep 24, 2019 </li>
+      <li> 0.13.1.0 - Nov 28, 2019 </li>
+      <li> 0.14.0.0 - Oct 4, 2020 </li>
+      <li> 0.14.1.0 - Oct 25, 2020 </li>
+    </ul>
+    <h4> Contributing Guidelines </h4>
+    <p> Please see [15]. </p>
+    <h4> Donation Fund </h4>
+    <p style="word-wrap: break-word;"> Aeon is a 100% community-sponsored
+      endeavor. If you want to join our efforts, the easiest thing you can do is
+      support the project financially. You can send AEON to the Aeon donation
+      address via the donate command (type help in the command-line wallet for
+      details). The Aeon donation address is:
+      WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs
+      (viewkey:
+      71bf19a7348ede17fa487167710dac401ef1556851bfd36b76040facf051630b). The
+      Bitcoin donation address is: 12Cyjf3qV6qLyXdzpLSLPdRFPUVidvnzFM. There
+      currently remains 445,369 AEON and 0.81 BTC in the donation fund. [16]
+    </p>
+    <h3> 7. References </h3>
+    <ol>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_basic/cryptonote_basic_impl.cpp">
+          cryptonote_basic_impl.cpp get_block_reward </a> </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
+          cryptonote_config.h MONEY_SUPPLY EMISSION_SPEED_FACTOR_PER_MINUTE
+          FINAL_SUBSIDY_PER_MINUTE </a> </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
+          cryptonote_config.h FEE_PER_KB </a> </li>
+      <li> CryptoNote authors, <a href="/files/cns/cns-010.txt"> CryptoNote
+          Difficulty Adjustment </a> </li>
+      <li> knacc, <a href="https://monero.stackexchange.com/a/7981"> How does
+          the difficulty adjustment for monero work? </a> </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
+          cryptonote_config.h BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW
+          CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT </a> </li>
+      <li> CryptoNote authors, <a href="/files/cns/cns-008.txt"> CryptoNight
+          Hash Function </a> </li>
+      <li> user36303, <a href="https://monero.stackexchange.com/a/372">
+          CryptoNight-Lite PoW modifications in Aeon </a> </li>
+      <li> Team Keccak, <a href="/files/KangarooTwelve.pdf"> KangarooTwelve:
+          fast hashing based on Keccak-p </a> </li>
+      <li> JollyMort, <a
+          href="https://monero.stackexchange.com/questions/2053/view-key-spend-key-paper-key-seed-is-there-a-short-presentation-of-vocabul">View
+          key, spend key, paper key, seed... Is there a short presentation of
+          vocabulary around Monero wallet? </a> </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
+          cryptonote_config.h CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX
+          CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX
+          CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX </a> </li>
+      <li> user36303, <a
+          href="https://monero.stackexchange.com/questions/3179/what-is-an-integrated-address">
+          What is an integrated address? </a> </li>
+      <li> kenshi84, <a
+          href="https://github.com/monero-project/monero/pull/2056">
+          Subaddresses #2056 </a> </li>
+      <li> JollyMort, <a
+          href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">
+          How to Use Monero Multisignature Wallets (2/2 & 2/3) </a> </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/CONTRIBUTING.md">
+          CONTRIBUTING.md </a> </li>
+      <li> yorha-0x, <a
+          href="https://docs.google.com/document/d/1X5Ansi0B9ruAaLHoP7v4Xu8vi79AHnLRztDKyvXRzhk/">
+          AEON Donation Fund Review </a> </li>
+      <li> CryptoNote authors, <a href="/files/cns/cns-009.txt"> CryptoNote
+          Technology </a> </li>
+      <li> CryptoNote authors, <a href="/files/cns/cns-002.txt"> CryptoNote
+          Signatures </a> </li>
+      <li> Monero Research Lab, <a href="/files/MRL-0001.pdf"> A Note on Chain
+          Reactions in Traceability in CryptoNote 2.0 </a> </li>
+      <li> studycrypto, <a href="https://monero.stackexchange.com/a/195"> How is
+          the quadratic miners penalty calculated </a> </li>
+      <li> stoffu, <a href="https://github.com/aeonix/aeon/pull/108"> switch to
+          KangarooTwelve proof of work #108 </a> </li>
+      <li> stoffu, <a href="https://github.com/aeonix/aeon/issues/103"> Proposal
+          to switch to SHA-3 proof of work #103 </a> </li>
+      <li> stoffu, <a href="https://github.com/aeonix/aeon/pull/188"> Aeon
+          multisig #188 </a> </li>
+    </ol>
+  </div>
+</body>
+
+</html>
