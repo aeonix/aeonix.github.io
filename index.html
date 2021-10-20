@@ -117,16 +117,21 @@
     <p> Height: 592000, Version 0.9.0.0 - Jul 21, 2015. Seeing that there were
       many empty blocks adding unwanted bloat, this was modified to a 4 minute
       block time. </p>
-    <p>
     <h4> Timestamp </h4>
     <p> The timestamp of an acceptable block is restricted to being no more than
       two hours of the node's local time and no less than the median of the
       previous 60 blocks. [6] </p>
     <h4> Mining Algorithms </h4>
-    <h5> Cryptonight </h5>
+    <h5> CryptoNight </h5>
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
-      protocol hashing algorithm. [7] </p>
-    <h5> Cryptonight-Lite </h5>
+      protocol hashing algorithm. CryptoNight is a memory-hard hash function. It 
+      is designed to be inefficiently computable on GPU, FPGA and ASIC 
+      architectures. The CryptoNight algorithm's first step is initializing 
+      large scratchpad with pseudo-random data. The next step is numerous 
+      read/write operations at pseudo-random addresses contained in the 
+      scratchpad. The final step is hashing the entire scratchpad to produce 
+      the resulting value. [7] </p>
+    <h5> CryptoNight-Lite </h5>
     <p> Height: 592000, Version: 0.9.0.0 - Jul 21, 2015. There are two
       modifications: the scratchpad is only half the size of regular Cryptonight
       (1 MB rather than 2 MB) and the number of AES iterations is halved (half a
