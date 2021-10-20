@@ -157,16 +157,17 @@
       between maintaining privacy and keeping transactions lightweight to
       prevent large blockchain size increases. [17][18][19] </p>
     <h4> Stealth Addresses </h4>
-    <p> A minimum piece of information compacted to a single 95-character base58
-      string which the recipient needs to give to the sender in order to receive
-      aeon. The information encoded in the address is the network byte, public
-      spend key, public view key and a checksum. The bare minimum which the
-      sender needs are the 2 public keys, but the network byte and the checksum
-      are added to prevent errors. Any Aeon address is a stealth address.
-      They're called stealth addresses because no aeon are actually sent to the
-      address itself, ie it never appears on the blockchain. Instead, it's used
-      by the sender to create a one-time destination from which only the
-      intended recipient can spend. [10] </p>
+    <p> A stealh address is a minimum piece of information compacted to a 
+      single 95-character base58 string which the recipient needs to give to 
+      the sender in order to receive  aeon. The information encoded in the 
+      address is the network byte, public spend key, public view key and a 
+      checksum. The bare minimum which the sender needs are the 2 public keys, 
+      but the network byte and the checksum are added to prevent errors. Any 
+      Aeon address is a stealth address. They're called stealth addresses 
+      because no aeon are actually sent to the address itself, ie it never 
+      appears on the blockchain. Instead, it's used by the sender to create a 
+      one-time destination from which only the intended recipient can spend. 
+      [10] </p>
     <h4> RingCT </h4>
     <p> The Aeon codebase currently omits the use of RingCT. There are no plans
       to add this feature as developers have opted to favor security of the
@@ -196,7 +197,7 @@
       ability to encrypt something or verify a signature. The private key gives
       the owner the ability to sign or decrypts something, so should be kept
       private. It's important that private keys are generated in a good way as
-      they shouldn't be easy to guess. [10] </p>
+      they shouldn't be easy to guess. [10][24] </p>
     <h4> View Keypair </h4>
     <p> The public part of it makes up the 2nd half of aeon address, and is used
       by the sender to generate a one-time stealth address to where the funds
@@ -209,7 +210,7 @@
       along with the signed key images to prove the balance of a wallet. Sharing
       only the view key would enable the auditor only to see received
       transactions, but he wouldn't be able to tell if any funds were spent, so
-      he couldn't know the actual balance. [10] </p>
+      he couldn't know the actual balance. [10][24] </p>
     <h4> Spend Keypair </h4>
     <p> The public part of it makes up the 1st half of aeon address, and is used
       to make new transactions and participate in ring signatures. The private
@@ -218,10 +219,21 @@
       the key image and accept the transaction as valid. This is what prevents
       double-spend as the network enforces the rule that a key image can be
       spent only once. I'd like to expand this a bit, but I'm a bit lacking
-      here, so can't right now. [10] </p>
+      here, so can't right now. [10][24] </p>
     <h4> Address Types and Prefixes </h4>
     <p> Public addresses start with "Wm". Integrated addresses use "Wz".
       Subadresses use "Xn". [11] </p>
+    <h4> Base58 </h4>
+    <p> Aeon has its own variant of Base58. In Aeon the Base58 encoding is 
+      performed in 8-byte blocks, except the last block which is the remaining 
+      (8 or less) bytes. The 8-byte block converts to 11 or less Base58 
+      characters. If the block converted to less then 11 characters, the output 
+      is padded with "1"s (0 in Base58). The final block is padded as well to 
+      whatever would be the maximum size of this number of bytes encoded in 
+      Base58. The advantage of Monero implementation is that output is of a 
+      fixed size which is not the case with plain Base58. The disadvantage is 
+      that default libraries won't work. The alphabet for the variant of Base58 
+      is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz [25][26] </p>
     <h4> Payment ID </h4>
     <p> A feature developed to make it easier for the sender to prove to the
       recipient that he sent him the funds. Due to Aeon privacy features, the
@@ -371,6 +383,14 @@
           to switch to SHA-3 proof of work #103 </a> </li>
       <li> stoffu, <a href="https://github.com/aeonix/aeon/pull/188"> Aeon
           multisig #188 </a> </li>
+      <li> CryptoNote authors, <a href="/files/cns/cns-007.txt"> CryptoNote
+          Keys and Addresses </a> </li>
+      <li> SerHack, <a href="https://monero.stackexchange.com/questions/7803/what-is-the-base-58-monero-alphabet-used-to-create-an-address">
+          What is the base 58 monero alphabet used to create an address? </a> 
+          </li>
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/common/base58.cpp">
+          base58.cpp </a> </li>
     </ol>
   </div>
 </body>
