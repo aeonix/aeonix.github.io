@@ -111,7 +111,7 @@
     <p> The timestamp of an acceptable block is restricted to being no more than
       two hours of the node's local time and no less than the median of the
       previous 60 blocks. [6] </p>
-    <h4> Mining Algorithms </h4>
+    <h4> Mining Algorithm </h4>
     <h5> CryptoNight </h5>
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
       protocol hashing algorithm. CryptoNight is a memory-hard hash function. It 
@@ -138,7 +138,7 @@
       compute the hash. The algorithm chosen was KangarooTwelve. This algorithm
       was designed by the winners of the SHA-3 competition. [9][21][22] </p>
     <h3> 4. Transactions </h3>
-    <h4> Ring signatures </h4>
+    <h4> Ring signature </h4>
     <p> Ring signature refers to the essential mechanism Aeon relies on to
       protect identifying information of network users. Transactions are signed
       using the basic Ring signature scheme used in Monero, such that each
@@ -146,7 +146,7 @@
       size of Aeon is fixed to 3. This is recognized as a balanced comprise
       between maintaining privacy and keeping transactions lightweight to
       prevent large blockchain size increases. [17][18][19] </p>
-    <h4> Stealth Addresses </h4>
+    <h4> Stealth Address </h4>
     <p> A stealth address is a minimum piece of information compacted to a 
       single 95-character base58 string which the recipient needs to give to 
       the sender in order to receive aeon. The information encoded in the 
@@ -215,11 +215,10 @@
       and a short payment id, bundled in one single string. They are intended to
       be used when a recipient requires a payment id, and they have some 
       advantages over the practice of supplying a standard address and a 
-      payment id: (*) it is self contained, including a checksum. (*) 
-      integrated addresses use a 64 bit payment id (as opposed to the 
-      standalone 256 bit payment ids) which are always encrypted on the 
-      blockchain, increasing privacy (and decreasing blockchain size usage 
-      slightly). [12] </p>
+      payment id: * it is self contained, including a checksum. * integrated 
+      addresses use a 64 bit payment id (as opposed to the standalone 256 bit 
+      payment ids) which are always encrypted on the blockchain, increasing 
+      privacy (and decreasing blockchain size usage slightly). [12] </p>
     <h5> Subaddress </h5>
     <p> Aeon supports the subaddress functionality from Monero. [13] </p>
     <h5> Address Types and Prefixes </h5>

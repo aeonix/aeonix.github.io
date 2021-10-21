@@ -13,6 +13,7 @@ Here are some general guidelines and reminders for tone and style:
 * Don't qualify or prejudge actions. Don't write that something is "easy" or "quick" as this is a deterrent if the user is not able to complete the action.
 * Don't reference future development or features that don't yet exist.
 * Remember to use sentence case for page titles and section headings.
+* Keep sections brief (1 paragraph) and offload detailed technical information into external references or files.
 
 ### Formatting 
 
