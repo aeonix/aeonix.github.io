@@ -187,11 +187,10 @@
       and the public spend key is used by the network to verify the signature of
       the key image and accept the transaction as valid. This is what prevents
       double-spend as the network enforces the rule that a key image can be
-      spent only once. I'd like to expand this a bit, but I'm a bit lacking
-      here, so can't right now. [10][24] </p>
+      spent only once. [10][24] </p>
     <h4> Multisignature </h4>
     <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
-      Monero.[14][23] Monero doesn't directly implement multisignatures (at 
+      Monero. [14][23] Monero doesn't directly implement multisignatures (at 
       least not in a classical sense). Monero emulates the feature by secret 
       splitting. Transactions are still signed with a single spend key. The 
       spend key is a sum of all N private keys. The rationale for such design 
@@ -227,9 +226,9 @@
     <p> Public addresses start with "Wm". Integrated addresses use "Wz".
       Subadresses use "Xn". [11] </p>
     <h5> Base58 </h5>
-    <p> Aeon has the Monero variant of Base58. The alphabet for the variant of 
-      Base58 is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. 
-      Please see [25][26] for more information. 
+    <p> Aeon has CryptoNote Base58 encoding scheme. The alphabet for the variant 
+      of Base58 is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. 
+      Please see [24][25][26] for more information. 
     </p>
     <h3> 6. Development </h3>
     <h4> Release History </h4>
