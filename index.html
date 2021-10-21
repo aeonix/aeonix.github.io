@@ -265,7 +265,11 @@
     <p> Aeon supports the subaddress functionality from Monero. [13] </p>
     <h4> Multisignature </h4>
     <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
-      Monero. [14][23] </p>
+      Monero.[14][23] Monero doesn't directly implement multisignatures (at least not 
+      in a classical sense). Monero emulates the feature by secret splitting. 
+      Transactions are still signed with a single spend key. The spend key is 
+      a sum of all N private keys. The rationale for such design is to decouple 
+      multisig from ring signatures.[30]</p>
     <h3> 6. Development </h3>
     <h4> Release History </h4>
     <ul>
@@ -410,7 +414,8 @@
       <li> CryptoNote authors, <a href="/files/cns/cns-007.txt"> CryptoNote
           Keys and Addresses </a> </li>
       <!-- 25 --> 
-      <li> SerHack, <a href="https://monero.stackexchange.com/questions/7803/what-is-the-base-58-monero-alphabet-used-to-create-an-address">
+      <li> SerHack, <a 
+          href="https://monero.stackexchange.com/questions/7803/what-is-the-base-58-monero-alphabet-used-to-create-an-address">
           What is the base 58 monero alphabet used to create an address? </a> 
           </li>
       <!-- 26 --> 
@@ -422,13 +427,14 @@
           href="https://raw.githubusercontent.com/aeonix/aeon/master/src/mnemonics/english.h">
           english.h </a> </li>
       <!-- 28 --> 
-      <li> Aeon contributors, <a
-          href="/README.md">https://github.com/aeonix/aeon/issues/215
-          README.md </a> </li>
+      <li> Aeon contributors, <a href="/README.md">
+          https://github.com/aeonix/aeon/issues/215 README.md </a> </li>
       <!-- 29 --> 
-      <li> yorha-0x, <a
-          href="https://github.com/aeonix/aeon/issues/215">
+      <li> yorha-0x, <a href="https://github.com/aeonix/aeon/issues/215">
           Request to Smooth for proof of dev fund. #215</a> </li>
+      <!-- 30 --> 
+      <li> Piotr Włodarek, <a href="https://monerodocs.org/multisignature/">
+          Multisignature</a> </li>
     </ol>
   </div>
 </body>
