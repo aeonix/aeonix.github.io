@@ -173,23 +173,6 @@
       to add this feature as developers have opted to favor security of the
       supply over enhanced privacy protections. </p>
     <h3> 5. Wallet </h3>
-    <h4> Mnemonic Seed </h4>
-    <p> Minimum piece of information used to restore the cryptographic keys that
-      make up the wallet. Basically, just a very very big number impossible to
-      guess. I'd like to separate the mnemonic and seed terms: seed: a 256bit
-      integer (usually represented as a 64 digit base16 number); mnemonic: in
-      this context, a word representation of the seed, with one extra word used
-      as a checksum. Both represent the same thing, but the mnemonic is a human
-      readable form of it. Convention currently in use consists of encoding the
-      seed using a 1626 words dictionary which results in a 24-word mnemonic. A
-      CRC32 checksum is performed on them to give the 25th word which is used
-      for error checking. The seed itself, if smaller than a certain number, is
-      used directly as the private spend key. Otherwise a seed mod l operation
-      is performed to obtain the private key from the seed, where l is a very
-      big number, specific to the elliptic curve used in Aeon cryptography. The
-      private view key is derived deterministically from the private spend key
-      (it doesn't have to be) and that is why we call such wallets
-      deterministic. [10] The aeon mnemonic word list can be found in [27].</p>
     <h4> Public-key cryptography </h4>
     <p> General terms specific to public-key cryptography where a private key
       and a public key make up a keypair. A public key is derived from the
@@ -220,32 +203,43 @@
       double-spend as the network enforces the rule that a key image can be
       spent only once. I'd like to expand this a bit, but I'm a bit lacking
       here, so can't right now. [10][24] </p>
-    <h4> Address Types and Prefixes </h4>
-    <p> Public addresses start with "Wm". Integrated addresses use "Wz".
-      Subadresses use "Xn". [11] </p>
-    <h4> Base58 </h4>
-    <p> Aeon has its own variant of Base58. In Aeon the Base58 encoding is 
-      performed in 8-byte blocks, except the last block which is the remaining 
-      (8 or less) bytes. The 8-byte block converts to 11 or less Base58 
-      characters. If the block converted to less then 11 characters, the output 
-      is padded with "1"s (0 in Base58). The final block is padded as well to 
-      whatever would be the maximum size of this number of bytes encoded in 
-      Base58. The advantage of Monero implementation is that output is of a 
-      fixed size which is not the case with plain Base58. The disadvantage is 
-      that default libraries won't work. The alphabet for the variant of Base58 
-      is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz [25][26] </p>
+    <h4> Multisignature </h4>
+    <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
+      Monero.[14][23] Monero doesn't directly implement multisignatures (at 
+      least not in a classical sense). Monero emulates the feature by secret 
+      splitting. Transactions are still signed with a single spend key. The 
+      spend key is a sum of all N private keys. The rationale for such design 
+      is to decouple multisig from ring signatures. [30]</p>
+    <h4> Mnemonic Seed </h4>
+    <p> Minimum piece of information used to restore the cryptographic keys that
+      make up the wallet. Basically, just a very very big number impossible to
+      guess. I'd like to separate the mnemonic and seed terms: seed: a 256bit
+      integer (usually represented as a 64 digit base16 number); mnemonic: in
+      this context, a word representation of the seed, with one extra word used
+      as a checksum. Both represent the same thing, but the mnemonic is a human
+      readable form of it. Convention currently in use consists of encoding the
+      seed using a 1626 words dictionary which results in a 24-word mnemonic. A
+      CRC32 checksum is performed on them to give the 25th word which is used
+      for error checking. The seed itself, if smaller than a certain number, is
+      used directly as the private spend key. Otherwise a seed mod l operation
+      is performed to obtain the private key from the seed, where l is a very
+      big number, specific to the elliptic curve used in Aeon cryptography. The
+      private view key is derived deterministically from the private spend key
+      (it doesn't have to be) and that is why we call such wallets
+      deterministic. [10] The aeon mnemonic word list can be found in [27].</p>
     <h4> Payment ID </h4>
-    <p> A feature developed to make it easier for the sender to prove to the
-      recipient that he sent him the funds. Due to Aeon privacy features, the
-      recipient can't tell from where the funds came. However, if there's a
-      payment ID attached to it, it would give him a clue. Payment IDs should be
-      randomly generated for each transaction to avoid linking transactions. It
-      works like this: 1. Recipient gives the sender his address and an unique
-      payment ID 2. Sender sends the Aeon with payment ID specified 3. Recipient
-      sees an incoming transaction with the payment ID specified, and he can
-      know that it came from that specific user because only that user could
-      have known the payment ID. [10] </p>
-    <h4> Integrated Addresses </h4>
+    <p> A Payment ID is feature developed to make it easier for the sender to 
+      prove to the recipient that he sent him the funds. Due to Aeon privacy 
+      features, the recipient can't tell from where the funds came. However, if 
+      there's a payment ID attached to it, it would give him a clue. Payment IDs 
+      should be randomly generated for each transaction to avoid linking 
+      transactions. It works like this: 1. Recipient gives the sender his 
+      address and an unique payment ID 2. Sender sends the Aeon with payment ID 
+      specified 3. Recipient sees an incoming transaction with the payment ID 
+      specified, and he can know that it came from that specific user because 
+      only that user could have known the payment ID. [10] </p>
+    <h4> Addresses </h4>
+    <h5> Integrated Address </h5>
     <p> Integrated addresses are an amalgamation of a standard Monero address
       and a short payment id, bundled in one single string. They are intended to
       be used when a recipient requires a payment id, and they have two main
@@ -261,15 +255,23 @@
       address from the sender. Not many exchanges and other merchants currently
       support integrated addresses, however, but their use is encouraged for the
       above reasons. [12] </p>
-    <h4> Subaddresses </h4>
+    <h5> Subaddress </h5>
     <p> Aeon supports the subaddress functionality from Monero. [13] </p>
-    <h4> Multisignature </h4>
-    <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
-      Monero.[14][23] Monero doesn't directly implement multisignatures (at least not 
-      in a classical sense). Monero emulates the feature by secret splitting. 
-      Transactions are still signed with a single spend key. The spend key is 
-      a sum of all N private keys. The rationale for such design is to decouple 
-      multisig from ring signatures.[30]</p>
+    <h5> Address Types and Prefixes </h5>
+    <p> Public addresses start with "Wm". Integrated addresses use "Wz".
+      Subadresses use "Xn". [11] </p>
+    <h5> Base58 </h5>
+    <p> Aeon has its own variant of Base58. In Aeon the Base58 encoding is 
+      performed in 8-byte blocks, except the last block which is the remaining 
+      (8 or less) bytes. The 8-byte block converts to 11 or less Base58 
+      characters. If the block converted to less then 11 characters, the output 
+      is padded with "1"s (0 in Base58). The final block is padded as well to 
+      whatever would be the maximum size of this number of bytes encoded in 
+      Base58. The advantage of Monero implementation is that output is of a 
+      fixed size which is not the case with plain Base58. The disadvantage is 
+      that default libraries won't work. The alphabet for the variant of Base58 
+      is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz [25][26] 
+    </p>
     <h3> 6. Development </h3>
     <h4> Release History </h4>
     <ul>
