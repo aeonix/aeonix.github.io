@@ -80,17 +80,7 @@
       allow for increased transaction throughput. To prevent spam there is a
       hard limit of twice the median of the size of the previous 100 blocks.[1]
       In order for a miner to raise the block size limit, they must incur a
-      penalty to their block reward. penalty=base_reward * ((block size / median
-      size of last 100 blocks) - 1)^2. reward=base_reward - penalty. Miners can
-      avoid this fee altogether by refusing to include transactions in blocks
-      that would lead to exceeding the median block size, although this is
-      likely not the optimal practice as including such transactions will often
-      still be profitable. Miners can create their own criteria for including
-      transactions in blocks by balancing transaction fees collected against the
-      quadratic miners penalty that will be applied. For example for all blocks
-      exceeding the median blocksize they could enforce minimum transaction fees
-      with a formula that scales fee requirements to compensate for the
-      quadratic penalty.[20] </p>
+      penalty to their block reward. See [20].</p>
     <h3> 3. Network Consensus </h3>
     <p> The Aeon network relies on the proof-of-work system innovated by the
       Bitcoin protocol. </p>
@@ -140,7 +130,7 @@
     <h5> KangarooTwelve </h5>
     <p> Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. Aeon originally set
       out to be an ASIC resistant mined coin using Cryptonite and this was
-      successful for many years. Eventually, ASIC miners arrived to the network
+      successful for many years. ASIC miners arrived to the network
       which caused a debate on whether AEON should continue to support ASIC
       resistance or to switch to a different hash function. Through much
       deliberation, it was decided to switch to a more efficient algorithm to
@@ -159,7 +149,7 @@
     <h4> Stealth Addresses </h4>
     <p> A stealth address is a minimum piece of information compacted to a 
       single 95-character base58 string which the recipient needs to give to 
-      the sender in order to receive  aeon. The information encoded in the 
+      the sender in order to receive aeon. The information encoded in the 
       address is the network byte, public spend key, public view key and a 
       checksum. The bare minimum which the sender needs are the 2 public keys, 
       but the network byte and the checksum are added to prevent errors. Any 
@@ -189,11 +179,7 @@
       protocol level, the sender performs an encryption with the recipient's
       public view key, and the recipient attempts to decrypt all the outputs on
       the blockchain to find the one belonging to him (where decryption was
-      successful). For audit purposes, it could be shared with the auditor,
-      along with the signed key images to prove the balance of a wallet. Sharing
-      only the view key would enable the auditor only to see received
-      transactions, but he wouldn't be able to tell if any funds were spent, so
-      he couldn't know the actual balance. [10][24] </p>
+      successful). [10][24] </p>
     <h4> Spend Keypair </h4>
     <p> The public part of it makes up the 1st half of aeon address, and is used
       to make new transactions and participate in ring signatures. The private
@@ -217,60 +203,33 @@
       integer (usually represented as a 64 digit base16 number); mnemonic: in
       this context, a word representation of the seed, with one extra word used
       as a checksum. Both represent the same thing, but the mnemonic is a human
-      readable form of it. Convention currently in use consists of encoding the
-      seed using a 1626 words dictionary which results in a 24-word mnemonic. A
-      CRC32 checksum is performed on them to give the 25th word which is used
-      for error checking. The seed itself, if smaller than a certain number, is
-      used directly as the private spend key. Otherwise a seed mod l operation
-      is performed to obtain the private key from the seed, where l is a very
-      big number, specific to the elliptic curve used in Aeon cryptography. The
-      private view key is derived deterministically from the private spend key
-      (it doesn't have to be) and that is why we call such wallets
-      deterministic. [10] The aeon mnemonic word list can be found in [27].</p>
+      readable form of it. [10] The aeon mnemonic word list can be found in [27]
+      .</p>
     <h4> Payment ID </h4>
-    <p> A Payment ID is feature developed to make it easier for the sender to 
+    <p> A Payment ID is a feature developed to make it easier for the sender to 
       prove to the recipient that he sent him the funds. Due to Aeon privacy 
       features, the recipient can't tell from where the funds came. However, if 
-      there's a payment ID attached to it, it would give him a clue. Payment IDs 
-      should be randomly generated for each transaction to avoid linking 
-      transactions. It works like this: 1. Recipient gives the sender his 
-      address and an unique payment ID 2. Sender sends the Aeon with payment ID 
-      specified 3. Recipient sees an incoming transaction with the payment ID 
-      specified, and he can know that it came from that specific user because 
-      only that user could have known the payment ID. [10] </p>
+      there's a payment ID attached to it, it would give him a clue. [10] </p>
     <h4> Addresses </h4>
     <h5> Integrated Address </h5>
     <p> Integrated addresses are an amalgamation of a standard Monero address
       and a short payment id, bundled in one single string. They are intended to
-      be used when a recipient requires a payment id, and they have two main
-      advantages over the historical practice of supplying a standard address
-      and a payment id: (*) it is self contained, including a checksum, so it
-      becomes a lot harder for the payer to forget the payment id, which is a
-      common cause of trouble. (*) integrated addresses use a short payment id
-      (64 bits, as opposed to the original 256 bit standalone payment ids),
-      which will always be encrypted on the blockchain, increasing privacy (and
-      decreasing blockchain size usage slightly). Note that it is trivial to go
-      from an integrated address to the standard address plus payment id. Thus,
-      an integrated address should NOT be viewed as a way to obscure one's
-      address from the sender. Not many exchanges and other merchants currently
-      support integrated addresses, however, but their use is encouraged for the
-      above reasons. [12] </p>
+      be used when a recipient requires a payment id, and they have some 
+      advantages over the practice of supplying a standard address and a 
+      payment id: (*) it is self contained, including a checksum. (*) 
+      integrated addresses use a 64 bit payment id (as opposed to the 
+      standalone 256 bit payment ids) which are always encrypted on the 
+      blockchain, increasing privacy (and decreasing blockchain size usage 
+      slightly). [12] </p>
     <h5> Subaddress </h5>
     <p> Aeon supports the subaddress functionality from Monero. [13] </p>
     <h5> Address Types and Prefixes </h5>
     <p> Public addresses start with "Wm". Integrated addresses use "Wz".
       Subadresses use "Xn". [11] </p>
     <h5> Base58 </h5>
-    <p> Aeon has its own variant of Base58. In Aeon the Base58 encoding is 
-      performed in 8-byte blocks, except the last block which is the remaining 
-      (8 or less) bytes. The 8-byte block converts to 11 or less Base58 
-      characters. If the block converted to less then 11 characters, the output 
-      is padded with "1"s (0 in Base58). The final block is padded as well to 
-      whatever would be the maximum size of this number of bytes encoded in 
-      Base58. The advantage of Monero implementation is that output is of a 
-      fixed size which is not the case with plain Base58. The disadvantage is 
-      that default libraries won't work. The alphabet for the variant of Base58 
-      is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz [25][26] 
+    <p> Aeon has its own variant of Base58. The alphabet for the variant of 
+      Base58 is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. 
+      Please see [25][26] for more information. 
     </p>
     <h3> 6. Development </h3>
     <h4> Release History </h4>
@@ -315,10 +274,9 @@
     <p> For aeonix source code please see [15]. For this website see [28]. </p>
     <h4> Donation Fund </h4>
     <p style="word-wrap: break-word;"> Aeon is a 100% community-sponsored
-      endeavor. If you want to join our efforts, the easiest thing you can do is
-      support the project financially. You can send AEON to the Aeon donation
-      address via the donate command (type help in the command-line wallet for
-      details). The Aeon donation address is:
+      endeavor. You can send AEON to the Aeon donation address via the donate 
+      command (type help in the command-line wallet for details). The Aeon 
+      donation address is:
       WmsSWgtT1JPg5e3cK41hKXSHVpKW7e47bjgiKmWZkYrhSS5LhRemNyqayaSBtAQ6517eo5PtH9wxHVmM78JDZSUu2W8PqRiNs
       (viewkey:
       71bf19a7348ede17fa487167710dac401ef1556851bfd36b76040facf051630b). The
