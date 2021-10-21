@@ -7,7 +7,6 @@ Try to keep your writing clear and concise. Your explanations should be comprehe
 Here are some general guidelines and reminders for tone and style:
 
 * Write accessibly in clear, simple sentences intended for a global audience. Avoid colloquial language, humour, cultural references, and personal opinion. Keep your writing technical.
-* Write from a unbiased point of view. Present factual information about Aeon.
 * Avoid jargon and acronyms, if you can. Spell out acronyms at least once per page.
 * Avoid mentioning or crediting specific people outside of the references section.
 * Be consistent. Use the same consistently-formatted word or phrase for a concept throughout the documentation.
@@ -20,7 +19,8 @@ Here are some general guidelines and reminders for tone and style:
 * Maintain structure and format conventions already established for text-width, title bolding, etc.
 * Maintain code conventions already established in index.html for new breaks on tags.
 * No images, links, emojis or other elements within the website except for the references which can contain external links and the about section which has a fixed set of links for essential purposes.
-* No additional pages should be added.
+* No additional pages should be added outside of the index.html.
+* Refrain from using references as parts of speech.
 
 ### References
 
