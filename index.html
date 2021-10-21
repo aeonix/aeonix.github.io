@@ -116,11 +116,7 @@
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
       protocol hashing algorithm. CryptoNight is a memory-hard hash function. It 
       is designed to be inefficiently computable on GPU, FPGA and ASIC 
-      architectures. The CryptoNight algorithm's first step is initializing 
-      large scratchpad with pseudo-random data. The next step is numerous 
-      read/write operations at pseudo-random addresses contained in the 
-      scratchpad. The final step is hashing the entire scratchpad to produce 
-      the resulting value. [7] </p>
+      architectures. [7] </p>
     <h5> CryptoNight-Lite </h5>
     <p> Height: 592000, Version: 0.9.0.0 - Jul 21, 2015. There are two
       modifications: the scratchpad is only half the size of regular Cryptonight
@@ -128,8 +124,10 @@
       million rather than a million). This makes a light hash about 4 times as
       fast as a regular one. [8] </p>
     <h5> KangarooTwelve </h5>
-    <p> Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. Released in 2016 by 
-      Team Keccak as a faster and lighter variant of SHA-3. [9][21][22] </p>
+    <p> Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. KangarooTwelve is a 
+      higher-performance reduced-round (from 24 to 12 rounds) version of Keccak 
+      which claims to have 128 bits of security while having performance as high
+       as 0.55 cycles per byte on a Skylake CPU. [9][21][22][34][35] </p>
     <h3> 4. Transactions </h3>
     <h4> Ring signature </h4>
     <p> Ring signature refers to the essential mechanism Aeon relies on to
@@ -395,6 +393,13 @@
           </a> </li>
       <!-- 33 --> 
       <li> aeonix, <a href="https://github.com/aeonix/aeon"> aeon </a> </li>
+      <!-- 34 --> 
+      <li> Team Keccak, <a href="/files/KangarooTwelveSlides.pdf"> 
+          KangarooTwelveSlides.pdf </a> </li>
+      <!-- 35 --> 
+      <li> Wikipedia contributors, <a 
+          href="https://en.wikipedia.org/wiki/SHA-3#KangarooTwelve"> SHA-3 </a> 
+          </li>
     </ol>
   </div>
 </body>
