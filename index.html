@@ -73,45 +73,10 @@
       does not depend on the fees paid by its network users. Thus fees can be
       very low so long as there is no spam to the blockchain. Thus there is
       currently a fixed minimum fee set to 0.0001 coins/KB. [3] </p>
-    <h4> Block Size Limit </h4>
-    <p> Because the security of the network is guaranteed by the tail emission
-      reward, there does not need to be any imposed artificial restrictions to
-      the block size limit. Thus the block size limit can grow as necessary to
-      allow for increased transaction throughput. To prevent spam there is a
-      hard limit of twice the median of the size of the previous 100 blocks. [1]
-      In order for a miner to raise the block size limit, they must incur a
-      penalty to their block reward. [20]</p>
     <h3> 3. Network Consensus </h3>
     <p> The Aeon network derives its security from the proof-of-work system 
       innovated by the Bitcoin protocol. </p>
-    <h4> Difficulty Adjustment </h4>
-    <h5> Version 1 </h5>
-    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The adjustment algorithm
-      examines 720 prior blocks, starting from 15 blocks ago. Of those 720
-      blocks, the 60 highest and lowest block times are excluded from the
-      analysis, which leaves 600 blocks. Out of those 600 blocks, the average
-      block time is determined. This average is then used to adjust the
-      difficulty proportionally in order to target a 120 second block time.
-      Difficulty is defined as the number of hash attempts required, on average,
-      to find a valid hash for the block every 120 seconds. [4][5] </p>
-    <h5> Version 2 </h5>
-    <p> Height: 1280000, Version 0.14.0.0 - Oct 4, 2020. The delay is dropped
-      from 15 blocks to 8 blocks. The sort/cutting highest and lowest block
-      times is removed, thus all 720 blocks are included in the difficulty
-      calculation. [31]</p>
-    <h4> Block Time Interval </h4>
-    <h5> Version 1 </h5>
-    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. Because Aeon was launched as a
-      clone of Monero, it started with a one minute block time. </p>
-    <h5> Version 2 </h5>
-    <p> Height: 592000, Version 0.9.0.0 - Jul 21, 2015. Seeing that there were
-      many empty blocks adding unwanted bloat, this was modified to a 4 minute
-      block time. </p>
-    <h4> Timestamp </h4>
-    <p> The timestamp of an acceptable block is restricted to being no more than
-      two hours of the node's local time and no less than the median of the
-      previous 60 blocks. [6] </p>
-    <h4> Mining Algorithm </h4>
+    <h4> Mining Algorithms </h4>
     <h5> CryptoNight </h5>
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
       protocol hashing algorithm. CryptoNight is a memory-hard hash function. It 
@@ -128,6 +93,45 @@
       higher-performance reduced-round (from 24 to 12 rounds) version of Keccak 
       which claims to have 128 bits of security while having performance as high
        as 0.55 cycles per byte on a Skylake CPU. [9][21][22][34][35] </p>
+    <h4> Difficulty Adjustment </h4>
+    <h5> Version 1 </h5>
+    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The adjustment algorithm
+      examines 720 prior blocks, starting from 15 blocks ago. Of those 720
+      blocks, the 60 highest and lowest block times are excluded from the
+      analysis, which leaves 600 blocks. Out of those 600 blocks, the average
+      block time is determined. This average is then used to adjust the
+      difficulty proportionally in order to target a 120 second block time.
+      Difficulty is defined as the number of hash attempts required, on average,
+      to find a valid hash for the block every 120 seconds. [4][5] </p>
+    <h5> Version 2 </h5>
+    <p> Height: 1280000, Version 0.14.0.0 - Oct 4, 2020. The delay is dropped
+      from 15 blocks to 8 blocks. The sort/cutting highest and lowest block
+      times is removed, thus all 720 blocks are included in the difficulty
+      calculation. [31]</p>
+    <h4> Block Size Limit </h4>
+    <p> Because the security of the network is guaranteed by the tail emission
+      reward, there does not need to be any imposed artificial restrictions to
+      the block size limit. Thus the block size limit can grow as necessary to
+      allow for increased transaction throughput. To prevent spam there is a
+      hard limit of twice the median of the size of the previous 100 blocks. [1]
+      In order for a miner to raise the block size limit, they must incur a
+      penalty to their block reward. [20] This penalty limit begins from max( 
+      20,000 bytes, median of previous 100 blocks ). [1][36]</p>
+    <h4> Transaction Size Limit </h4>
+    <p> There is a limit to the size of any given Aeon transaction. That is 
+      20,000 bytes * 125 / 100. [37]</p>
+    <h4> Block Time Interval </h4>
+    <h5> Version 1 </h5>
+    <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. Because Aeon was launched as a
+      clone of Monero, it started with a one minute block time. </p>
+    <h5> Version 2 </h5>
+    <p> Height: 592000, Version 0.9.0.0 - Jul 21, 2015. Seeing that there were
+      many empty blocks adding unwanted bloat, this was modified to a 4 minute
+      block time. </p>
+    <h4> Timestamp </h4>
+    <p> The timestamp of an acceptable block is restricted to being no more than
+      two hours of the node's local time and no less than the median of the
+      previous 60 blocks. [6] </p>
     <h3> 4. Private Transactions </h3>
     <h4> Ring signature </h4>
     <p> Ring signature refers to the essential mechanism Aeon relies on to
@@ -401,6 +405,15 @@
       <li> Wikipedia contributors, <a 
           href="https://en.wikipedia.org/wiki/SHA-3#KangarooTwelve"> SHA-3 </a> 
           </li>
+      <!-- 36 --> 
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_config.h">
+          CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 
+          CRYPTONOTE_REWARD_BLOCKS_WINDOW </a> </li>
+      <!-- 37 --> 
+      <li> Aeon contributors, <a
+          href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_core/tx_pool.cpp">
+          get_transaction_weight_limit </a> </li>
     </ol>
   </div>
 </body>
