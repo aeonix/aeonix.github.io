@@ -167,14 +167,11 @@
       private. It's important that private keys are generated in a good way as
       they shouldn't be easy to guess. [10][24] </p>
     <h4> View Keypair </h4>
-    <p> The public part of it makes up the 2nd half of aeon address, and is used
-      by the sender to generate a one-time stealth address to where the funds
-      are actually sent. The owner of the wallet uses the private view key to
-      scan the blockchain and find the funds sent to his address. At the
-      protocol level, the sender performs an encryption with the recipient's
-      public view key, and the recipient attempts to decrypt all the outputs on
-      the blockchain to find the one belonging to him (where decryption was
-      successful). [10][24] </p>
+    <p> The public view key makes up the 2nd part of an aeon address. Someone who 
+      wants to receive aeon gives the sender their address to generate a 256-bit 
+      encrypted output id for each output sent. The receiver can use their private 
+      view key to decrypt the output ids and find the funds sent to their address. 
+      [10][24][38] </p>
     <h4> Spend Keypair </h4>
     <p> The public part of it makes up the 1st half of aeon address, and is used
       to make new transactions and participate in ring signatures. The private
@@ -413,6 +410,10 @@
       <li> Aeon contributors, <a
           href="https://raw.githubusercontent.com/aeonix/aeon/master/src/cryptonote_core/tx_pool.cpp">
           get_transaction_weight_limit </a> </li>
+      <!-- 38 --> 
+      <li> cloud10again, <a
+          href="https://www.reddit.com/r/Monero/comments/4aifdj/private_public_spendkey_viewkey_confusion/d10xvv5/">
+          Private / Public spendkey / viewkey confusion. </a> </li>
     </ol>
   </div>
 </body>
