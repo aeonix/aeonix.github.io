@@ -140,17 +140,15 @@
       size of Aeon is fixed to 3. This is recognized as a balanced comprise
       between maintaining privacy and keeping transactions lightweight to
       prevent large blockchain size increases. [17][18][19] </p>
-    <h4> Stealth Address </h4>
-    <p> A stealth address is a minimum piece of information compacted to a 
-      single 95-character base58 string which the recipient needs to give to 
-      the sender in order to receive aeon. The information encoded in the 
+    <h4> Dual-key Address </h4>
+    <p> An Aeon address is a 95-character base58 string which the recipient 
+      gives to the sender in order to receive aeon. The information encoded in the 
       address is the network byte, public spend key, public view key and a 
       checksum. The bare minimum which the sender needs are the 2 public keys, 
-      but the network byte and the checksum are added to prevent errors. Any 
-      Aeon address is a stealth address. They're called stealth addresses 
-      because no aeon are actually sent to the address itself, ie it never 
-      appears on the blockchain. Instead, it's used by the sender to create a 
-      one-time destination from which only the intended recipient can spend. 
+      but the network byte and the checksum are added to prevent errors. Every 
+      Aeon address is a dual-key address. The sender uses these keys to create 
+      an encrypted output id from which only the intended recipient can view 
+      the ownership (view key) and create a spend (spend key). 
       [10] </p>
     <h4> RingCT </h4>
     <p> The Aeon codebase currently omits the use of RingCT which is used in 
