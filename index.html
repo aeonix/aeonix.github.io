@@ -15,12 +15,12 @@
     <h1 style="background-color: antiquewhite;padding: 2rem;"> &#x1FA99; Aeon
       Cryptocurrency </h1>
     <h3> About </h3>
-    <p> Aeon was annouced on BitcoinTalk forums in June of 2014 as a copy of
-      Monero code and the genesis block was mined shortly thereafter. Since
-      then, the Aeon codebase has intentionally been kept close to Monero's in
-      order to benefit from the higher code reliability (due to the larger
-      resources of peer reviewing available to Monero). Over time, Aeon has
-      evolved a few critical differences such as size 3 ring signatures,
+    <p> Aeon was annouced on BitcoinTalk forums in June of 2014 as a cryptocurrency 
+      based on the CryptoNote[39] and Monero protocols and the genesis block was mined 
+      shortly thereafter. Since then, the Aeon codebase has intentionally been kept 
+      close to Monero's in order to benefit from the higher code reliability (due 
+      to the larger resources of peer reviewing available to Monero). Over time, 
+      Aeon has evolved a few critical differences such as size 3 ring signatures,
       asic-friendly mining, and omitting ring-ct proofs. As a direct result of
       this, Aeon serves as a unique alternative to Monero. All coins have been
       100% proof-of-work mined with no coin sale, no ICO, no pre-mine, no tax
@@ -63,11 +63,11 @@
       2014. Thus it slowly approaches 18.44 million coins from genesis block to 
       approximately 2022. Once the block reward reaches 1.2 coins, the reward 
       remains fixed at that amount so that the supply grows at a constant rate 
-      each year. [1][2] </p>
+      each year. [1,2,39] </p>
     <h4> Tail Emission </h4>
     <p> Aeon relies on a constant block reward to ensure a perpetual incentive
       for miners to secure the network. This is fixed to 1.2 coins per block
-      which amounts to creating about 157,680 coins each year. [1][2] </p>
+      which amounts to creating about 157,680 coins each year. [1,2] </p>
     <h4> Fees and Mining Reward </h4>
     <p> With a constant block reward for miners, the security of the blockchain
       does not depend on the fees paid by its network users. Thus fees can be
@@ -81,7 +81,7 @@
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The standard CryptoNote
       protocol hashing algorithm. CryptoNight is a memory-hard hash function. It 
       is designed to be inefficiently computable on GPU, FPGA and ASIC 
-      architectures. [7] </p>
+      architectures. [7,39] </p>
     <h5> CryptoNight-Lite </h5>
     <p> Height: 592000, Version: 0.9.0.0 - Jul 21, 2015. There are two
       modifications: the scratchpad is only half the size of regular Cryptonight
@@ -92,7 +92,7 @@
     <p> Height: 1146200, Version 0.13.0.0 - Sep 24, 2019. KangarooTwelve is a 
       higher-performance reduced-round (from 24 to 12 rounds) version of Keccak 
       which claims to have 128 bits of security while having performance as high
-       as 0.55 cycles per byte on a Skylake CPU. [9][21][22][34][35] </p>
+       as 0.55 cycles per byte on a Skylake CPU. [9,21,22,34,35] </p>
     <h4> Difficulty Adjustment </h4>
     <h5> Version 1 </h5>
     <p> Height: 1, Version 0.8.9.1 - Jun 6, 2014. The adjustment algorithm
@@ -102,7 +102,7 @@
       block time is determined. This average is then used to adjust the
       difficulty proportionally in order to target a 120 second block time.
       Difficulty is defined as the number of hash attempts required, on average,
-      to find a valid hash for the block every 120 seconds. [4][5] </p>
+      to find a valid hash for the block every 120 seconds. [4,5,39] </p>
     <h5> Version 2 </h5>
     <p> Height: 1280000, Version 0.14.0.0 - Oct 4, 2020. The delay is dropped
       from 15 blocks to 8 blocks. The sort/cutting highest and lowest block
@@ -116,7 +116,7 @@
       hard limit of twice the median of the size of the previous 100 blocks. [1]
       In order for a miner to raise the block size limit, they must incur a
       penalty to their block reward. [20] This penalty limit begins from max( 
-      20,000 bytes, median of previous 100 blocks ). [1][36]</p>
+      20,000 bytes, median of previous 100 blocks ). [1,36,39]</p>
     <h4> Transaction Size Limit </h4>
     <p> The Aeon transaction size limit is 25,000 bytes. [37]</p>
     <h4> Block Time Interval </h4>
@@ -139,7 +139,7 @@
       signer of the transaction has a plausible deniability. The ring signature
       size of Aeon is fixed to 3. This is recognized as a balanced comprise
       between maintaining privacy and keeping transactions lightweight to
-      prevent large blockchain size increases. [17][18][19] </p>
+      prevent large blockchain size increases. [17,18,19] </p>
     <h4> Dual-keypair Address </h4>
     <p> An Aeon address is a 95-character base58 string which the recipient 
       gives to the sender in order to receive aeon. The information encoded in the 
@@ -163,13 +163,13 @@
       ability to encrypt something or verify a signature. The private key gives
       the owner the ability to sign or decrypts something, so should be kept
       private. It's important that private keys are generated in a good way as
-      they shouldn't be easy to guess. [10][24] </p>
+      they shouldn't be easy to guess. [10,24] </p>
     <h4> View Keypair </h4>
     <p> The public view key makes up the 2nd part of an aeon address. Someone who 
       wants to receive aeon gives the sender their address to generate a 256-bit 
       encrypted output id for each output sent. The receiver can use their private 
       view key to decrypt the output ids and find the funds sent to their address. 
-      [10][24][38] </p>
+      [10,24,38,39] </p>
     <h4> Spend Keypair </h4>
     <p> The public part of it makes up the 1st half of aeon address, and is used
       to make new transactions and participate in ring signatures. The private
@@ -177,10 +177,10 @@
       and the public spend key is used by the network to verify the signature of
       the key image and accept the transaction as valid. This is what prevents
       double-spend as the network enforces the rule that a key image can be
-      spent only once. [10][24] </p>
+      spent only once. [10,24,39] </p>
     <h4> Multisignature </h4>
     <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
-      Monero. [14][23] Monero doesn't directly implement multisignatures (at 
+      Monero. [14,23] Monero doesn't directly implement multisignatures (at 
       least not in a classical sense). Monero emulates the feature by secret 
       splitting. Transactions are still signed with a single spend key. The 
       spend key is a sum of all N private keys. The rationale for such design 
@@ -216,7 +216,7 @@
     <h5> Base58 </h5>
     <p> Aeon has CryptoNote Base58 encoding scheme. The alphabet for the variant 
       of Base58 is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. 
-      [24][25][26]
+      [24,25,26]
     </p>
     <h3> 6. Development </h3>
     <h4> Release History </h4>
@@ -412,6 +412,9 @@
       <li> cloud10again, <a
           href="https://www.reddit.com/r/Monero/comments/4aifdj/private_public_spendkey_viewkey_confusion/d10xvv5/">
           Private / Public spendkey / viewkey confusion. </a> </li>
+      <!-- 39 --> 
+      <li> Nicolas van Saberhagen, <a href="/files/CryptoNotev2.pdf"> CryptoNote 
+          v 2.0 </a> </li>
     </ol>
   </div>
 </body>
