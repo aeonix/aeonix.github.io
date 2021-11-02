@@ -128,11 +128,11 @@
       two hours of the node's local time and no less than the median of the
       previous 60 blocks. [6] </p>
     <h3> 4. Private Transactions </h3>
-    <h4> Ring signature </h4>
-    <p> Ring signature refers to the essential mechanism Aeon relies on to
+    <h4> Group signature </h4>
+    <p> Group signature refers to the essential mechanism Aeon relies on to
       protect identifying information of network users. Transactions are signed
-      using the basic Ring signature scheme used in Monero, such that each
-      signer of the transaction has a plausible deniability. The ring signature
+      using the basic Group signature scheme used in Monero, such that each
+      signer of the transaction has a plausible deniability. The group signature
       size of Aeon is fixed to 3. This is recognized as a balanced comprise
       between maintaining privacy and keeping transactions lightweight to
       prevent large blockchain size increases. [17,18,19] </p>
@@ -145,7 +145,7 @@
       Aeon address is a dual-keypair address. The sender uses these keys to create 
       an encrypted output id from which only the intended recipient can view 
       the ownership (view key) and create a spend (spend key). 
-      [10] </p>
+      [10,39] </p>
     <h4> RingCT </h4>
     <p> The Aeon codebase currently omits the use of RingCT which is used in 
       the Monero protocol to encrypt transaction amounts. There are no plans to 
@@ -153,27 +153,29 @@
       over enhanced privacy protections. </p>
     <h3> 5. Wallet </h3>
     <h4> Public-key cryptography </h4>
-    <p> General terms specific to public-key cryptography where a private key
-      and a public key make up a keypair. A public key is derived from the
-      private key. The public key is safe to share, and gives the recipient the
-      ability to encrypt something or verify a signature. The private key gives
-      the owner the ability to sign or decrypts something, so should be kept
-      private. It's important that private keys are generated in a good way as
-      they shouldn't be easy to guess. [10,24] </p>
-    <h4> View Keypair </h4>
-    <p> The public view key makes up the 2nd part of an aeon address. Someone who 
+    <p> Public-key cryptography is where a private key and a public key make up 
+      a keypair. A public key is derived from the private key. The public key is 
+      safe to share, and gives the recipient the ability to encrypt something or 
+      verify a signature. The private key gives the owner the ability to sign or 
+      decrypts something, so should be kept private. It's important that private 
+      keys are generated in a good way as they shouldn't be easy to guess. 
+      [10,24] </p>
+    <h4>Dual-keypair Wallets</h4>
+    <p> The CryptoNote protocol introduced the notion of the dual-keypair wallet 
+      system whereby transactions are encrypted through the spend and view 
+      keypairs. </p>
+    <h5> Spend Keypair </h5>
+    <p> The public spend key forms half of an aeon address, and is used
+      to make new transactions and participate in ring signatures. The private
+      spend key is used to form an input when the owner wants to spend funds.
+      The public spend key is used by the network to verify the signature of
+      the input and accept the transaction as valid. [10,24,39] </p>
+    <h5> View Keypair </h5>
+    <p> The public view key makes up the 2nd half of an aeon address. Someone who 
       wants to receive aeon gives the sender their address to generate a 256-bit 
       encrypted output id for each output sent. The receiver can use their private 
-      view key to decrypt the output ids and find the funds sent to their address. 
+      view key to decrypt the output ids and find which belong to their address. 
       [10,24,38,39] </p>
-    <h4> Spend Keypair </h4>
-    <p> The public part of it makes up the 1st half of aeon address, and is used
-      to make new transactions and participate in ring signatures. The private
-      spend key is used to sign a key image when the owner wants to spend funds,
-      and the public spend key is used by the network to verify the signature of
-      the key image and accept the transaction as valid. This is what prevents
-      double-spend as the network enforces the rule that a key image can be
-      spent only once. [10,24,39] </p>
     <h4> Multisignature </h4>
     <p> Aeon supports the arbitrary M of N multi-signature wallet scheme from
       Monero. [14,23] Monero doesn't directly implement multisignatures (at 
