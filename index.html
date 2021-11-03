@@ -4,14 +4,23 @@
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
+  <style>
+    body {
+      width: 21cm;
+      display: block;
+      margin: 1cm auto;
+      padding: 10px 25px;
+      box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+      overflow-y: scroll;
+      word-break:break-word;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 
-<body
-  style="width: 80ch; margin: 0 auto; font-size:11pt; background-color:aliceblue; font-family: sans-serif; word-wrap: break-word">
-  <div style="background-color:white; padding:1rem 2rem;">
-    <h1 style="background-color: antiquewhite;padding: 2rem;"> &#x1FA99; Aeon
-      Cryptocurrency </h1>
-    <h3> About </h3>
+<body>
+  <div>
+    <h1>AEON</h1>
     <p> Aeon was annouced on BitcoinTalk forums, June 6, 2014, as a cryptocurrency 
       based on the CryptoNote[39] protocol. Since then, the Aeon codebase 
       has intentionally been kept close to Monero's (another CryptoNote fork) in 
@@ -37,10 +46,41 @@
     <ol>
       <li> Mission </li>
       <li> Economics </li>
+        <ol style="list-style-type:lower-roman">
+          <li> Total Supply </li>
+          <li> Tail Emission </li>
+          <li> Fees and Mining Reward </li>
+        </ol>
       <li> Network Consensus </li>
+        <ol style="list-style-type:lower-roman">
+          <li> Mining Algorithms </li>
+          <li> Difficulty Adjustment </li>
+          <li> Block Size Limit </li>
+          <li> Transaction Size Limit </li>
+          <li> Block Time Interval </li>
+          <li> Timestamp </li>
+        </ol>
       <li> Private Transactions </li>
+        <ol style="list-style-type:lower-roman">
+          <li> Group Signature </li>
+          <li> Dual-keypair Address </li>
+          <li> RingCT </li>
+        </ol>
       <li> Wallet </li>
+        <ol style="list-style-type:lower-roman">
+          <li> Public-key cryptography </li>
+          <li> Dual-keypair Wallets </li>
+          <li> Multisignature </li>
+          <li> Mnemonic Seed </li>
+          <li> Payment ID </li>
+          <li> Addresses Types </li>
+        </ol>
       <li> Development </li>
+        <ol style="list-style-type:lower-roman">
+          <li> Release History </li>
+          <li> Contributing Guidelines </li>
+          <li> Donation Fund </li>
+        </ol>
       <li> References </li>
     </ol>
     <h3> 1. Mission </h3>
@@ -196,7 +236,7 @@
       prove to the recipient that he sent him the funds. Due to Aeon privacy 
       features, the recipient can't tell from where the funds came. However, if 
       there's a payment ID attached to it, it would give him a clue. [10] </p>
-    <h4> Addresses </h4>
+    <h4> Addresses Types </h4>
     <h5> Integrated Address </h5>
     <p> Integrated addresses are an amalgamation of a standard Aeon address
       and a short payment id, bundled in one single string. They are intended to
