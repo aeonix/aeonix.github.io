@@ -185,11 +185,13 @@
     <h4> 1. Group signature </h4>
     <p> Group signature refers to the essential mechanism Aeon relies on to
       protect identifying information of network users. Transactions are signed
-      using the basic Group signature scheme used in Monero, such that each
-      signer of the transaction has a plausible deniability. The group signature
-      size of Aeon is fixed to 3. This is recognized as a balanced comprise
-      between maintaining privacy and keeping transactions lightweight to
-      prevent large blockchain size increases. [17,18,19] </p>
+      using the basic group signature scheme innovated by the CryptoNote authors, 
+      such that each signer of the transaction has a plausible deniability.
+      [17,18] </p>
+    <h5> Group signature size </h5>
+    <p> The group signature size originally was only limited by the transaction 
+      size limit but Aeon has been fixed to 3 member signatures since version 
+      0.13.0.0 (height 1146200). [19,40,41] </p>
     <h4> 2. Dual-keypair Address </h4>
     <p> An Aeon address is a 95-character base58 string which the recipient 
       gives to the sender in order to receive aeon. The information encoded in the 
@@ -473,6 +475,13 @@
       <!-- 39 --> 
       <li> Nicolas van Saberhagen, <a href="/files/CryptoNotev2.pdf"> CryptoNote 
           v 2.0 </a> </li>
+      <!-- 40 --> 
+      <li> stoffu, <a href="https://github.com/aeonix/aeon/pull/136"> Fix ring 
+        size to 3 from v8 #136  </a> </li>
+      <!-- 41 --> 
+      <li> BigslimVdub, <a href="
+        https://github.com/aeonix/aeon/issues/65">  Removal of Ring Size 1-4 and 
+        or using fixed Ring Size for Aeon #65 </a> </li>
     </ol>
     </section>
   </div>
