@@ -66,12 +66,6 @@
           <li> Block Time Interval </li>
           <li> Timestamp </li>
         </ol>
-      <li> Private Transactions </li>
-        <ol style="list-style-type:number">
-          <li> Group Signature </li>
-          <li> Dual-keypair Address </li>
-          <li> RingCT </li>
-        </ol>
       <li> Wallet </li>
         <ol style="list-style-type:number">
           <li> Public-key cryptography </li>
@@ -80,6 +74,12 @@
           <li> Mnemonic Seed </li>
           <li> Payment ID </li>
           <li> Addresses Types </li>
+        </ol>
+      <li> Private Transactions </li>
+        <ol style="list-style-type:number">
+          <li> Group Signature </li>
+          <li> Dual-keypair Address </li>
+          <li> RingCT </li>
         </ol>
       <li> Development </li>
         <ol style="list-style-type:number">
@@ -181,35 +181,7 @@
       previous 60 blocks. [6] </p>
     </section>
     <section>
-    <h3> IV. Private Transactions </h3>
-    <h4> 1. Group signature </h4>
-    <p> Group signature refers to the essential mechanism Aeon relies on to
-      protect identifying information of network users. Transactions are signed
-      using the basic group signature scheme innovated by the CryptoNote authors, 
-      such that each signer of the transaction has a plausible deniability.
-      [17,18] </p>
-    <h5> Group signature size </h5>
-    <p> The group signature size originally was only limited by the transaction 
-      size limit but Aeon has been fixed to 3 member signatures since version 
-      0.13.0.0 (height 1146200). [19,40,41] </p>
-    <h4> 2. Dual-keypair Address </h4>
-    <p> An Aeon address is a 95-character base58 string which the recipient 
-      gives to the sender in order to receive aeon. The information encoded in the 
-      address is the network byte, public spend key, public view key and a 
-      checksum. The bare minimum which the sender needs are the 2 public keys, 
-      but the network byte and the checksum are added to prevent errors. Every 
-      Aeon address is a dual-keypair address. The sender uses these keys to create 
-      an encrypted output id from which only the intended recipient can view 
-      the ownership (view key) and create a spend (spend key). 
-      [10,39] </p>
-    <h4> 3. RingCT </h4>
-    <p> The Aeon codebase currently omits the use of RingCT which is used in 
-      the Monero protocol to encrypt transaction amounts. There are no plans to 
-      add this feature as developers have opted to favor security of the supply 
-      over enhanced privacy protections. </p>
-    </section>
-    <section>
-    <h3> V. Wallet </h3>
+    <h3> IV. Wallet </h3>
     <h4> 1. Public-key cryptography </h4>
     <p> Public-key cryptography is where a private key and a public key make up 
       a keypair. A public key is derived from the private key. The public key is 
@@ -274,6 +246,34 @@
       of Base58 is 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. 
       [24,25,26]
     </p>
+    </section>
+    <section>
+    <h3> V. Private Transactions </h3>
+    <h4> 1. Group signature </h4>
+    <p> Group signature refers to the essential mechanism Aeon relies on to
+      protect identifying information of network users. Transactions are signed
+      using the basic group signature scheme innovated by the CryptoNote authors, 
+      such that each signer of the transaction has a plausible deniability.
+      [17,18] </p>
+    <h5> Group signature size </h5>
+    <p> The group signature size originally was only limited by the transaction 
+      size limit but Aeon has been fixed to 3 member signatures since version 
+      0.13.0.0 (height 1146200). [19,40,41] </p>
+    <h4> 2. Dual-keypair Address </h4>
+    <p> An Aeon address is a 95-character base58 string which the recipient 
+      gives to the sender in order to receive aeon. The information encoded in the 
+      address is the network byte, public spend key, public view key and a 
+      checksum. The bare minimum which the sender needs are the 2 public keys, 
+      but the network byte and the checksum are added to prevent errors. Every 
+      Aeon address is a dual-keypair address. The sender uses these keys to create 
+      an encrypted output id from which only the intended recipient can view 
+      the ownership (view key) and create a spend (spend key). 
+      [10,39] </p>
+    <h4> 3. RingCT </h4>
+    <p> The Aeon codebase currently omits the use of RingCT which is used in 
+      the Monero protocol to encrypt transaction amounts. There are no plans to 
+      add this feature as developers have opted to favor security of the supply 
+      over enhanced privacy protections. </p>
     </section>
     <section>
     <h3> VI. Development </h3>
