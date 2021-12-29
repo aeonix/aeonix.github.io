@@ -1,5 +1,5 @@
 # AEON Project Website
-Copyright (c) 2014-2019, AEON Project
+Copyright (c) 2014-2022, AEON Project
 
 url: https://www.aeon.cash
 
