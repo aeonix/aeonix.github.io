@@ -12,11 +12,11 @@ The following files will be altered in some way during translation:
 index.html
 _config.yml
 _includes/header.html
-
 ```
 
 #### Required edits to index.html
-No major edits are needed here. Copy index.html as index.YOUR_LANGUAGE_ACRONYM.html. Example: `cp index.html index.pl.html`
+No major edits are needed here. Copy index.html as index.YOUR_LANGUAGE_ACRONYM.html.    
+Example: `cp index.html index.pl.html`
 
 This is all that is required for this file.
 
@@ -85,6 +85,6 @@ After completing the above, you should be ready to submit a Pull Request to be r
 
 In need of help with editing the AEON project website? We encourage you to open an issue. However, if you are looking to receive assistance quickly, try one of the alternate solutions below.
 * Reddit: https://reddit.com/r/Aeon
-* IRC: https://webchat.freenode.net/?channels=%23aeon
+* IRC: https://web.libera.chat/#aeon
 * Discord: https://discord.gg/TM8mEsx
 * Telegram: https://telegram.me/AEONgroup
